@@ -7,7 +7,10 @@ module.exports = function(grunt) {
   require('load-grunt-config')(grunt);
 
   // Register default task
-  grunt.registerTask('default', ['connect:dev','watch','concat']);
+  grunt.registerTask('default', ['watch','concat']);
+
+  // Open new tab for static development
+  grunt.registerTask('dev', ['connect:dev','watch','concat']);
 
   // Let's process things for production
   grunt.registerTask('process', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'modernizr', 'imagemin']);
@@ -16,7 +19,7 @@ module.exports = function(grunt) {
   grunt.registerTask('move', ['copy']);
 
   // We can start MAMP to view Production if we want
-  grunt.registerTask('prod', ['connect:prod']);
+  // grunt.registerTask('prod', ['connect:prod']);
 
   // Turn those SVGs into a sprite
   grunt.registerTask('svg', ['svgstore']);
