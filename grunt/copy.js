@@ -6,43 +6,43 @@ module.exports = {
         expand: true,
         flatten: true,
         src:  [
-                'dev/lib/styles/css/*-min.css',
-                'dev/lib/styles/css/*.css',
-                'dev/lib/styles/css/*.map'
+                '_dev/lib/css/*-min.css',
+                '_dev/lib/css/*.css',
+                '_dev/lib/css/*.map'
               ],
-        dest: 'production/cms/content/assets/css/',
+        dest: '_prod/_content/assets/css/',
         filter: 'isFile'
       },
       {
         // Move JS files from development to production
         expand: true,
         flatten: true,
-        src: ['dev/lib/javascripts/production/*-min.js'],
-        dest: 'production/cms/content/assets/js/',
+        src: ['_dev/lib/js/production/*-min.js'],
+        dest: '_prod/_content/assets/js/',
         filter: 'isFile'
       },
       {
         // Move images from development to production
         expand: true,
         flatten: true,
-        src: ['dev/lib/images/*'],
-        dest: 'production/cms/content/assets/img/',
+        src: ['_dev/lib/img/*'],
+        dest: '_prod/_content/assets/img/',
         filter: 'isFile'
       },
       {
         // Move SVG icons from development to production
         expand: true,
         flatten: true,
-        src: ['dev/lib/images/svg/processed/*'],
-        dest: 'production/cms/content/assets/img/svg/',
+        src: ['_dev/lib/img/svg/processed/*'],
+        dest: '_prod/_content/assets/img/svg/',
         filter: 'isFile'
       },
       {
         // Move font files from development to production
         expand: true,
         flatten: true,
-        src: ['dev/lib/fonts/*'],
-        dest: 'production/cms/content/assets/fonts/',
+        src: ['_dev/lib/fonts/*'],
+        dest: '_prod/_content/assets/fonts/',
         filter: 'isFile'
       },
     ]

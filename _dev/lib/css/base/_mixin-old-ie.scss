@@ -1,0 +1,22 @@
+
+/**
+
+  @old-ie >
+--------------------------------------------------------
+  base/_mixin-old-ie.scss
+--------------------------------------------------------
+
+@link http://geoffgraham.me/mobile-first-sass-for-internet-explorer/
+
+------------------------------------------------------ */
+
+
+
+$old-ie: false !default;
+
+@mixin old-ie {
+    // Only use this content if we're dealing with old IE
+    @if $old-ie {
+        @content;
+    }
+}

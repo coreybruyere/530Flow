@@ -7,7 +7,7 @@ module.exports = {
       }
     },
     files: {
-      'dev/lib//images/svg/processed/svg-defs.svg': ['dev/lib//images/svg/source/*.svg']
+      '_dev/lib/img/svg/processed/svg-defs.svg': ['_dev/lib/img/svg/source/*.svg']
     },
   },
 }

@@ -1,0 +1,125 @@
+/**
+
+  @variables
+---------------------------------------------------------
+  base/_vars.scss
+--------------------------------------------------------
+
+  Global variables are defined here.  Define your colors,
+  spacing and grid settings.
+
+-----------------------------------------------------  */
+
+
+
+
+
+/* @colors
+--------------------------------------------------------
+
+  All color variables are defined here.
+
+  We use real color names here.  Although naming something
+  like 'brand' is in fact more generic and reusable, we've
+  found that you end up creating variables like $brand-2,
+  $brand-alt, $brand-complimentary etc.  While coding,
+  it's too easy to forget what those mean.
+
+  If the design changes drastically and the brand changes
+  from, let's say, blue to green, just do a global
+  find/replace - that's what text editors are for.
+
+------------------------------------------------------ */
+
+
+// Colors
+//
+$color__black: #515554;
+$color__grey: #b0b3b3;
+$color__grey--light: #cfd2d2;
+$color__offwhite: #f4f4f4;
+$color__white: #fff;
+$color__error: red;
+$color__warning: yellow;
+$color__info: blue;
+$color__success: green;
+
+$alert: $color__error;
+$success: $color__success;
+
+
+
+
+
+/* @breakpoints
+---------------------------------------------------------
+
+  Define global breakpoints as xs, sm, md, lg, xl
+
+--------------------------------------------------------- */
+
+// Define breakpoints map to help with some other functions
+// and mixins.  Very fancy :)
+//
+$breakpoints: (
+ n:  0,
+ xs: u(rem(320)),
+ sm: u(rem(550)),
+ md: u(rem(768)),
+ lg: u(rem(1024)),
+ xl: u(rem(1256)),
+ xxl: u(rem(1600))
+);
+
+
+// Define individual variables
+//
+// Extra Small: Small mobile
+$breakpoint__xs: map-get($breakpoints, xs);
+
+// Small: Larger mobile
+$breakpoint__sm: map-get($breakpoints, sm);
+
+// Medium: Tablet
+$breakpoint__md: map-get($breakpoints, md);
+
+// Large: Landscape tablet, beginning desk size
+$breakpoint__lg: map-get($breakpoints, lg);
+
+// Extra Large: Large Desk size
+$breakpoint__xl: map-get($breakpoints, xl);
+
+// Double Extra Large: Huge Desk size
+$breakpoint__xxl: map-get($breakpoints, xxl);
+
+
+// -- Media Queries
+$screen: "only screen" !default;
+$small-mobile: "only screen and (min-width:"#{$breakpoint__xs}")" !default;
+$mobile: "only screen and (min-width:"#{$breakpoint__sm}")" !default;
+$tablet: "only screen and (min-width:"#{$breakpoint__md}")" !default;
+$small-desktop: "only screen and (min-width:"#{$breakpoint__lg}")" !default;
+$desktop: "only screen and (min-width:"#{$breakpoint__xl}")" !default;
+$large-desktop: "only screen and (min-width:"#{$breakpoint__xxl}")" !default;
+
+// -- Orientation  Media Queries
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
+
+
+
+
+
+/* @global spacing unit
+---------------------------------------------------------
+
+  Define an em value for $unit.  $unit is a helpful little
+  variable that serves to keep your spacing consistent.
+
+  Most often, 1 $unit is equal to your baseline height.  So
+  if your baseline height is 1.125ems (which is 18px), that's
+  the value of 1 $unit.
+
+--------------------------------------------------------- */
+
+$unit: 1.125em;

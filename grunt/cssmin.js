@@ -1,11 +1,8 @@
 module.exports = {
   combine: {
     files: {
-      // 'dev/lib//styles/css/application-min.css': ['dev/lib//styles/css/application.css']
-      // 'development/lib//styles/css/ie-min.css': ['development/lib//styles/css/ie.css']
-      'production/cms/content/assets/css/main-min.css': ['production/cms/content/assets/css/main.css']
-      'production/cms/content/assets/css/ie-min.css': ['production/cms/content/assets/css/ie.css'],
-
+      '_prod/_content/assets/css/screen-min.css': ['_prod/_content/assets/css/screen.css'],
+      '_prod/_content/assets/css/screen-ie-min.css': ['_prod/_content/assets/css/screen-ie.css']
     }
   }
 }

@@ -1,3 +1,3 @@
 module.exports = {
-  beforeconcat: ['dev/lib//javascripts/*.js']
+  beforeconcat: ['_dev/lib/js/*.js']
 }

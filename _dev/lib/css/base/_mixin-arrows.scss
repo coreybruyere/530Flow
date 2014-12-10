@@ -1,0 +1,109 @@
+
+/**
+
+  @fancy arrow
+--------------------------------------------------------
+  base/_mixin-arrows.scss
+--------------------------------------------------------
+
+// Usage: @include arrow("down", $color, $hover, u(rem(value)));
+
+------------------------------------------------------ */
+
+
+@mixin arrow($direction: "down", $color: black, $hover: black, $size: u(rem(5)) ) {
+
+  $arrow-size: $size !global;
+  $arrow-color: $color !global;
+  $arrow-hover: $hover !global;
+
+  position: relative;
+
+  &:before {
+    position: absolute;
+    border: solid transparent;
+    content: " ";
+    top: auto;
+    left: auto;
+    height: 0;
+    width: 0;
+    // margin: u(rem(1)) 0 0 0;
+    border-color: transparent;
+    border-width: $arrow-size;
+    pointer-events: none;
+    transition: color .5s ease-in-out;
+  }
+
+  @if $direction == "up" {
+
+    @include arrow-up;
+
+  } @elseif $direction == "down" {
+
+    @include arrow-down;
+
+  } @elseif $direction == "left" {
+
+    @include arrow-left;
+
+  } @elseif $direction == "right" {
+
+    @include arrow-right;
+
+  }
+
+}
+
+// Clases that are conditionally extended in arrow mixin based on arrow direction
+@mixin arrow-up() {
+  &:before {
+    bottom: 100%;
+    border-bottom-color: $arrow-color;
+    margin-left: (-$arrow-size);
+    left: 50%;
+  }
+  &:hover:before {
+    border-bottom-color: $arrow-hover;
+  }
+}
+
+@mixin arrow-down() {
+  &:before {
+    top: 100%;
+    border-top-color: $arrow-color;
+    margin-left: (-$arrow-size);
+    left: 50%;
+  }
+  &:hover:before {
+    border-top-color: $arrow-hover;
+  }
+}
+
+@mixin arrow-left() {
+  &:before {
+    right: 100%;
+    border-right-color: $arrow-color;
+    margin-top: (-$arrow-size);
+    top: 50%;
+  }
+  &:hover:before {
+    border-right-color: $arrow-hover;
+  }
+}
+
+@mixin arrow-right() {
+  &:before {
+    left: 100%;
+    border-left-color: $arrow-color;
+    margin-top: (-$arrow-size);
+    top: 50%;
+  }
+  &:hover:before {
+    border-left-color: $arrow-hover;
+  }
+}
+
+
+
+
+

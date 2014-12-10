@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>***YOUR-TITLE-HERE***</title>
+
+    <!-- Canonical Meta -->
+    <link rel="canonical" href="**YOUR-URL-HERE***">
+
+    <!-- Viewport Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <meta name="description" content="***YOUR-CONTENT-HERE-***">
+    <meta name="keywords" content="***YOUR-CONTENT-HERE-***">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link href="/lib/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/lib/img/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+    <link href="/lib/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="/lib/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="/lib/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <meta name="apple-mobile-web-app-title" content="***YOUR-SITE'S-NAME-HERE-***">
+
+    <!-- Facebook -->
+    <meta property="og:image" content="***YOUR-URL-HERE-***/lib/img/avatar.png">
+    <meta property="og:title" content="***YOUR-TITLE-HERE-***">
+    <meta property="og:site_name" content="***YOUR-SITE'S-NAME-HERE-***">
+    <meta property=" og:url" content="***YOUR-URL-HERE-***">
+    <meta property="og:description" content="***YOUR-CONTENT-HERE-***">
+
+    <!-- Windows 8 Pin app to start screen -->
+    <meta name="msapplication-TileColor" content="****BRAND-COLOR-HERE***">
+    <meta name="msapplication-TileImage" content="***YOUR-URL-HERE-***/lib/img/apple-touch-icon-precomposed.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="lib/css/style.dev.css" media="(min-width:320px)" />
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+      <link rel="stylesheet" href="lib/styles/ie-min.css" />
+    <![endif]-->
+
+    <!-- Header Scripts -->
+    <script src="lib/javascripts/production/modernizr-min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="site">
+
+      <header class="site-header" role="banner">
+        <div class="container">
+          <a class="branding" href="index.html">
+            <img class="branding__logo" src="lib/img/fpo-logo.png" alt="Site Name">
+            <h1 class="branding__wordmark">Site Name</h1>
+          </a>
+          <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="example-grids.html">Grids</a>
+            <a href="example-modules.html">Modules</a>
+            <a href="example-forms.html">Forms</a>
+            <a href="http://skyline.is">Skyline</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main" role="main">
+
+        <section class="block--ends container">
+          <h1>Example Form</h1>
+          <p>Here's an example form to give you a head start.</p>
+        </section>
+
+        <section class="block container">
+          <h2>A basic form example</h2>
+
+          <form class="form">
+            <header class="form__header">
+              <h1>Title of this form</h1>
+            </header>
+            <fieldset>
+              <legend>Personal Information</legend>
+              <article class="field">
+                <label class="field__label" for="exampleInput1">Your Name</label>
+                <input class="field__input" id="exampleInputA" type="text" required="required" placeholder="Your name">
+                <span class="field__feedback"></span>
+                <span class="field__hint"></span>
+              </article>
+              <article class="field">
+                <label class="field__label" for="exampleInputB">Your Email</label>
+                <input class="field__input" id="exampleInput2" type="email" required="required" placeholder="Your email">
+                <span class="field__feedback"></span>
+                <span class="field__hint">Must be a valid email address</span>
+              </article>
+            </fieldset>
+            <fieldset>
+              <article class="field">
+                <label class="field__label">Choose your favorite</label>
+                <div class="field__input-group">
+                  <label class="label--radio" for="favorite-food-1"><input id="favorite-food-1" name="favorite-food" type="radio" value="pizza"> Pizza</label>
+                  <label class="label--radio" for="favorite-food-2"><input id="favorite-food-2" name="favorite-food" type="radio" value="tacos"> Tacos</label>
+                  <label class="label--radio" for="favorite-food-3"><input id="favorite-food-3" name="favorite-food" type="radio" value="burgers"> Burgers</label>
+                </div>
+                <span class="field__feedback"></span>
+                <span class="field__hint"></span>
+              </article>
+              <article class="field">
+                <label class="field__label">Select one</label>
+                <select name="schramburger">
+                  <option value="value-1">Option 1</option>
+                  <option value="value-2">Option 2</option>
+                  <option value="value-3">Option 3</option>
+                  <option value="value-4">Option 4</option>
+                </select>
+              </article>
+            </fieldset>
+            <fieldset>
+              <article class="field">
+                <label class="field__label">Your message</label>
+                <textarea class="field__input">Hello, there</textarea>
+                <span class="field__feedback"></span>
+                <span class="field__hint"></span>
+              </article>
+            </fieldset>
+            <footer class="form__actions">
+              <input type="submit" class="btn btn--block" value="Submit">
+            </footer>
+          </form>
+        </section>
+
+        <section class="block container">
+          <p><em>You'll find more examples in the comments of the modules/_forms.scss partial.</em></p>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <a class="branding" href="/">Site Name</a>
+          <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="example-grids.html">Grids</a>
+            <a href="example-modules.html">Modules</a>
+            <a href="example-forms.html">Forms</a>
+            <a href="http://skyline.is">Skyline</a>
+          </nav>
+          <small class="site-credits">&copy; 2014 Site Name</small>
+        </div>
+      </footer>
+
+    </div><!--/.site-->
+
+  </body>
+
+
+</html>

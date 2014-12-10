@@ -1,8 +1,8 @@
 module.exports = {
   dist: {
     src: [
-      'dev/lib/javascripts/*.js',
+      '_dev/lib/js/*.js',
     ],
-    dest: 'production/cms/content/assets/js/global.js'
+    dest: '_prod/_content/assets/js/global.js'
   }
 }

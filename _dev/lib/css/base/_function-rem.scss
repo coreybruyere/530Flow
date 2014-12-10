@@ -1,0 +1,28 @@
+/**
+
+  @unit >
+--------------------------------------------------------
+  base/_function-u.scss
+--------------------------------------------------------
+
+// Usage: u(rem({number}))
+
+------------------------------------------------------ */
+
+/**
+ * Divides `$target` by default `$context`. Used in conjunction with {u} function
+ *
+ * @param {Target}   $target  - list to update
+ * @param {Context}  $context (16) - index to add
+ *
+ * @requires {u} u - used inside of u function
+ *
+ * @example scss
+ * // margin: u(rem($value))
+ *
+ * @return {$value rem | $value px}
+ */
+
+@function rem($target, $context: 16) {
+  @return ($target / $context)+0rem;
+}
