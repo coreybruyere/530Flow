@@ -12,8 +12,17 @@
     @include cleafix();
   }
 
-
 --------------------------------------------------------- */
+
+/**
+ * Clearfix - Clear floats the easy way
+ * @example scss
+ * // @include clearfix();
+ * // or
+ * // @extend %clearfix;
+ * // or
+ * // .clearfix
+ */
 
 @mixin clearfix() {
   &:before,

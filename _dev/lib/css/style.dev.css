@@ -128,9 +128,9 @@ video {
 
 /**
 
-  @unit >
+  @rem
 --------------------------------------------------------
-  base/_function-u.scss
+  base/_function-rem.scss
 --------------------------------------------------------
 
 // Usage: u(rem({number}))
@@ -151,7 +151,7 @@ video {
  */
 /**
 
-  @unit >
+  @unit
 --------------------------------------------------------
   base/_function-u.scss
 --------------------------------------------------------
@@ -160,10 +160,14 @@ video {
 
 ------------------------------------------------------ */
 /**
- * Divides `$target` by default `$context`. Used in conjunction with {u} function
+ * @see rem
+ * @see u
+*/
+/**
+ * Passes value and returns as pixel for IE stylesheet and rem for regular stylesheet. Used in conjunction with {rem} function
  *
- * @param {Target}   $target  - list to update
- * @param {Context}  $context (16) - index to add
+ * @param {Values}  $values - Value to convert
+ * @param {Pixel Base}   $pixelBase (16)  - Base pixel value
  *
  * @requires {u} u - used inside of u function
  *
@@ -214,8 +218,16 @@ video {
     @include cleafix();
   }
 
-
 --------------------------------------------------------- */
+/**
+ * Clearfix - Clear floats the easy way
+ * @example scss
+ * // @include clearfix();
+ * // or
+ * // @extend %clearfix;
+ * // or
+ * // .clearfix
+ */
 /**
 
   @font-face importer mixin
@@ -234,6 +246,18 @@ video {
   @include embed-font($font-name, $font-filepath-and-name);
 
 --------------------------------------------------------- */
+/**
+ * $font-name is used in your css in font-family declarations
+ * $font-filepath-and-name is the location of your font
+ * file and the filename WITHOUT the file extension.  The
+ * extensions are added here in the mixin
+ *
+ * @param {Font Name}               $font-name Name of font
+ * @param {Font Filepath and name}  $font-filepath-and-name path to file
+ * @example scss
+ * // @include embed-font($font-name, $font-filepath-and-name);
+ *
+ */
 /**
 
   @gradual media queries mixin

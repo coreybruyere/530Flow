@@ -17,6 +17,19 @@
 
 --------------------------------------------------------- */
 
+/**
+ * $font-name is used in your css in font-family declarations
+ * $font-filepath-and-name is the location of your font
+ * file and the filename WITHOUT the file extension.  The
+ * extensions are added here in the mixin
+ *
+ * @param {Font Name}               $font-name Name of font
+ * @param {Font Filepath and name}  $font-filepath-and-name path to file
+ * @example scss
+ * // @include embed-font($font-name, $font-filepath-and-name);
+ *
+ */
+
 @mixin embed-font($font-name, $font-filepath-and-name){
   @font-face {
   	font-family: $font-name;

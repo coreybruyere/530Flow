@@ -1,20 +1,24 @@
-## Basic Skyline Starter HTML and SCSS
-
-#### Modified by Corey Bruyere
+## 530's Skyline Starter HTML and SCSS
 
 
 ### Introduction
 
-Skyline helps you create a design system for your website.  It encourages a well thought-out CSS architecture, and enables you to develop a reusable and maintainable codebase.
+530's modified version of Skyline helps you create a design system for your website.  It encourages a well thought-out CSS architecture, and enables you to develop a reusable and maintainable codebase.
 
-This starter kit includes the style files you will use on your site. In most cases, you will copy the contents of the `css` folder into your own project. Each SCSS partial is self-documented and includes markup examples in the comments. The kit also contains HTML files as examples to illustrate how you will write out your markup.
+This starter kit includes the style files you will use on your site. In most cases, you will copy the contents of the `css` folder into your own project. Each SCSS partial is self-documented and includes markup examples in the comments. Whenever a new partial is added make sure to use the same documentation style to keep the project consistent. The kit also contains HTML files as examples to illustrate how you will write out your markup.
 
-Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. It is really a starting point, an organized set of files that allow you to create your own custom framework.
+530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `_dev` directory.
+
+Use the `index.html` file as a starting point for static development then prefix the rest of your pages with `page-`. ``**example:** page-about.html`
+
+You can reference the example files or documentation to clarify proper BEM/SCSS, JS hooks, and Grid/Layout usage.
+
+An HTML file is also provided in `lib/css/sass-docs/` that documents all SCSS variable, function, and mixin usage. Please document any additional mixins added using the same format.
 
 ### Guidelines
 
 #### CSS / SCSS
-This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Follow those as closely as possible to maintain an organzied, readable codebase.
+This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, understandable codebase.
 
 The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory
 
@@ -153,8 +157,6 @@ The starter files contain as little code as possible.  The structure consists of
 ```
 
 ### Usage
-These starter files are not a working app. Most likely, you'll add these resources into your applications.
-
 run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`
 
 

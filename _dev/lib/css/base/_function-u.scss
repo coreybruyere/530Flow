@@ -1,7 +1,7 @@
 
 /**
 
-  @unit >
+  @unit
 --------------------------------------------------------
   base/_function-u.scss
 --------------------------------------------------------
@@ -11,10 +11,20 @@
 ------------------------------------------------------ */
 
 /**
- * Divides `$target` by default `$context`. Used in conjunction with {u} function
+ * @see rem
+ * @see u
+*/
+$pixelBase : 16;
+
+@function parseInt($n) {
+      @return $n / ($n * 0 + 1);
+}
+
+/**
+ * Passes value and returns as pixel for IE stylesheet and rem for regular stylesheet. Used in conjunction with {rem} function
  *
- * @param {Target}   $target  - list to update
- * @param {Context}  $context (16) - index to add
+ * @param {Values}  $values - Value to convert
+ * @param {Pixel Base}   $pixelBase (16)  - Base pixel value
  *
  * @requires {u} u - used inside of u function
  *
@@ -23,13 +33,6 @@
  *
  * @return {$value rem | $value px}
  */
-
-$pixelBase : 16;
-
-@function parseInt($n) {
-      @return $n / ($n * 0 + 1);
-}
-
 @function u($values){
 
       $list: ();

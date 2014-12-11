@@ -60,6 +60,15 @@
               
               </a>
             </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="u" data-type="function">
+              <a href="#function-u">u
+              
+              
+              </a>
+            </li>
             </ul>
           
         
@@ -97,7 +106,34 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="burger-parts" data-type="mixin">
               <a href="#mixin-burger-parts">burger-parts
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
               
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="burger-top" data-type="mixin">
+              <a href="#mixin-burger-top">burger-top
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="burger-middle" data-type="mixin">
+              <a href="#mixin-burger-middle">burger-middle
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="burger-bottom" data-type="mixin">
+              <a href="#mixin-burger-bottom">burger-bottom
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
               
               </a>
             </li>
@@ -106,7 +142,7 @@
             
             <li class="sidebar__item  sassdoc__item" data-name="burger-to-cross" data-type="mixin">
               <a href="#mixin-burger-to-cross">burger-to-cross
-              
+              <span class="sidebar__annotation  sidebar__annotation--private">private</span>
               
               </a>
             </li>
@@ -128,15 +164,6 @@
               
               </a>
             </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="font-size" data-type="mixin">
-              <a href="#mixin-font-size">font-size
-              
-              
-              </a>
-            </li>
             </ul>
           
         
@@ -154,8 +181,8 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="old-ie" data-type="variable">
-              <a href="#variable-old-ie">old-ie
+            <li class="sidebar__item  sassdoc__item" data-name="pixelBase" data-type="variable">
+              <a href="#variable-pixelBase">pixelBase
               
               
               </a>
@@ -163,8 +190,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="pixelBase" data-type="variable">
-              <a href="#variable-pixelBase">pixelBase
+            <li class="sidebar__item  sassdoc__item" data-name="old-ie" data-type="variable">
+              <a href="#variable-old-ie">old-ie
               
               
               </a>
@@ -449,6 +476,262 @@
 
 </section>
               
+                <section class="main__item  item" id="function-u">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-u">u</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function u($values, $pixelBase: 16) { 
+
+      $list: ();
+
+      @each $value in $values {
+
+            $unit : unit($value);
+            $val  : parseInt($value);
+
+            @if ($px-only) or ($dev-mode) and ($unit == &#39;rem&#39;) {
+                  $list: append($list, ($val * $pixelBase) + px);
+            }
+
+            @else if($unit == &#39;px&#39;) or ($unit == &#39;rem&#39;){
+                  $list: append($list, $value);
+            }
+
+            @else {
+                  @warn &#39;There is no unit conversion for #{$unit}&#39;;
+            }
+
+      }
+
+      @return $list();
+ }"
+    data-collapsed="@function u($values, $pixelBase: 16) { ... }"><code>@function u($values, $pixelBase: 16) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Passes value and returns as pixel for IE stylesheet and rem for regular stylesheet. Used in conjunction with {rem} function</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$values</code></th>
+          <td data-label="desc"><p>Value to convert</p>
+</td>
+          <td data-label="type">
+          
+            Values
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$pixelBase</code></th>
+          <td data-label="desc"><p>Base pixel value</p>
+</td>
+          <td data-label="type">
+          
+            Pixel base
+          
+          </td>
+          <td data-label="default">
+          
+            <code>16</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    $value rem, $value px
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// margin: u(rem($value))</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-pixelBase"><code>pixelBase</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-arrow"><code>arrow</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
             </section>
           
         
@@ -485,11 +768,59 @@
 
 
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin arrow() { 
+    data-expanded="@mixin arrow($direction: down, $color: black, $hover: black, $size: u(rem(5))) { 
 
   $arrow-size: $size !global;
   $arrow-color: $color !global;
@@ -531,7 +862,7 @@
   }
 
  }"
-    data-collapsed="@mixin arrow() { ... }"><code>@mixin arrow() { ... }</code></pre>
+    data-collapsed="@mixin arrow($direction: down, $color: black, $hover: black, $size: u(rem(5))) { ... }"><code>@mixin arrow($direction: down, $color: black, $hover: black, $size: u(rem(5))) { ... }</code></pre>
 
   
 </div>
@@ -546,9 +877,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>  @fancy arrow
-  base/_mixin-arrows.scss</p>
-<p>// Usage: @include arrow(&quot;down&quot;, $color, $hover, u(rem(value)));</p>
+  <div class="item__description"><p>CSS arrows. 4 directions: left, down, right, and up</p>
 </div>
 
 
@@ -558,7 +887,83 @@
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>desired direction</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>down</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>desired color</p>
+</td>
+          <td data-label="type">
+          
+            Color
+          
+          </td>
+          <td data-label="default">
+          
+            <code>black</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$hover</code></th>
+          <td data-label="desc"><p>desired hover state color</p>
+</td>
+          <td data-label="type">
+          
+            Hover
+          
+          </td>
+          <td data-label="default">
+          
+            <code>black</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$size</code></th>
+          <td data-label="desc"><p>5px passed through rem function</p>
+</td>
+          <td data-label="type">
+          
+            Size
+          
+          </td>
+          <td data-label="default">
+          
+            <code>u(rem(5))</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -569,6 +974,16 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include arrow();
+// @include arrow(&#39;up&#39;, red, blue, u(rem(10)));</code></pre>
+  </div>
+  
+
 
   
     
@@ -584,6 +999,19 @@
       
       <h3 class="item__sub-heading">Requires</h3>
       <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-u"><code>u</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
     
 
     
@@ -658,11 +1086,83 @@
 
 
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin burger() { 
+    data-expanded="@mixin burger($width: 1.875em, $height: .250em, $hover: .250em, $color: #000, $border-radius: .188em, $transiition-duration: .3s) { 
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
     $burger-color: $color !global;
@@ -705,7 +1205,7 @@
         top: $height + $gutter;
     }
  }"
-    data-collapsed="@mixin burger() { ... }"><code>@mixin burger() { ... }</code></pre>
+    data-collapsed="@mixin burger($width: 1.875em, $height: .250em, $hover: .250em, $color: #000, $border-radius: .188em, $transiition-duration: .3s) { ... }"><code>@mixin burger($width: 1.875em, $height: .250em, $hover: .250em, $color: #000, $border-radius: .188em, $transiition-duration: .3s) { ... }</code></pre>
 
   
 </div>
@@ -720,7 +1220,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Burger</p>
+  <div class="item__description"><p>CSS Menu Burger</p>
 </div>
 
 
@@ -730,7 +1230,115 @@
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$width</code></th>
+          <td data-label="desc"><p>desired width</p>
+</td>
+          <td data-label="type">
+          
+            Width
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1.875em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$height</code></th>
+          <td data-label="desc"><p>desired height</p>
+</td>
+          <td data-label="type">
+          
+            Height
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.250em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$hover</code></th>
+          <td data-label="desc"><p>desired gutter space</p>
+</td>
+          <td data-label="type">
+          
+            Gutter
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.250em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc"><p>desired color</p>
+</td>
+          <td data-label="type">
+          
+            Color
+          
+          </td>
+          <td data-label="default">
+          
+            <code>#000</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$border-radius</code></th>
+          <td data-label="desc"><p>desired border radius</p>
+</td>
+          <td data-label="type">
+          
+            Border radius
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.188em</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transiition-duration</code></th>
+          <td data-label="desc"><p>desired transition time</p>
+</td>
+          <td data-label="type">
+          
+            Transition
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.3s</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -741,6 +1349,16 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger();
+// @include burger(&#39;3em&#39;, 1em, 1em, red, .2em, .1s);</code></pre>
+  </div>
+  
+
 
   
     
@@ -793,6 +1411,8 @@
 
 <h3 class="item__heading">
   
+    <span class="item__access">[private]</span>
+  
 
   <a class="item__name" href="#mixin-burger-parts">burger-parts</a>
 
@@ -835,7 +1455,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Select parts of the burger</p>
+  <div class="item__description"><p>Select all parts of the burger</p>
 </div>
 
 
@@ -856,6 +1476,17 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger-parts {
+//   color: black;
+// }</code></pre>
+  </div>
+  
+
 
   
     
@@ -864,6 +1495,406 @@
   
     
     
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-burger-top">
+
+<h3 class="item__heading">
+  
+    <span class="item__access">[private]</span>
+  
+
+  <a class="item__name" href="#mixin-burger-top">burger-top</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin burger-top() { 
+    &amp;:before {
+        @content;
+    }
+ }"
+    data-collapsed="@mixin burger-top() { ... }"><code>@mixin burger-top() { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Top part of the burger</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger-top {
+//   color: black;
+// }</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-burger-middle">
+
+<h3 class="item__heading">
+  
+    <span class="item__access">[private]</span>
+  
+
+  <a class="item__name" href="#mixin-burger-middle">burger-middle</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin burger-middle() { 
+    &amp; {
+        @content;
+    }
+ }"
+    data-collapsed="@mixin burger-middle() { ... }"><code>@mixin burger-middle() { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Middle part of the burger</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger-middle {
+//   color: black;
+// }</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-burger-bottom">
+
+<h3 class="item__heading">
+  
+    <span class="item__access">[private]</span>
+  
+
+  <a class="item__name" href="#mixin-burger-bottom">burger-bottom</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin burger-bottom() { 
+    &amp;:after {
+        @content;
+    }
+ }"
+    data-collapsed="@mixin burger-bottom() { ... }"><code>@mixin burger-bottom() { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Bottom part of the burger</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger-bottom {
+//   color: black;
+// }</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+
 
 
 
@@ -907,6 +1938,8 @@
                 <section class="main__item  item" id="mixin-burger-to-cross">
 
 <h3 class="item__heading">
+  
+    <span class="item__access">[private]</span>
   
 
   <a class="item__name" href="#mixin-burger-to-cross">burger-to-cross</a>
@@ -987,6 +2020,16 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include burger-to-cross();
+// @include burger-to-cross(green);</code></pre>
+  </div>
+  
+
 
   
     
@@ -995,6 +2038,10 @@
   
     
     
+
+
+  
+
 
 
 
@@ -1088,13 +2135,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>  @clearfix mixin
-  base/_clearfix.scss</p>
-<p>  Use @include clearfix(); in your CSS</p>
-<p>  Usage: clearfix mixin
-  .element-to-clearfix {
-    @include cleafix();
-  }</p>
+  <div class="item__description"><p>Clearfix - Clear floats the easy way</p>
 </div>
 
 
@@ -1115,6 +2156,19 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">// @include clearfix();
+// or
+// @extend %clearfix;
+// or
+// .clearfix</code></pre>
+  </div>
+  
+
 
   
     
@@ -1185,11 +2239,31 @@
 
 
 
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@mixin embed-font() { 
+    data-expanded="@mixin embed-font($font-name, $font-filepath-and-name) { 
   @font-face {
   	font-family: $font-name;
   	src: url($font-filepath-and-name+&quot;.eot&quot;); /* IE9 Compat Modes */
@@ -1199,7 +2273,7 @@
   	     url($font-filepath-and-name+&quot;.svg#svgFontName&quot;) format(&#39;svg&#39;); /* Legacy iOS */
   	}
  }"
-    data-collapsed="@mixin embed-font() { ... }"><code>@mixin embed-font() { ... }</code></pre>
+    data-collapsed="@mixin embed-font($font-name, $font-filepath-and-name) { ... }"><code>@mixin embed-font($font-name, $font-filepath-and-name) { ... }</code></pre>
 
   
 </div>
@@ -1214,15 +2288,10 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>  @font-face importer mixin
-  _base/_mixin-font-face-importer.scss</p>
-<p>  Use this mixin to embed a font</p>
-<p>  $font-name is used in your css in font-family declarations
-  $font-filepath-and-name is the location of your font
-  file and the filename WITHOUT the file extension.  The
-  extensions are added here in the mixin</p>
-<p>  Usage:
-  @include embed-font($font-name, $font-filepath-and-name);</p>
+  <div class="item__description"><p>$font-name is used in your css in font-family declarations
+$font-filepath-and-name is the location of your font
+file and the filename WITHOUT the file extension.  The
+extensions are added here in the mixin</p>
 </div>
 
 
@@ -1232,7 +2301,51 @@
 
 
 
-  <p>None.</p>
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-name</code></th>
+          <td data-label="desc"><p>Name of font</p>
+</td>
+          <td data-label="type">
+          
+            Font name
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-filepath-and-name</code></th>
+          <td data-label="desc"><p>path to file</p>
+</td>
+          <td data-label="type">
+          
+            Font filepath and name
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 
@@ -1243,122 +2356,15 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
 
   
+  <div class="item__example  example">
     
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
+    <pre class="example__code"><code class="language-scss">// @include embed-font($font-name, $font-filepath-and-name);</code></pre>
+  </div>
   
 
-
-
-</section>
-              
-                <section class="main__item  item" id="mixin-font-size">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#mixin-font-size">font-size</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="relative  clear  code--collapsed">
-  <pre class="item__code  item__code--togglable  language-scss"
-    data-current-state="collapsed"
-    data-expanded="@mixin font-size() { 
-  font-size: $sizeValue + px;
-  font-size: ($sizeValue / 16) + rem;
- }"
-    data-collapsed="@mixin font-size() { ... }"><code>@mixin font-size() { ... }</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>  @font size
-  base/_mixin-font-size.scss</p>
-<p>// example: @include font-size(13);</p>
-</div>
-
-
-  
-    
-    <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <p>None.</p>
-
-
-
-  
-    
-    
-
-  
-    
-    
 
   
     
@@ -1421,6 +2427,133 @@
 
               
               
+                <section class="main__item  item" id="variable-pixelBase">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-pixelBase">pixelBase</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$pixelBase: 16;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-u"><code>u</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">See</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-rem"><code>rem</code></a></li>
+  
+
+
+
+  
+    
+
+    <li><a href="#function-u"><code>u</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
                 <section class="main__item  item" id="variable-old-ie">
 
 <h3 class="item__heading">
@@ -1458,8 +2591,7 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>  @old-ie &gt;
-  base/_mixin-old-ie.scss</p>
+  <div class="item__description"><p>IE legacy mixin - returns content to ie stylesheet only</p>
 </div>
 
 
@@ -1480,117 +2612,17 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
 
   
+  <div class="item__example  example">
     
-    
-
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="http://geoffgraham.me/mobile-first-sass-for-internet-explorer/">
-        
-          http://geoffgraham.me/mobile-first-sass-for-internet-explorer/
-        
-      </a>
-    </li>
-  
-  </ul>
-
-  
-    
-    
-
+    <pre class="example__code"><code class="language-scss">// @include old-ie {
+// 	filter:alpha(opacity=100);
+// }</code></pre>
+  </div>
   
 
-
-
-</section>
-              
-                <section class="main__item  item" id="variable-pixelBase">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-pixelBase">pixelBase</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$pixelBase: 16;</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>  @unit &gt;
-  base/_function-u.scss</p>
-<p>// Usage: u(rem({number}))</p>
-</div>
-
-
-  
-    
-    
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
 
   
     
@@ -1665,20 +2697,12 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>  @container
-  layout/_container.scss</p>
-<p>  The .container class is applied to restrict the
-  max-width of an element, usually a bit of content.</p>
-<p>  Often, you will place a .container div within another
-  element that has a background color. This gives you
-  a full-bleed background, but the content is contained
-  within the max-width.</p>
-<p>  Example: Container within a section
-  <section class="awesome-section-with-background-color">
-    <div class="container">
-      <p>Your content goes here... </p>
-    </div>
-  </section></p>
+  <div class="item__description"><p>The $container__max-width var is used within the .container class and is applied to restrict the
+max-width of an element, usually a bit of content.
+Often, you will place a .container div within another
+element that has a background color. This gives you
+a full-bleed background, but the content is contained
+within the max-width.</p>
 </div>
 
 
@@ -1699,6 +2723,19 @@
   
     
     
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-html">  &lt;section class=&quot;awesome-section-with-background-color&quot;&gt;
+   &lt;div class=&quot;container&quot;&gt;
+      &lt;p&gt;Your content goes here... &lt;/p&gt;
+   &lt;/div&gt;
+  &lt;/section&gt;</code></pre>
+  </div>
+  
+
 
   
     

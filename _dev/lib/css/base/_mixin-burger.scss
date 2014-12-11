@@ -6,24 +6,25 @@
   base/_mixin-burger.scss
 --------------------------------------------------------
 
-// Usage: @include arrow("down", $color, $hover, u(rem(value)));
+// Usage: @include burger();
 
 ------------------------------------------------------ */
 
 /**
- * Burger parts
+ * CSS Menu Burger
  *
- * (---) top    -> &:before
- * [---] middle -> &
- * (---) bottom -> &:after
+ * @param {Width}         $width (1.875em)  -  desired width
+ * @param {Height}        $height (.250em)  -  desired height
+ * @param {Gutter}        $hover (.250em)  -  desired gutter space
+ * @param {Color}         $color (#000)  -  desired color
+ * @param {Border Radius} $border-radius (.188em)  -  desired border radius
+ * @param {Transition}    $transiition-duration (.3s)  -  desired transition time
+ * @example scss
+ * // @include burger();
+ * // @include burger('3em', 1em, 1em, red, .2em, .1s);
+ *
  */
-
-
-/**
- * Burger
- */
-
-@mixin burger($width: 30px, $height: 4px, $gutter: 4px, $color: #000, $border-radius: 3px, $transition-duration: .3s) {
+@mixin burger($width: 1.875em, $height: .250em, $gutter: .250em, $color: #000, $border-radius: .188em, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
     $burger-color: $color !global;
@@ -69,38 +70,75 @@
 
 
 /**
- * Select parts of the burger
+ * Select all parts of the burger
+ * @content Custom overrides of default mixin in mixin format
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-parts {
+ * //   color: black;
+ * // }
  */
-
 @mixin burger-parts {
     &, &:before, &:after {
         @content;
     }
 }
 
+/**
+ * Top part of the burger
+ * @content Custom overrides of default mixin in mixin format
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-top {
+ * //   color: black;
+ * // }
+ */
 @mixin burger-top {
     &:before {
         @content;
     }
 }
 
+/**
+ * Middle part of the burger
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-middle {
+ * //   color: black;
+ * // }
+ */
 @mixin burger-middle {
     & {
         @content;
     }
 }
 
+/**
+ * Bottom part of the burger
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-bottom {
+ * //   color: black;
+ * // }
+ */
 @mixin burger-bottom {
     &:after {
         @content;
     }
 }
 
-
 /**
  * Burger animations
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-to-cross();
+ * // @include burger-to-cross(green);
  */
-
 @mixin burger-to-cross($active-color: $burger-color) {
     & {
         background-color: transparent;

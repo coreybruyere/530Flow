@@ -10,6 +10,20 @@
 
 ------------------------------------------------------ */
 
+/**
+ * CSS arrows. 4 directions: left, down, right, and up
+ *
+ * @param {Direction}   $direction (down)  -  desired direction
+ * @param {Color}       $color (black)  -  desired color
+ * @param {Hover}       $hover (black)  -  desired hover state color
+ * @param {Size}        $size (u(rem(5)))  -  5px passed through rem function
+ *
+ * @example scss
+ * // @include arrow();
+ * // @include arrow('up', red, blue, u(rem(10)));
+ *
+ */
+
 
 @mixin arrow($direction: "down", $color: black, $hover: black, $size: u(rem(5)) ) {
 
