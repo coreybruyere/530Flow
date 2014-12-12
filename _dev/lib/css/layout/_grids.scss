@@ -36,7 +36,7 @@
 
 
 // Define the point at which grids no longer stack, but float
-$grid__float-at: $breakpoint__xs;
+$grid__float-at: $small-mobile;
 
 
 
@@ -92,11 +92,12 @@ $grid__float-at: $breakpoint__xs;
 // Grid Wrap
 .grid-wrap,
 .gw {
-  @include clearfix();
+  @extend %clearfix;
   display: block;
   // Sometimes, ul are used for grid wraps
   list-style-type: none;
-  @include bp-at-least($grid__float-at) {
+  // -- Min Width @ $grid__float-at
+  @media #{$grid__float-at} {
     margin: 0 -.25*$unit;
   }
 }
@@ -105,7 +106,7 @@ $grid__float-at: $breakpoint__xs;
 // Grid
 .grid,
 .g {
-  @include clearfix();
+  @extend %clearfix;
   min-height: 1rem;
   position: relative;
   padding-bottom: 1*$unit;
@@ -113,7 +114,8 @@ $grid__float-at: $breakpoint__xs;
   &:last-of-type {
     padding-bottom: 0;
   }
-  @include bp-at-least($grid__float-at) {
+  // -- Min Width @ $grid__float-at
+  @media #{$grid__float-at} {
     padding: 0 .25*$unit .75*$unit;
     float: left;
   }

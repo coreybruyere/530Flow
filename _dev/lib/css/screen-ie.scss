@@ -48,6 +48,13 @@ $px-only: true;
 
 -----------------------------------------------------  */
 
+
+  // Functions
+  //
+  @import "base/function-rem";
+
+  @import "base/function-u";
+
   // Vars
   //
   @import "base/vars";
@@ -56,19 +63,29 @@ $px-only: true;
   //
   @import "base/reset";
 
-  // Mixins / Functions
+  // Mixins
   //
-  @import "base/function-rem";
-
-  @import "base/function-u";
-
   @import "base/mixin-breakpoints";
+
+  @import "base/mixin-arrows";
+
+  @import "base/mixin-burger";
+
+  @import "base/mixin-flexbox";
+
+  @import "base/mixin-retina";
+
+  @import "base/mixin-old-ie";
 
   @import "base/mixin-clearfix";
 
   @import "base/mixin-font-face-importer";
 
   @import "base/mixin-gradual-media-queries";
+
+  // Helpers
+  //
+  @import "base/helpers";
 
   // Global
   //
@@ -140,11 +157,9 @@ $px-only: true;
 
   @import "layout/grids";
 
-  @import "layout/hide";
-
   @import "layout/media";
 
-  @import "layout/ups";
+  @import "layout/grid-ups";
 
   @import "layout/widths";
 
@@ -193,6 +208,12 @@ $px-only: true;
   @import "modules/callouts";
 
   @import "modules/heroes";
+
+  @import "modules/tabs";
+
+  @import "modules/tooltips";
+
+  @import "modules/post";
 
   @import "modules/modals";
 

@@ -60,7 +60,7 @@
 .four-sixths       { width: (4/6)*100%; }
 .five-sixths       { width: (5/6)*100%; }
 
-// Sevenths        
+// Sevenths
 .one-seventh       { width: (1/7)*100%; }
 .two-sevenths      { width: (2/7)*100%; }
 .three-sevenths    { width: (3/7)*100%; }
@@ -102,7 +102,7 @@
 .nine-tenths       { width: 90%; }
 
 
-// Elevenths       
+// Elevenths
 .one-eleventh      { width: (1/11)*100%; }
 .two-elevenths     { width: (2/11)*100%; }
 .three-elevenths   { width: (3/11)*100%; }
@@ -131,15 +131,16 @@
 
 
 
-/* @breakpoint__sm
+/* @small-mobile
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__sm size
+  the $small-mobile size
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__sm) {
+// -- Min Width @ $small-mobile
+@media #{$small-mobile} {
 
   // Whole
   .sm-one-whole         { width: 100%; }
@@ -174,7 +175,7 @@
   .sm-four-sixths       { width: (4/6)*100%; }
   .sm-five-sixths       { width: (5/6)*100%; }
 
-  // Sevenths        
+  // Sevenths
   .sm-one-seventh       { width: (1/7)*100%; }
   .sm-two-sevenths      { width: (2/7)*100%; }
   .sm-three-sevenths    { width: (3/7)*100%; }
@@ -216,7 +217,7 @@
   .sm-nine-tenths       { width: 90%; }
 
 
-  // Elevenths       
+  // Elevenths
   .sm-one-eleventh      { width: (1/11)*100%; }
   .sm-two-elevenths     { width: (2/11)*100%; }
   .sm-three-elevenths   { width: (3/11)*100%; }
@@ -241,21 +242,22 @@
   .sm-nine-twelfths     { width: (9/12)*100%; }
   .sm-ten-twelfths      { width: (10/12)*100%; }
   .sm-eleven-twelfths   { width: (11/12)*100%; }
-     
+
 }
 
 
 
 
-/* @breakpoint__md
+/* @tablet
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__md size
+  the $tablet size
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__md) {
+// -- Min Width @ $tablet
+@media #{$tablet} {
 
   // Whole
   .md-one-whole         { width: 100%; }
@@ -290,7 +292,7 @@
   .md-four-sixths       { width: (4/6)*100%; }
   .md-five-sixths       { width: (5/6)*100%; }
 
-  // Sevenths        
+  // Sevenths
   .md-one-seventh       { width: (1/7)*100%; }
   .md-two-sevenths      { width: (2/7)*100%; }
   .md-three-sevenths    { width: (3/7)*100%; }
@@ -332,7 +334,7 @@
   .md-nine-tenths       { width: 90%; }
 
 
-  // Elevenths       
+  // Elevenths
   .md-one-eleventh      { width: (1/11)*100%; }
   .md-two-elevenths     { width: (2/11)*100%; }
   .md-three-elevenths   { width: (3/11)*100%; }
@@ -364,15 +366,16 @@
 
 
 
-/* @breakpoint__lg
+/* @small-desktop
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $small-desktop size
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__lg) {
+// -- Min Width @ $small-desktop
+@media #{$small-desktop} {
 
   // Whole
   .lg-one-whole         { width: 100%; }
@@ -407,7 +410,7 @@
   .lg-four-sixths       { width: (4/6)*100%; }
   .lg-five-sixths       { width: (5/6)*100%; }
 
-  // Sevenths        
+  // Sevenths
   .lg-one-seventh       { width: (1/7)*100%; }
   .lg-two-sevenths      { width: (2/7)*100%; }
   .lg-three-sevenths    { width: (3/7)*100%; }
@@ -449,7 +452,7 @@
   .lg-nine-tenths       { width: 90%; }
 
 
-  // Elevenths       
+  // Elevenths
   .lg-one-eleventh      { width: (1/11)*100%; }
   .lg-two-elevenths     { width: (2/11)*100%; }
   .lg-three-elevenths   { width: (3/11)*100%; }
@@ -481,15 +484,16 @@
 
 
 
-/* @breakpoint__xl
+/* @desktop
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $desktop size
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__xl) {
+// -- Min Width @ $desktop
+@media #{$desktop} {
 
   // Whole
   .xl-one-whole         { width: 100%; }
@@ -524,7 +528,7 @@
   .xl-four-sixths       { width: (4/6)*100%; }
   .xl-five-sixths       { width: (5/6)*100%; }
 
-  // Sevenths        
+  // Sevenths
   .xl-one-seventh       { width: (1/7)*100%; }
   .xl-two-sevenths      { width: (2/7)*100%; }
   .xl-three-sevenths    { width: (3/7)*100%; }
@@ -566,7 +570,7 @@
   .xl-nine-tenths       { width: 90%; }
 
 
-  // Elevenths       
+  // Elevenths
   .xl-one-eleventh      { width: (1/11)*100%; }
   .xl-two-elevenths     { width: (2/11)*100%; }
   .xl-three-elevenths   { width: (3/11)*100%; }

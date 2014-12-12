@@ -1,0 +1,278 @@
+/**
+
+  @helpers
+---------------------------------------------------------
+  base/_helpers.scss
+--------------------------------------------------------
+
+  This partial is for global helper classes only! Don't
+  tamper with units or add items that can't be used as
+  utilized helper classes
+
+--------------------------------------------------------- */
+
+
+/* @float-helpers
+--------------------------------------------------------
+*/
+
+.float-left,
+%float-left {
+  float: left !important;
+}
+
+.float-right,
+%float-right {
+  float: right !important;
+}
+
+.float-none,
+%float-none {
+  float: none !important;
+}
+
+
+/*
+  @hide
+---------------------------------------------------------
+ */
+
+// The classic, display: none
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// Use this if you still need js access to this element
+// it's visually hidden but still in the DOM
+.is-visually-hidden {
+  position: absolute;
+  left: -9999%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+// Responsive hiders
+// -- Min Width @ $small-mobile
+@media #{$small-mobile} {
+  .hide__xs {
+    display: none;
+  }
+}
+
+// -- Min Width @ $mobile
+@media #{$mobile} {
+  .hide__sm {
+    display: none;
+  }
+}
+
+// -- Min Width @ $tablet
+@media #{$tablet} {
+  .hide__md {
+    display: none;
+  }
+}
+
+// -- Min Width @ $small-desktop
+@media #{$small-desktop} {
+  .hide__lg {
+    display: none;
+  }
+}
+
+// -- Min Width @ $desktop
+@media #{$desktop} {
+  .hide__xl {
+    display: none;
+  }
+}
+
+
+/* @border-helpers
+--------------------------------------------------------
+*/
+
+.border {
+  // Positions
+  &.top       { border-top-style: solid; }
+  &.right     { border-right-style: solid; }
+  &.bottom    { border-bottom-style: solid; }
+  &.left      { border-left-style: solid; }
+  &.all       { border-style: solid; }
+
+  // thicknesses
+  &.none      { border-width: u(rem(0)); }
+  &.xs        { border-width: u(rem(1)); }
+  &.sm        { border-width: u(rem(2)); }
+  &.md        { border-width: u(rem(3)); }
+  &.lg        { border-width: u(rem(4)); }
+  &.xl        { border-width: u(rem(5)); }
+
+  // Palettes
+  &.dark      { border-color: $color__black; }
+  &.medium    { border-color: $color__grey; }
+  &.light     { border-color: $color__grey--light; }
+  &.xlight    { border-color: $color__white; }
+}
+
+
+/* @bg-color
+--------------------------------------------------------
+*/
+
+.bg-color {
+  // Palettes
+  &.bg-dark   { background-color: $color__black; }
+  &.bg-medium { background-color: $color__grey; }
+  &.bg-light  { background-color: $color__grey--light; }
+  &.bg-xlight { background-color: $color__grey--light; }
+  &.bg-none   { background-color: transparent; }
+  &.bg-white  { background-color: $color__white; }
+}
+
+
+/* @padding-helpers
+--------------------------------------------------------
+*/
+
+.shim {
+  &.top {
+    &.none    { padding-top: 0em; }
+    &.xs      { padding-top: $unit/.95; }
+    &.sm      { padding-top: $unit/.85; }
+    &.md      { padding-top: $unit/.75; }
+    &.lg      { padding-top: $unit/.65; }
+    &.xl      { padding-top: $unit/.55; }
+    &.jumbo   { padding-top: $unit/.45; }
+  }
+
+  &.right {
+    &.none    { padding-right: 0em; }
+    &.xs      { padding-right: $unit/.95; }
+    &.sm      { padding-right: $unit/.85; }
+    &.md      { padding-right: $unit/.75; }
+    &.lg      { padding-right: $unit/.65; }
+    &.xl      { padding-right: $unit/.55; }
+    &.jumbo   { padding-right: $unit/.45; }
+  }
+
+  &.bottom {
+    &.none    { padding-bottom: 0em; }
+    &.xs      { padding-bottom: $unit/.95; }
+    &.sm      { padding-bottom: $unit/.85; }
+    &.md      { padding-bottom: $unit/.75; }
+    &.lg      { padding-bottom: $unit/.65; }
+    &.xl      { padding-bottom: $unit/.55; }
+    &.jumbo   { padding-bottom: $unit/.45; }
+  }
+
+  &.left {
+    &.none    { padding-left: 0em; }
+    &.xs      { padding-left: $unit/.95; }
+    &.sm      { padding-left: $unit/.85; }
+    &.md      { padding-left: $unit/.75; }
+    &.lg      { padding-left: $unit/.65; }
+    &.xl      { padding-left: $unit/.55; }
+    &.jumbo   { padding-left: $unit/.45; }
+  }
+
+  &.all {
+    &.none    { padding: 0em; }
+    &.xs      { padding: $unit/.95; }
+    &.sm      { padding: $unit/.85; }
+    &.md      { padding: $unit/.75; }
+    &.lg      { padding: $unit/.65; }
+    &.xl      { padding: $unit/.55; }
+    &.jumbo   { padding: $unit/.45; }
+  }
+}
+
+
+/* @margin-helpers
+--------------------------------------------------------
+*/
+
+.margin {
+  &.top {
+    &.none   { margin-top: 0em; }
+    &.xs     { margin-top: $unit/.95; }
+    &.sm     { margin-top: $unit/.85; }
+    &.md     { margin-top: $unit/.75; }
+    &.lg     { margin-top: $unit/.65; }
+    &.xl     { margin-top: $unit/.55; }
+    &.jumbo  { margin-top: $unit/.45; }
+  }
+
+  &.right {
+    &.none   { margin-right: 0em; }
+    &.xs     { margin-right: $unit/.95; }
+    &.sm     { margin-right: $unit/.85; }
+    &.md     { margin-right: $unit/.75; }
+    &.lg     { margin-right: $unit/.65; }
+    &.xl     { margin-right: $unit/.55; }
+    &.jumbo  { margin-right: $unit/.45; }
+  }
+
+  &.bottom {
+    &.none   { margin-bottom: 0em; }
+    &.xs     { margin-bottom: $unit/.95; }
+    &.sm     { margin-bottom: $unit/.85; }
+    &.md     { margin-bottom: $unit/.75; }
+    &.lg     { margin-bottom: $unit/.65; }
+    &.xl     { margin-bottom: $unit/.55; }
+    &.jumbo  { margin-bottom: $unit/.45; }
+  }
+
+  &.left {
+    &.none   { margin-left: 0em; }
+    &.xs     { margin-left: $unit/.95; }
+    &.sm     { margin-left: $unit/.85; }
+    &.md     { margin-left: $unit/.75; }
+    &.lg     { margin-left: $unit/.65; }
+    &.xl     { margin-left: $unit/.55; }
+    &.jumbo  { margin-left: $unit/.45; }
+  }
+}
+
+
+/* @push-pull-helpers
+--------------------------------------------------------
+*/
+
+.full-bleed {
+    margin-right:-$unit!important;
+    margin-left: -$unit!important;
+
+    .islet & {
+        margin-right:-($unit / 2)!important;
+        margin-left: -($unit / 2)!important;
+    }
+}
+
+
+/* @bg-color-helpers
+--------------------------------------------------------
+*/
+
+// Mute an object by reducing its opacity.
+
+.muted,
+%muted {
+    opacity:0.5!important;
+    filter:alpha(opacity = 50)!important;
+}
+
+
+/* @clearix
+--------------------------------------------------------
+*/
+
+.clearfix,
+%clearfix {
+  @include clearfix();
+}
+
+

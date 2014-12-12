@@ -40,6 +40,56 @@
 -----------------------------------------------------  */
 /**
 
+  @rem
+--------------------------------------------------------
+  base/_function-rem.scss
+--------------------------------------------------------
+
+// Usage: u(rem({number}))
+
+------------------------------------------------------ */
+/**
+ * Divides `$target` by default `$context`. Used in conjunction with {u} function
+ *
+ * @param {Target}   $target  - list to update
+ * @param {Context}  $context (16) - index to add
+ *
+ * @requires {u} u - used inside of u function
+ *
+ * @example scss
+ * // margin: u(rem($value))
+ *
+ * @return {$value rem | $value px}
+ */
+/**
+
+  @unit
+--------------------------------------------------------
+  base/_function-u.scss
+--------------------------------------------------------
+
+// Usage: u(rem({number}))
+
+------------------------------------------------------ */
+/**
+ * @see rem
+ * @see u
+*/
+/**
+ * Passes value and returns as pixel for IE stylesheet and rem for regular stylesheet. Used in conjunction with {rem} function
+ *
+ * @param {Values}  $values - Value to convert
+ * @param {Pixel Base}   $pixelBase (16)  - Base pixel value
+ *
+ * @requires {u} u - used inside of u function
+ *
+ * @example scss
+ * // margin: u(rem($value))
+ *
+ * @return {$value rem | $value px}
+ */
+/**
+
   @variables
 ---------------------------------------------------------
   base/_vars.scss
@@ -128,56 +178,6 @@ video {
 
 /**
 
-  @rem
---------------------------------------------------------
-  base/_function-rem.scss
---------------------------------------------------------
-
-// Usage: u(rem({number}))
-
------------------------------------------------------- */
-/**
- * Divides `$target` by default `$context`. Used in conjunction with {u} function
- *
- * @param {Target}   $target  - list to update
- * @param {Context}  $context (16) - index to add
- *
- * @requires {u} u - used inside of u function
- *
- * @example scss
- * // margin: u(rem($value))
- *
- * @return {$value rem | $value px}
- */
-/**
-
-  @unit
---------------------------------------------------------
-  base/_function-u.scss
---------------------------------------------------------
-
-// Usage: u(rem({number}))
-
------------------------------------------------------- */
-/**
- * @see rem
- * @see u
-*/
-/**
- * Passes value and returns as pixel for IE stylesheet and rem for regular stylesheet. Used in conjunction with {rem} function
- *
- * @param {Values}  $values - Value to convert
- * @param {Pixel Base}   $pixelBase (16)  - Base pixel value
- *
- * @requires {u} u - used inside of u function
- *
- * @example scss
- * // margin: u(rem($value))
- *
- * @return {$value rem | $value px}
- */
-/**
-
   @breakpoints mixin
 -----------------------------------------------------
   base/_mixin-breakpoints.scss
@@ -204,6 +204,126 @@ video {
   }
 
 -----------------------------------------------------  */
+/**
+
+  @fancy arrow
+--------------------------------------------------------
+  base/_mixin-arrows.scss
+--------------------------------------------------------
+
+// Usage: @include arrow("down", $color, $hover, u(rem(value)));
+
+------------------------------------------------------ */
+/**
+ * CSS arrows. 4 directions: left, down, right, and up
+ *
+ * @param {Direction}   $direction (down)  -  desired direction
+ * @param {Color}       $color (black)  -  desired color
+ * @param {Hover}       $hover (black)  -  desired hover state color
+ * @param {Size}        $size (u(rem(5)))  -  5px passed through rem function
+ *
+ * @example scss
+ * // @include arrow();
+ * // @include arrow('up', red, blue, u(rem(10)));
+ *
+ */
+/**
+
+  @burger menu
+--------------------------------------------------------
+  base/_mixin-burger.scss
+--------------------------------------------------------
+
+// Usage: @include burger();
+
+------------------------------------------------------ */
+/**
+ * CSS Menu Burger
+ *
+ * @param {Width}         $width (1.875em)  -  desired width
+ * @param {Height}        $height (.250em)  -  desired height
+ * @param {Gutter}        $hover (.250em)  -  desired gutter space
+ * @param {Color}         $color (#000)  -  desired color
+ * @param {Border Radius} $border-radius (.188em)  -  desired border radius
+ * @param {Transition}    $transiition-duration (.3s)  -  desired transition time
+ * @example scss
+ * // @include burger();
+ * // @include burger('3em', 1em, 1em, red, .2em, .1s);
+ *
+ */
+/**
+ * Select all parts of the burger
+ * @content Custom overrides of default mixin in mixin format
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-parts {
+ * //   color: black;
+ * // }
+ */
+/**
+ * Top part of the burger
+ * @content Custom overrides of default mixin in mixin format
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-top {
+ * //   color: black;
+ * // }
+ */
+/**
+ * Middle part of the burger
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-middle {
+ * //   color: black;
+ * // }
+ */
+/**
+ * Bottom part of the burger
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-bottom {
+ * //   color: black;
+ * // }
+ */
+/**
+ * Burger animations
+ * @access private
+ * @requires burger
+ * @example scss
+ * // @include burger-to-cross();
+ * // @include burger-to-cross(green);
+ */
+/**
+
+  @retina
+--------------------------------------------------------
+  base/_mixin-retina.scss
+--------------------------------------------------------
+
+------------------------------------------------------ */
+/**
+
+  @old-ie
+--------------------------------------------------------
+  base/_mixin-old-ie.scss
+--------------------------------------------------------
+
+@link http://geoffgraham.me/mobile-first-sass-for-internet-explorer/
+
+------------------------------------------------------ */
+/**
+ * IE legacy mixin - returns content to ie stylesheet only
+ *
+ * @example scss
+ * // @include old-ie {
+ * // 	filter:alpha(opacity=100);
+ * // }
+ *
+ */
 /**
 
   @clearfix mixin
@@ -283,6 +403,406 @@ video {
  See http://codepen.io/jeffschram/pen/IixqA
 
 ------------------------------------------------------ */
+/**
+
+  @helpers
+---------------------------------------------------------
+  base/_helpers.scss
+--------------------------------------------------------
+
+  This partial is for global helper classes only! Don't
+  tamper with units or add items that can't be used as
+  utilized helper classes
+
+--------------------------------------------------------- */
+/* @float-helpers
+--------------------------------------------------------
+*/
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+/*
+  @hide
+---------------------------------------------------------
+ */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.is-visually-hidden {
+  position: absolute;
+  left: -9999%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 320px) {
+  .hide__xs {
+    display: none;
+  }
+}
+@media only screen and (min-width: 550px) {
+  .hide__sm {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hide__md {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hide__lg {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1256px) {
+  .hide__xl {
+    display: none;
+  }
+}
+/* @border-helpers
+--------------------------------------------------------
+*/
+.border.top {
+  border-top-style: solid;
+}
+.border.right {
+  border-right-style: solid;
+}
+.border.bottom {
+  border-bottom-style: solid;
+}
+.border.left {
+  border-left-style: solid;
+}
+.border.all {
+  border-style: solid;
+}
+.border.none {
+  border-width: 0px;
+}
+.border.xs {
+  border-width: 1px;
+}
+.border.sm {
+  border-width: 2px;
+}
+.border.md {
+  border-width: 3px;
+}
+.border.lg {
+  border-width: 4px;
+}
+.border.xl {
+  border-width: 5px;
+}
+.border.dark {
+  border-color: #515554;
+}
+.border.medium {
+  border-color: #b0b3b3;
+}
+.border.light {
+  border-color: #cfd2d2;
+}
+.border.xlight {
+  border-color: white;
+}
+
+/* @bg-color
+--------------------------------------------------------
+*/
+.bg-color.bg-dark {
+  background-color: #515554;
+}
+.bg-color.bg-medium {
+  background-color: #b0b3b3;
+}
+.bg-color.bg-light {
+  background-color: #cfd2d2;
+}
+.bg-color.bg-xlight {
+  background-color: #cfd2d2;
+}
+.bg-color.bg-none {
+  background-color: transparent;
+}
+.bg-color.bg-white {
+  background-color: white;
+}
+
+/* @padding-helpers
+--------------------------------------------------------
+*/
+.shim.top.none {
+  padding-top: 0em;
+}
+.shim.top.xs {
+  padding-top: 1.18421em;
+}
+.shim.top.sm {
+  padding-top: 1.32353em;
+}
+.shim.top.md {
+  padding-top: 1.5em;
+}
+.shim.top.lg {
+  padding-top: 1.73077em;
+}
+.shim.top.xl {
+  padding-top: 2.04545em;
+}
+.shim.top.jumbo {
+  padding-top: 2.5em;
+}
+.shim.right.none {
+  padding-right: 0em;
+}
+.shim.right.xs {
+  padding-right: 1.18421em;
+}
+.shim.right.sm {
+  padding-right: 1.32353em;
+}
+.shim.right.md {
+  padding-right: 1.5em;
+}
+.shim.right.lg {
+  padding-right: 1.73077em;
+}
+.shim.right.xl {
+  padding-right: 2.04545em;
+}
+.shim.right.jumbo {
+  padding-right: 2.5em;
+}
+.shim.bottom.none {
+  padding-bottom: 0em;
+}
+.shim.bottom.xs {
+  padding-bottom: 1.18421em;
+}
+.shim.bottom.sm {
+  padding-bottom: 1.32353em;
+}
+.shim.bottom.md {
+  padding-bottom: 1.5em;
+}
+.shim.bottom.lg {
+  padding-bottom: 1.73077em;
+}
+.shim.bottom.xl {
+  padding-bottom: 2.04545em;
+}
+.shim.bottom.jumbo {
+  padding-bottom: 2.5em;
+}
+.shim.left.none {
+  padding-left: 0em;
+}
+.shim.left.xs {
+  padding-left: 1.18421em;
+}
+.shim.left.sm {
+  padding-left: 1.32353em;
+}
+.shim.left.md {
+  padding-left: 1.5em;
+}
+.shim.left.lg {
+  padding-left: 1.73077em;
+}
+.shim.left.xl {
+  padding-left: 2.04545em;
+}
+.shim.left.jumbo {
+  padding-left: 2.5em;
+}
+.shim.all.none {
+  padding: 0em;
+}
+.shim.all.xs {
+  padding: 1.18421em;
+}
+.shim.all.sm {
+  padding: 1.32353em;
+}
+.shim.all.md {
+  padding: 1.5em;
+}
+.shim.all.lg {
+  padding: 1.73077em;
+}
+.shim.all.xl {
+  padding: 2.04545em;
+}
+.shim.all.jumbo {
+  padding: 2.5em;
+}
+
+/* @margin-helpers
+--------------------------------------------------------
+*/
+.margin.top.none {
+  margin-top: 0em;
+}
+.margin.top.xs {
+  margin-top: 1.18421em;
+}
+.margin.top.sm {
+  margin-top: 1.32353em;
+}
+.margin.top.md {
+  margin-top: 1.5em;
+}
+.margin.top.lg {
+  margin-top: 1.73077em;
+}
+.margin.top.xl {
+  margin-top: 2.04545em;
+}
+.margin.top.jumbo {
+  margin-top: 2.5em;
+}
+.margin.right.none {
+  margin-right: 0em;
+}
+.margin.right.xs {
+  margin-right: 1.18421em;
+}
+.margin.right.sm {
+  margin-right: 1.32353em;
+}
+.margin.right.md {
+  margin-right: 1.5em;
+}
+.margin.right.lg {
+  margin-right: 1.73077em;
+}
+.margin.right.xl {
+  margin-right: 2.04545em;
+}
+.margin.right.jumbo {
+  margin-right: 2.5em;
+}
+.margin.bottom.none {
+  margin-bottom: 0em;
+}
+.margin.bottom.xs {
+  margin-bottom: 1.18421em;
+}
+.margin.bottom.sm {
+  margin-bottom: 1.32353em;
+}
+.margin.bottom.md {
+  margin-bottom: 1.5em;
+}
+.margin.bottom.lg {
+  margin-bottom: 1.73077em;
+}
+.margin.bottom.xl {
+  margin-bottom: 2.04545em;
+}
+.margin.bottom.jumbo {
+  margin-bottom: 2.5em;
+}
+.margin.left.none {
+  margin-left: 0em;
+}
+.margin.left.xs {
+  margin-left: 1.18421em;
+}
+.margin.left.sm {
+  margin-left: 1.32353em;
+}
+.margin.left.md {
+  margin-left: 1.5em;
+}
+.margin.left.lg {
+  margin-left: 1.73077em;
+}
+.margin.left.xl {
+  margin-left: 2.04545em;
+}
+.margin.left.jumbo {
+  margin-left: 2.5em;
+}
+
+/* @push-pull-helpers
+--------------------------------------------------------
+*/
+.full-bleed {
+  margin-right: -1.125em !important;
+  margin-left: -1.125em !important;
+}
+.islet .full-bleed {
+  margin-right: -0.5625em !important;
+  margin-left: -0.5625em !important;
+}
+
+/* @bg-color-helpers
+--------------------------------------------------------
+*/
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important;
+}
+
+/* @clearix
+--------------------------------------------------------
+*/
+.clearfix,
+.container,
+.grid-wrap,
+.gw,
+.grid,
+.g,
+.media,
+.site-header {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after,
+.container:before,
+.grid-wrap:before,
+.gw:before,
+.grid:before,
+.g:before,
+.media:before,
+.site-header:before,
+.container:after,
+.grid-wrap:after,
+.gw:after,
+.grid:after,
+.g:after,
+.media:after,
+.site-header:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.grid-wrap:after,
+.gw:after,
+.grid:after,
+.g:after,
+.media:after,
+.site-header:after {
+  clear: both;
+}
+
 /**
 
   @fonts
@@ -510,7 +1030,7 @@ button:focus, button:active {
   <a class="btn btn--large">Large button</a>
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(550))) {
+@media only screen and (min-width: 320px) {
   .btn--large {
     font-size: 1.25em;
     padding: 1.25em 2.75em;
@@ -1609,19 +2129,27 @@ em {
   </section>
 
 ------------------------------------------------------ */
+/**
+ * The $container__max-width var is used within the .container class and is applied to restrict the
+ * max-width of an element, usually a bit of content.
+ * Often, you will place a .container div within another
+ * element that has a background color. This gives you
+ * a full-bleed background, but the content is contained
+ * within the max-width.
+ *
+ * @example html
+ *   <section class="awesome-section-with-background-color">
+ *    <div class="container">
+ *       <p>Your content goes here... </p>
+ *    </div>
+ *   </section>
+ *
+ */
 .container {
-  zoom: 1;
   margin-left: auto;
   margin-right: auto;
   max-width: 64em;
   padding: 0 1.125em;
-}
-.container:before, .container:after {
-  content: " ";
-  display: table;
-}
-.container:after {
-  clear: both;
 }
 
 /**
@@ -1700,21 +2228,10 @@ em {
 ------------------------------------------------------ */
 .grid-wrap,
 .gw {
-  zoom: 1;
   display: block;
   list-style-type: none;
 }
-.grid-wrap:before, .grid-wrap:after,
-.gw:before,
-.gw:after {
-  content: " ";
-  display: table;
-}
-.grid-wrap:after,
-.gw:after {
-  clear: both;
-}
-@media screen and (min-width: u(rem(320))) {
+@media only screen and (min-width: 320px) {
   .grid-wrap,
   .gw {
     margin: 0 -0.28125em;
@@ -1723,27 +2240,16 @@ em {
 
 .grid,
 .g {
-  zoom: 1;
   min-height: 1rem;
   position: relative;
   padding-bottom: 1.125em;
   width: 100%;
 }
-.grid:before, .grid:after,
-.g:before,
-.g:after {
-  content: " ";
-  display: table;
-}
-.grid:after,
-.g:after {
-  clear: both;
-}
 .grid:last-of-type,
 .g:last-of-type {
   padding-bottom: 0;
 }
-@media screen and (min-width: u(rem(320))) {
+@media only screen and (min-width: 320px) {
   .grid,
   .g {
     padding: 0 0.28125em 0.84375em;
@@ -1751,55 +2257,6 @@ em {
   }
 }
 
-/**
-
-  @hide
----------------------------------------------------------
-  layout/_hide.scss
---------------------------------------------------------
-
-  Utility state classes to hide things in different ways
-
---------------------------------------------------------- */
-.is-hidden {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-.is-visually-hidden {
-  position: absolute;
-  left: -9999%;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-}
-
-@media screen and (min-width: u(rem(320))) {
-  .hide__xs {
-    display: none;
-  }
-}
-@media screen and (min-width: u(rem(550))) {
-  .hide__sm {
-    display: none;
-  }
-}
-@media screen and (min-width: u(rem(768))) {
-  .hide__md {
-    display: none;
-  }
-}
-@media screen and (min-width: u(rem(1024))) {
-  .hide__lg {
-    display: none;
-  }
-}
-@media screen and (min-width: u(rem(1256))) {
-  .hide__xl {
-    display: none;
-  }
-}
 /**
 
   @media
@@ -1845,15 +2302,7 @@ em {
 ---------------------------------------------------------  */
 .media {
   display: block;
-  zoom: 1;
   margin-bottom: 1em;
-}
-.media:before, .media:after {
-  content: " ";
-  display: table;
-}
-.media:after {
-  clear: both;
 }
 
 .media__left {
@@ -1987,14 +2436,14 @@ em {
   width: 8.333333333%;
 }
 
-/* @breakpoint__xs
+/* @small-mobile
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__xs size
+  the $small-mobile
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(320))) {
+@media only screen and (min-width: 320px) {
   .xs-two-up > * {
     width: 50%;
   }
@@ -2039,14 +2488,14 @@ em {
     width: 8.333333333%;
   }
 }
-/* @breakpoint__sm
+/* @mobile
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__sm size
+  the $mobile
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(550))) {
+@media only screen and (min-width: 550px) {
   .sm-two-up > * {
     width: 50%;
   }
@@ -2091,14 +2540,14 @@ em {
     width: 8.333333333%;
   }
 }
-/* @breakpoint__md
+/* @tablet
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__md size
+  the $tablet
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(768))) {
+@media only screen and (min-width: 768px) {
   .md-two-up > * {
     width: 50%;
   }
@@ -2143,14 +2592,14 @@ em {
     width: 8.333333333%;
   }
 }
-/* @breakpoint__lg
+/* @small-desktop
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $small-desktop
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(1024))) {
+@media only screen and (min-width: 1024px) {
   .lg-two-up > * {
     width: 50%;
   }
@@ -2195,14 +2644,14 @@ em {
     width: 8.333333333%;
   }
 }
-/* @breakpoint__xl
+/* @desktop
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__xl size
+  the $desktop
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(1256))) {
+@media only screen and (min-width: 1256px) {
   .xl-two-up > * {
     width: 50%;
   }
@@ -2537,14 +2986,14 @@ em {
   width: 91.66667%;
 }
 
-/* @breakpoint__sm
+/* @small-mobile
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__sm size
+  the $small-mobile size
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(550))) {
+@media only screen and (min-width: 320px) {
   .sm-one-whole {
     width: 100%;
   }
@@ -2813,14 +3262,14 @@ em {
     width: 91.66667%;
   }
 }
-/* @breakpoint__md
+/* @tablet
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__md size
+  the $tablet size
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(768))) {
+@media only screen and (min-width: 768px) {
   .md-one-whole {
     width: 100%;
   }
@@ -3089,14 +3538,14 @@ em {
     width: 91.66667%;
   }
 }
-/* @breakpoint__lg
+/* @small-desktop
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $small-desktop size
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(1024))) {
+@media only screen and (min-width: 1024px) {
   .lg-one-whole {
     width: 100%;
   }
@@ -3365,14 +3814,14 @@ em {
     width: 91.66667%;
   }
 }
-/* @breakpoint__xl
+/* @desktop
 --------------------------------------------------------
 
   Sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $desktop size
 
 ------------------------------------------------------ */
-@media screen and (min-width: u(rem(1256))) {
+@media only screen and (min-width: 1256px) {
   .xl-one-whole {
     width: 100%;
   }
@@ -3681,16 +4130,8 @@ em {
 
 ------------------------------------------------------ */
 .site-header {
-  zoom: 1;
   padding: 1.125em 0;
   border-bottom: 1px solid #cfd2d2;
-}
-.site-header:before, .site-header:after {
-  content: " ";
-  display: table;
-}
-.site-header:after {
-  clear: both;
 }
 
 /* @branding
@@ -3711,7 +4152,7 @@ em {
   display: block;
   text-align: center;
 }
-@media screen and (min-width: u(rem(768))) {
+@media only screen and (min-width: 768px) {
   .branding {
     margin: 0;
     float: left;
@@ -3723,7 +4164,7 @@ em {
   height: 3.375em;
   width: 3.375em;
 }
-@media screen and (min-width: u(rem(768))) {
+@media only screen and (min-width: 768px) {
   .branding__logo {
     float: left;
     margin-right: 1.125em;
@@ -3748,7 +4189,7 @@ em {
 .site-nav {
   text-align: center;
 }
-@media screen and (min-width: u(rem(768))) {
+@media only screen and (min-width: 768px) {
   .site-nav {
     float: right;
   }
@@ -3805,7 +4246,7 @@ em {
   modules/_pages.scss
 --------------------------------------------------------
 
-  Pages contain content and can have styled headers
+  Pages contain specific content and can have styled headers
   and footers if you choose.
 
 -----------------------------------------------------  */
@@ -4023,17 +4464,157 @@ em {
   transform: translateY(-50%);
   font-size: .75em;
 }
-@media screen and (min-width: u(rem(550))) {
+@media only screen and (min-width: 550px) {
   .hero__main {
     font-size: 1em;
   }
 }
-@media screen and (min-width: u(rem(1024))) {
-  .hero__main {
-    font-size: 1.25em;
-  }
+
+/**
+
+  @tabs
+--------------------------------------------------------
+  modules/_tabs.scss
+--------------------------------------------------------
+
+  Tab styled navigation. If using JS make sure to place
+  states at the bottom
+
+  Example: Tabs
+  <div class="tab">
+
+  </div>
+------------------------------------------------------ */
+/**
+
+  @heroes
+--------------------------------------------------------
+  modules/_tooltips.scss
+--------------------------------------------------------
+
+  Just your everyday, normal hero.  Contains a div that has
+  the media (video or image) in the background, and a div
+  for the main content.
+
+  Example: tooltip
+  <ul>
+  <li class="tooltip" data-tooltip="Top Text" data-placement="top" data-trigger="hover">Top Tooltip</li>
+  <li class="tooltip" data-tooltip="Bottom Text" data-placement="bottom" data-trigger="hover">Bottom Tooltip</li>
+  <li class="tooltip" data-tooltip="Left Text" data-placement="left" data-trigger="hover">Left Tooltip</li>
+  <li class="tooltip" data-tooltip="Right Text" data-placement="right" data-trigger="hover">Right Tooltip</li>
+  </ul>
+
+
+------------------------------------------------------ */
+.tooltip, [role="tooltip"] {
+  outline: none;
+  position: relative;
+}
+.tooltip:after, .tooltip:before, [role="tooltip"]:after, [role="tooltip"]:before {
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  text-decoration: none;
+  transition: opacity .3s linear 0s;
+  visibility: hidden;
+  font-size: 12px;
+}
+.tooltip:after, [role="tooltip"]:after {
+  content: attr(data-tooltip);
+  padding: 6px;
+  background-color: #515554;
+  color: white;
+  white-space: nowrap;
+}
+.tooltip[data-trigger="hover"]:hover:before, .tooltip[data-trigger="hover"]:hover:after, .tooltip[data-trigger="focus"]:focus:before, .tooltip[data-trigger="focus"]:focus:after, [role="tooltip"][data-trigger="hover"]:hover:before, [role="tooltip"][data-trigger="hover"]:hover:after, [role="tooltip"][data-trigger="focus"]:focus:before, [role="tooltip"][data-trigger="focus"]:focus:after {
+  opacity: 1;
+  transition: opacity .3s linear 0s;
+  visibility: visible;
+  z-index: 2;
+}
+.tooltip[data-placement="top"]:after, .tooltip[data-placement="top"]:before, [role="tooltip"][data-placement="top"]:after, [role="tooltip"][data-placement="top"]:before {
+  bottom: 100%;
+}
+.tooltip[data-placement="top"]:after, [role="tooltip"][data-placement="top"]:after {
+  border-radius: 4px;
+  left: 50%;
+  margin: 0 0 14px 0;
+  transform: translate(50%);
+}
+.tooltip[data-placement="top"]:before, [role="tooltip"][data-placement="top"]:before {
+  content: "";
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid #515554;
+  left: 50%;
+  margin: 0 0 7px 0;
+  transform: translate(50%);
+}
+.tooltip[data-placement="right"]:after, .tooltip[data-placement="right"]:before, [role="tooltip"][data-placement="right"]:after, [role="tooltip"][data-placement="right"]:before {
+  left: 100%;
+}
+.tooltip[data-placement="right"]:after, [role="tooltip"][data-placement="right"]:after {
+  border-radius: 4px;
+  margin: 0 0 0 14px;
+  top: 50%;
+  transform: translate(50%);
+}
+.tooltip[data-placement="right"]:before, [role="tooltip"][data-placement="right"]:before {
+  content: "";
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #515554;
+  margin: 0 0 0 7px;
+  top: 50%;
+  transform: translate(50%);
+}
+.tooltip[data-placement="bottom"]:after, .tooltip[data-placement="bottom"]:before, [role="tooltip"][data-placement="bottom"]:after, [role="tooltip"][data-placement="bottom"]:before {
+  top: 100%;
+}
+.tooltip[data-placement="bottom"]:after, [role="tooltip"][data-placement="bottom"]:after {
+  border-radius: 4px;
+  left: 50%;
+  margin: 15px 0 0 0;
+  transform: translate(50%);
+}
+.tooltip[data-placement="bottom"]:before, [role="tooltip"][data-placement="bottom"]:before {
+  content: "";
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid #515554;
+  left: 50%;
+  margin: 8px 0 0 0;
+  transform: translate(50%);
+}
+.tooltip[data-placement="left"]:after, .tooltip[data-placement="left"]:before, [role="tooltip"][data-placement="left"]:after, [role="tooltip"][data-placement="left"]:before {
+  right: 100%;
+}
+.tooltip[data-placement="left"]:after, [role="tooltip"][data-placement="left"]:after {
+  border-radius: 4px;
+  margin: 0 15px 0 0;
+  top: 50%;
+  transform: translate(50%);
+}
+.tooltip[data-placement="left"]:before, [role="tooltip"][data-placement="left"]:before {
+  content: "";
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #515554;
+  margin: 0 7px 0 0;
+  top: 50%;
+  transform: translate(50%);
 }
 
+/**
+
+  @post
+--------------------------------------------------------
+  modules/_post.scss
+--------------------------------------------------------
+
+  Blog Post styling - .post being the class that wraps around each article item
+
+-----------------------------------------------------  */
 /**
 
   @modals

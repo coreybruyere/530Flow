@@ -39,14 +39,14 @@ $pixelBase : 16;
 
       @each $value in $values {
 
-            $unit : unit($value);
+            $val-unit : unit($value);
             $val  : parseInt($value);
 
-            @if ($px-only) or ($dev-mode) and ($unit == 'rem') {
+            @if ($px-only) or ($dev-mode) and ($val-unit == 'rem') {
                   $list: append($list, ($val * $pixelBase) + px);
             }
 
-            @else if($unit == 'px') or ($unit == 'rem'){
+            @else if($val-unit == 'px') or ($val-unit == 'rem'){
                   $list: append($list, $value);
             }
 

@@ -91,6 +91,9 @@ If you don’t need to add presentation and behaviour to your web documents, the
 * An example would be a navigation drop down, or a message that displays a success or error state.
 * State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
 * When state rules are added to specific modules, the module name should be included in the classname and prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
+* States should be placed at the bottom of the partial thats being changed
+* Make sure to document each state
+* States can use `!importants` if absolutely necessary
 
 #### JS
 Use ID's for JS on unique selectors and classes on repeated elements. Prefix all JS hooks with 'js-').

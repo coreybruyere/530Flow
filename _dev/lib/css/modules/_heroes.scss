@@ -40,10 +40,8 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: .75em;
-  @include bp-at-least($breakpoint__sm) {
+  // -- Min Width @ $mobile
+  @media #{$mobile} {
     font-size: 1em;
-  }
-  @include bp-at-least($breakpoint__lg) {
-    font-size: 1.25em;
   }
 }

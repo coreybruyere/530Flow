@@ -98,7 +98,7 @@
 }
 
 // Eight up
-.eight-up > *{
+.eight-up > * {
   width: 12.5%;
 }
 
@@ -113,7 +113,7 @@
 }
 
 // Eleven up
-.eleven-up > *{
+.eleven-up > * {
  width: 9.090909091%;
 }
 
@@ -126,15 +126,16 @@
 
 
 
-/* @breakpoint__xs
+/* @small-mobile
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__xs size
+  the $small-mobile
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__xs) {
+// -- Min Width @ $small-mobile
+@media #{$small-mobile} {
 
   // Two up
   .xs-two-up > * {
@@ -172,7 +173,7 @@
   }
 
   // Nine up
-  .xs-nine-up > *{
+  .xs-nine-up > * {
     width: 11.111111111%;
   }
 
@@ -182,7 +183,7 @@
   }
 
   // Eleven up
-  .xs-eleven-up > *{
+  .xs-eleven-up > * {
    width: 9.090909091%;
   }
 
@@ -197,15 +198,17 @@
 
 
 
-/* @breakpoint__sm
+/* @mobile
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__sm size
+  the $mobile
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__sm) {
+// -- Min Width @ $mobile
+@media #{$mobile} {
+
 
   // Two up
   .sm-two-up > * {
@@ -238,7 +241,7 @@
   }
 
   // Eight up
-  .sm-eight-up > *{
+  .sm-eight-up > * {
     width: 12.5%;
   }
 
@@ -253,7 +256,7 @@
   }
 
   // Eleven up
-  .sm-eleven-up > *{
+  .sm-eleven-up > * {
    width: 9.090909091%;
   }
 
@@ -268,15 +271,16 @@
 
 
 
-/* @breakpoint__md
+/* @tablet
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__md size
+  the $tablet
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__md) {
+// -- Min Width @ $tablet
+@media #{$tablet} {
 
   // Two up
   .md-two-up > * {
@@ -309,12 +313,12 @@
   }
 
   // Eight up
-  .md-eight-up > *{
+  .md-eight-up > * {
     width: 12.5%;
   }
 
   // Nine up
-  .md-nine-up > *{
+  .md-nine-up > * {
     width: 11.111111111%;
   }
 
@@ -324,7 +328,7 @@
   }
 
   // Eleven up
-  .md-eleven-up > *{
+  .md-eleven-up > * {
    width: 9.090909091%;
   }
 
@@ -339,15 +343,16 @@
 
 
 
-/* @breakpoint__lg
+/* @small-desktop
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__lg size
+  the $small-desktop
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__lg) {
+// -- Min Width @ $small-desktop
+@media #{$small-desktop} {
 
   // Two up
   .lg-two-up > * {
@@ -380,12 +385,12 @@
   }
 
   // Eight up
-  .lg-eight-up > *{
+  .lg-eight-up > * {
     width: 12.5%;
   }
 
   // Nine up
-  .lg-nine-up > *{
+  .lg-nine-up > * {
     width: 11.111111111%;
   }
 
@@ -395,7 +400,7 @@
   }
 
   // Eleven up
-  .lg-eleven-up > *{
+  .lg-eleven-up > * {
    width: 9.090909091%;
   }
 
@@ -410,15 +415,16 @@
 
 
 
-/* @breakpoint__xl
+/* @desktop
 --------------------------------------------------------
 
   Up sizes that are applied if viewport is at least at
-  the $breakpoint__xl size
+  the $desktop
 
 ------------------------------------------------------ */
 
-@include bp-at-least($breakpoint__xl) {
+// -- Min Width @ $desktop
+@media #{$desktop} {
 
   // Two up
   .xl-two-up > * {
@@ -451,12 +457,12 @@
   }
 
   // Eight up
-  .xl-eight-up > *{
+  .xl-eight-up > * {
     width: 12.5%;
   }
 
   // Nine up
-  .xl-nine-up > *{
+  .xl-nine-up > * {
     width: 11.111111111%;
   }
 
@@ -466,7 +472,7 @@
   }
 
   // Eleven up
-  .xl-eleven-up > *{
+  .xl-eleven-up > * {
    width: 9.090909091%;
   }
 

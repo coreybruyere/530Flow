@@ -88,7 +88,8 @@ button {
 ------------------------------------------------------ */
 
 .btn--large {
-  @include bp-at-least($breakpoint__sm) {
+  // -- Min Width @ $small-mobile
+  @media #{$small-mobile} {
     font-size: 1.25em;
     padding: 1.25em 2.75em;
   }

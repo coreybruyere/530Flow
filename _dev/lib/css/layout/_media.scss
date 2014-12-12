@@ -45,9 +45,9 @@
 ---------------------------------------------------------  */
 
 // The main media object
-.media{
+.media {
+  @extend %clearfix;
   display: block;
-  @include clearfix();
   margin-bottom: 1em;  // you might end up changing this, either globally or per module
 }
 
@@ -79,3 +79,5 @@
 .media__body > :last-child {
   margin-bottom: 0;
 }
+
+
