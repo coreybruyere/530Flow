@@ -1,7 +1,7 @@
-## 530's Starter Workflow : HTML, SCSS, WP
+# 530's Starter Workflow : HTML, SCSS, WP
 
 
-### Introduction
+## Introduction
 
 530's modified version of Skyline helps you create a design system for your website.  It encourages a well thought-out CSS architecture, and enables you to develop a reusable and maintainable codebase.
 
@@ -15,7 +15,7 @@ You can reference the example files or documentation to clarify proper BEM/SCSS,
 
 An HTML file is also provided in `lib/css/sass-docs/` that documents all SCSS variable, function, and mixin usage. Please document any additional mixins added using the same format.
 
-### Guidelines
+## Guidelines
 
 #### CSS / SCSS
 This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, and maintainable codebase.
@@ -29,69 +29,69 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 
 ###### General Styling
 
-    * **DO NOT** using ID's.  Use classes instead
-    * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
-    * **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
-    * All CSS class names should use BEM syntax with double underscore and double dash
-    * Use one discrete, comma separated selector per line in multi-selector rulesets
-    * Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
-    * List @extend(s) first
-    * List "regular" styles next
-    * List @include(s) next
-    * Nest all pseduo-classes directly beneath base properties and values
-    * Media queries belong right after pseudo-classes
-    * List any class modifiers after all module children
-    * Modules are named _{module}.scss
-    * Be generous with comments & use same comment block style `// -- Comment Text`
-    * Variablize all colors, numbers, etc.
-    * Use provided `rem` function
-    * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
-    * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
+* **DO NOT** using ID's.  Use classes instead
+* **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
+* **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
+* All CSS class names should use BEM syntax with double underscore and double dash
+* Use one discrete, comma separated selector per line in multi-selector rulesets
+* Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
+* List @extend(s) first
+* List "regular" styles next
+* List @include(s) next
+* Nest all pseduo-classes directly beneath base properties and values
+* Media queries belong right after pseudo-classes
+* List any class modifiers after all module children
+* Modules are named _{module}.scss
+* Be generous with comments & use same comment block style `// -- Comment Text`
+* Variablize all colors, numbers, etc.
+* Use provided `rem` function
+* Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
+* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
-* ###### SCSS Example
-    ```css
-        .module {
-            @extend %clearfix;
-            margin-top: u(rem(10));
-            color: red;
-            @include mixin;
+###### SCSS Example
+```css
+    .module {
+        @extend %clearfix;
+        margin-top: u(rem(10));
+        color: red;
+        @include mixin;
 
-            /* -- Min Width @ $tablet */
-            @include min-breakpoint($tablet) {
-                margin-top: u(rem(10)) u(rem(20));
-            }
-
-        .module__item {
-            display: inline-block;
+        /* -- Min Width @ $tablet */
+        @include min-breakpoint($tablet) {
+            margin-top: u(rem(10)) u(rem(20));
         }
 
-        .module--alt {
-            @extend .module;
-            color: green;
-        }
-    ```
-    ** Class names are named using adjectives and nouns.
+    .module__item {
+        display: inline-block;
+    }
 
-    ```css
-        /* -- Block Noun */
-        .person {}
+    .module--alt {
+        @extend .module;
+        color: green;
+    }
+```
+** Class names are named using adjectives and nouns.
 
-        /* -- Element Noun__Noun */
-        .person__hand{}
+```css
+    /* -- Block Noun */
+    .person {}
 
-        /* -- Modifier Noun_Noun--Adjective */
-        .person__hand--left{}
-    ```
+    /* -- Element Noun__Noun */
+    .person__hand{}
 
-* ###### States
-    * States are styles that override all other styles.  Usually via javascript.
-    * States are generally applied to the same element as a layout rule, or to the same element as a base module.
-    * An example would be a navigation drop down, or a message that displays a success or error state.
-    * State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
-    * When state rules are added to specific modules, the module name should be included in the classname and   prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
-    * States should be placed at the bottom of the partial thats being changed
-    * Make sure to document each state
-    * States can use `!importants` if absolutely necessary
+    /* -- Modifier Noun_Noun--Adjective */
+    .person__hand--left{}
+```
+
+###### States
+* States are styles that override all other styles.  Usually via javascript.
+* States are generally applied to the same element as a layout rule, or to the same element as a base module.
+* An example would be a navigation drop down, or a message that displays a success or error state.
+* State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
+* When state rules are added to specific modules, the module name should be included in the classname and   prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
+* States should be placed at the bottom of the partial thats being changed
+* Make sure to document each state
+* States can use `!importants` if absolutely necessary
 
 #### JS
 Use ID's for JS on unique selectors and classes on repeated elements. Prefix all JS hooks with 'js-').
@@ -112,7 +112,7 @@ Throw this snippet in your Emmet Sublime User Settings to enable some quick keyb
 }
 ```
 
-### Starter Files
+## Starter Files
 The starter files contain as little code as possible.  The structure consists of:
 
 ```
@@ -157,10 +157,10 @@ The starter files contain as little code as possible.  The structure consists of
 
 ```
 
-### Usage
+## Usage
 run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`
 
 
-### Documentation
+## Documentation
 Extensive docs are in the works, but not yet released. However, Skyline makes it easy by adding detailed documentation in the comments of the scss partials themselves. Descriptions are right next to the actual code, making it simple to learn how it works.
 
