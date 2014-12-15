@@ -9,7 +9,7 @@ This starter kit includes the style files you will use on your site. In most cas
 
 530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `_dev` directory.
 
-Use the `index.html` file as a starting point for static development then prefix the rest of your pages with `page-`. ``**example:** page-about.html`
+Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'. `**example:** page-about.html`
 
 You can reference the example files or documentation to clarify proper BEM/SCSS, JS hooks, and Grid/Layout usage.
 
@@ -18,37 +18,35 @@ An HTML file is also provided in `lib/css/sass-docs/` that documents all SCSS va
 ### Guidelines
 
 #### CSS / SCSS
-This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, understandable codebase.
+This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, and maintainable codebase.
 
 The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory
 
-**Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components.
+**Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML
 
-**Class names impart little or no useful semantic information to** machines or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
+**Class names impart little or no useful semantic information to machines** or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 
-If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML
 
-###### General Styling
+* ###### General Styling
 
-* DON'T using ID's.  Use classes instead
-* All CSS class names should use BEM syntax with double underscore and double dash
-* DO NOT over-qualify selectors.  Keep specificity number as low as possible
-* Use one discrete, comma separated selector per line in multi-selector rulesets
-* Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
-* List @extend(s) first
-* List "regular" styles next
-* List @include(s) next
-* Nest all pseduo-classes directly beneath base properties and values
-* Media queries belong right after pseudo-classes
-* Nest tags beaneath if absolutely necessary, but try to refrain from that
-* List any class modifiers after all module children
-* Modules are named _{module}.scss
-* Be generous with comments & use same comment block style => "// -- Comment Text"
-* Variablize all colors, numbers, etc.
-* Use rem function
-* Do not NEST! (with the exception of pseudo/hover states and module modifier and child classes).
-* Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
-* If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
+    * **DO NOT** using ID's.  Use classes instead
+    * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
+    * **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
+    * All CSS class names should use BEM syntax with double underscore and double dash
+    * Use one discrete, comma separated selector per line in multi-selector rulesets
+    * Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
+    * List @extend(s) first
+    * List "regular" styles next
+    * List @include(s) next
+    * Nest all pseduo-classes directly beneath base properties and values
+    * Media queries belong right after pseudo-classes
+    * List any class modifiers after all module children
+    * Modules are named _{module}.scss
+    * Be generous with comments & use same comment block style `// -- Comment Text`
+    * Variablize all colors, numbers, etc.
+    * Use provided `rem` function
+    * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
+    * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
 ###### SCSS Example
 ```css
