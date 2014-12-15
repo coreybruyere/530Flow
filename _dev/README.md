@@ -27,7 +27,7 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 **Class names impart little or no useful semantic information to machines** or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 
 
-* ###### General Styling
+###### General Styling
 
     * **DO NOT** using ID's.  Use classes instead
     * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
