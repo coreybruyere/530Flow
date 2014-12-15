@@ -1,4 +1,4 @@
-## 530's Skyline Starter HTML and SCSS
+## 530's Starter Workflow : HTML, SCSS, WP
 
 
 ### Introduction
@@ -7,7 +7,7 @@
 
 This starter kit includes the style files you will use on your site. In most cases, you will copy the contents of the `css` folder into your own project. Each SCSS partial is self-documented and includes markup examples in the comments. Whenever a new partial is added make sure to use the same documentation style to keep the project consistent. The kit also contains HTML files as examples to illustrate how you will write out your markup.
 
-530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `_dev` directory.
+530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` when working in the `_dev` directory.
 
 Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'. `**example:** page-about.html`
 
@@ -48,50 +48,50 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
     * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
     * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
-###### SCSS Example
-```css
-    .module {
-        @extend %clearfix;
-        margin-top: u(rem(10));
-        color: red;
-        @include mixin;
+* ###### SCSS Example
+    ```css
+        .module {
+            @extend %clearfix;
+            margin-top: u(rem(10));
+            color: red;
+            @include mixin;
 
-        /* -- Min Width @ $tablet */
-        @include min-breakpoint($tablet) {
-            margin-top: u(rem(10)) u(rem(20));
+            /* -- Min Width @ $tablet */
+            @include min-breakpoint($tablet) {
+                margin-top: u(rem(10)) u(rem(20));
+            }
+
+        .module__item {
+            display: inline-block;
         }
 
-    .module__item {
-        display: inline-block;
-    }
+        .module--alt {
+            @extend .module;
+            color: green;
+        }
+    ```
+    ** Class names are named using adjectives and nouns.
 
-    .module--alt {
-        @extend .module;
-        color: green;
-    }
-```
-** Class names are named using adjectives and nouns.
+    ```css
+        /* -- Block Noun */
+        .person {}
 
-```css
-    /* -- Block Noun */
-    .person {}
+        /* -- Element Noun__Noun */
+        .person__hand{}
 
-    /* -- Element Noun__Noun */
-    .person__hand{}
+        /* -- Modifier Noun_Noun--Adjective */
+        .person__hand--left{}
+    ```
 
-    /* -- Modifier Noun_Noun--Adjective */
-    .person__hand--left{}
-```
-
-###### States
-* States are styles that override all other styles.  Usually via javascript.
-* States are generally applied to the same element as a layout rule, or to the same element as a base module.
-* An example would be a navigation drop down, or a message that displays a success or error state.
-* State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
-* When state rules are added to specific modules, the module name should be included in the classname and prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
-* States should be placed at the bottom of the partial thats being changed
-* Make sure to document each state
-* States can use `!importants` if absolutely necessary
+* ###### States
+    * States are styles that override all other styles.  Usually via javascript.
+    * States are generally applied to the same element as a layout rule, or to the same element as a base module.
+    * An example would be a navigation drop down, or a message that displays a success or error state.
+    * State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
+    * When state rules are added to specific modules, the module name should be included in the classname and   prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
+    * States should be placed at the bottom of the partial thats being changed
+    * Make sure to document each state
+    * States can use `!importants` if absolutely necessary
 
 #### JS
 Use ID's for JS on unique selectors and classes on repeated elements. Prefix all JS hooks with 'js-').
