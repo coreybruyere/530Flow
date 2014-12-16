@@ -9,15 +9,31 @@
 
 ------------------------------------------------------ */
 
-
 .site-footer {
   padding: 1*$unit 0;
   border-top: 1px solid $color__grey--light;
 }
 
 
-// Credits
-.site-credits {
-  display: block;
-  clear: both;
+
+
+
+
+/*
+
+  @site-nav-footer
+--------------------------------------------------------
+
+  The main footer navigation
+
+-----------------------------------------------------  */
+
+.site-nav--footer {
+  @extend %site-nav;
 }
+
+.site-nav--footer__link {
+  @extend %site-nav-link;
+}
+
+

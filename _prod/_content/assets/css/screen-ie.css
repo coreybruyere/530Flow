@@ -4188,22 +4188,23 @@ em {
   The main site navigation.
 
 -----------------------------------------------------  */
-.site-nav {
+.site-nav, .site-nav--footer {
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
-  .site-nav {
+  .site-nav, .site-nav--footer {
     float: right;
   }
 }
-.site-nav a {
+
+.site-nav__link, .site-nav--footer__link {
   display: inline-block;
   height: 3.375em;
   line-height: 3.375em;
   padding: 0 .5em;
   margin-left: 0.5625em;
 }
-.site-nav a:first-child {
+.site-nav__link:first-child, .site-nav--footer__link:first-child {
   margin-left: 0;
 }
 
@@ -4231,6 +4232,14 @@ em {
   The site's global footer
 
 ------------------------------------------------------ */
+/*
+
+  @site-nav-footer
+--------------------------------------------------------
+
+  The main footer navigation
+
+-----------------------------------------------------  */
 .site-footer {
   padding: 1.125em 0;
   border-top: 1px solid #cfd2d2;

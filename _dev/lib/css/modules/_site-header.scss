@@ -12,7 +12,7 @@
 .site-header {
   @extend %clearfix;
   padding: 1*$unit 0;
-  border-bottom: 1px solid $color__grey--light;
+  border-bottom: u(rem(1)) solid $color__grey--light;
 }
 
 
@@ -75,21 +75,30 @@
 
 -----------------------------------------------------  */
 
-.site-nav {
+// Site nav placeholders - extended to header and footer nav
+%site-nav {
   text-align: center;
   // -- Min Width @ $tablet
   @media #{$tablet} {
     float: right;
   }
-  a {
-    display: inline-block;
-    height: 3*$unit;
-    line-height: 3*$unit;
-    padding: 0 .5em;
-    margin-left: .5*$unit;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+}
 
+%site-nav-link {
+  display: inline-block;
+  height: 3*$unit;
+  line-height: 3*$unit;
+  padding: 0 .5em;
+  margin-left: .5*$unit;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.site-nav {
+  @extend %site-nav;
+}
+
+.site-nav__link {
+  @extend %site-nav-link;
 }
