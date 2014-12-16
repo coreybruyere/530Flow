@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****
 
   MAIN STYLESHEET for 530 Sites
@@ -957,6 +958,41 @@ body {
   color: #515554;
   background: white;
 }
+@media (min-width: 20em) {
+  body {
+    font-size: 80%;
+  }
+}
+@media (min-width: 30em) {
+  body {
+    font-size: 83.33333%;
+  }
+}
+@media (min-width: 40em) {
+  body {
+    font-size: 86.66667%;
+  }
+}
+@media (min-width: 50em) {
+  body {
+    font-size: 90%;
+  }
+}
+@media (min-width: 60em) {
+  body {
+    font-size: 93.33333%;
+  }
+}
+@media (min-width: 70em) {
+  body {
+    font-size: 96.66667%;
+  }
+}
+@media (min-width: 80em) {
+  body {
+    font-size: 100%;
+  }
+}
 
 /**
 
@@ -988,9 +1024,6 @@ button:focus, button:active {
 }
 
 .btn {
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: inline-block;
   background: #515554;
   color: white;
@@ -1000,6 +1033,9 @@ button:focus, button:active {
   text-decoration: none;
   letter-spacing: .225em;
   padding: 1em 1.25em;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .btn:hover, .btn:focus, .btn:active {
   outline: none;
@@ -1050,7 +1086,7 @@ button:focus, button:active {
 
 ------------------------------------------------------ */
 .btn--inline {
-  font-size: 1em;
+  font-size: inherit;
 }
 
 /* @btn--block
@@ -1157,12 +1193,13 @@ code {
 
 ------------------------------------------------------ */
 input {
-  -webkit-appearance: none;
   border-radius: 0;
   width: 100%;
   padding: 1em;
   border: 1px solid #515554;
   color: #515554;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility;
 }
 input:focus {
   outline: none;
@@ -1235,6 +1272,7 @@ input:focus:-ms-input-placeholder {
 select {
   width: 100%;
   font-size: 1rem;
+  text-rendering: optimizeLegibility;
 }
 select.select--sm {
   font-size: .5rem;
@@ -1266,6 +1304,7 @@ textarea {
   min-height: 6em;
   padding: 1em;
   border: solid 1px #515554;
+  text-rendering: optimizeLegibility;
 }
 textarea:focus {
   outline: none;
@@ -1291,29 +1330,34 @@ textarea.textarea--l {
 
 
 ------------------------------------------------------ */
-input[type=radio] {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
+input[type=radio], input[type=checkbox] {
+  width: 14px;
+  height: 14px;
   padding: 0;
-  border-radius: 50%;
-  border: 1px solid #444;
+  border: 1px solid #b0b3b3;
   background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
-input[type=radio]:checked {
-  background: #222;
+input[type=radio]:checked, input[type=checkbox]:checked {
+  background: #515554;
+  border-color: #515554;
 }
 
-.label--radio {
+.label--radio, .label--checkbox {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  padding-left: 1em;
+  padding-left: 20px;
 }
-.label--radio input {
+.label--radio input, .label--checkbox input {
   position: absolute;
-  top: .7em;
+  top: 4px;
   left: 0;
+}
+
+input[type=radio] {
+  border-radius: 50%;
 }
 
 /* @checkbox inputs
@@ -1330,28 +1374,15 @@ input[type=radio]:checked {
 
 
 ------------------------------------------------------ */
-input[type=checkbox] {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
-  padding: 0;
-  border: 1px solid #444;
-  background: transparent;
-}
-input[type=checkbox]:checked {
-  background: #222;
-}
-
-.label--checkbox {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  padding-left: 1em;
-}
-.label--checkbox input {
+input[type=checkbox]:after {
   position: absolute;
-  top: .7em;
-  left: 0;
+  bottom: 0;
+  height: 11px;
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  color: white;
+  content: '✔';
 }
 
 /* @textareas
@@ -1395,7 +1426,7 @@ label {
 .form {
   display: block;
   padding: 2em;
-  border: 1px solid #888;
+  border: 1px solid #888888;
   background: #eee;
 }
 
@@ -1416,7 +1447,7 @@ label {
 .form__header {
   padding-bottom: 1em;
   margin-bottom: 2em;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #888888;
 }
 
 /* @fieldsets
@@ -1647,7 +1678,7 @@ fieldset {
 .form__actions {
   padding-top: 1em;
   margin-top: 2em;
-  border-top: 1px solid #888;
+  border-top: 1px solid #888888;
 }
 
 /**
@@ -1675,27 +1706,33 @@ fieldset {
   <h1 class="h3">This is an h1 but looks like an h3</h1>
 
 ------------------------------------------------------ */
-h1, .h1 {
+h1,
+.h1 {
   margin-bottom: 1em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   margin-bottom: 1em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   margin-bottom: 1em;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   margin-bottom: 1em;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   margin-bottom: 1em;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   margin-bottom: 1em;
 }
 
@@ -1735,42 +1772,7 @@ hr {
 
 ------------------------------------------------------ */
 html {
-  font-size: 80%;
-}
-@media (min-width: 20em) {
-  html {
-    font-size: 80%;
-  }
-}
-@media (min-width: 30em) {
-  html {
-    font-size: 83.33333%;
-  }
-}
-@media (min-width: 40em) {
-  html {
-    font-size: 86.66667%;
-  }
-}
-@media (min-width: 50em) {
-  html {
-    font-size: 90%;
-  }
-}
-@media (min-width: 60em) {
-  html {
-    font-size: 93.33333%;
-  }
-}
-@media (min-width: 70em) {
-  html {
-    font-size: 96.66667%;
-  }
-}
-@media (min-width: 80em) {
-  html {
-    font-size: 100%;
-  }
+  font-size: 16px;
 }
 
 * {
@@ -4268,26 +4270,26 @@ em {
 
   Example: Error
   <div class="alert alert--error">
-    <a href="#" class="btn__close">&times;</a>
-    <p>Uh oh - something went wrong</p>
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Uh oh - something went wrong</p>
   </div>
 
   Example: Warning
   <div class="alert alert--warning">
-    <a href="#" class="btn__close">&times;</a>
-    <p>Shake it fast, but watch yourself.</p>
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Shake it fast, but watch yourself.</p>
   </div>
 
   Example: Success
   <div class="alert alert--success">
-    <a href="#" class="btn__close">&times;</a>
-    <p>The secret to my success is that I learn, 25 hours a day!</p>
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">The secret to my success is that I learn, 25 hours a day!</p>
   </div>
 
   Example: Info
   <div class="alert alert--info">
-    <a href="#" class="btn__close">&times;</a>
-    <p>Did you ever know that you're my hero?</p>
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Did you ever know that you're my hero?</p>
   </div>
 
   NOTE: The code below uses declared color units, if you'd
@@ -4302,69 +4304,70 @@ em {
   padding: .5rem 4rem .5rem .5rem;
   line-height: 1.25;
 }
-.alert p {
+
+.alert__msg {
   margin: 0;
 }
-.alert .btn__close {
+
+.alert__close {
   position: absolute;
   top: 50%;
   margin-top: -.75em;
   right: 1em;
   opacity: .5;
-  -webkit-transition: all .3s;
   transition: all .3s;
   text-decoration: none;
 }
-.alert .btn__close:hover {
+.alert__close:hover {
   opacity: 1;
+}
+.alert--error .alert__close {
+  color: red;
+}
+.alert__close .alert--warning {
+  color: yellow;
+}
+.alert__close .alert--info {
+  color: blue;
+}
+.alert__close .alert--success {
+  color: green;
 }
 
 .alert--error {
-  color: #e04646;
-  border-color: #e04646;
-  background: #ffe6e6;
-}
-.alert--error .btn__close {
-  color: #e04646;
+  color: red;
+  border-color: red;
+  background: #f4f4f4;
 }
 .alert--error:after {
-  border-color: #e04646;
+  border-color: red;
 }
 
 .alert--warning {
-  color: #b29804;
-  border-color: #b29804;
-  background: #fcf7d8;
-}
-.alert--warning .btn__close {
-  color: #b29804;
+  color: yellow;
+  border-color: yellow;
+  background: #f4f4f4;
 }
 .alert--warning:after {
-  border-color: #b29804;
+  border-color: yellow;
 }
 
 .alert--info {
-  color: #537df6;
-  border-color: #537df6;
-  background: #e8f3ff;
-}
-.alert--info .btn__close {
-  color: #537df6;
+  color: blue;
+  border-color: blue;
+  background: #f4f4f4;
 }
 .alert--info:after {
-  border-color: #537df6;
+  border-color: blue;
 }
 
 .alert--success {
-  color: #0ca129;
-  border-color: #0ca129;
-  background: #dafce1;
-}
-.alert--success .btn__close {
-  color: #0ca129;
+  color: green;
+  border-color: green;
+  background: #f4f4f4;
 }
 .alert--success:after {
-  border-color: #0ca129;
+  border-color: green;
 }
 
 /**

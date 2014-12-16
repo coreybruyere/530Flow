@@ -11,11 +11,9 @@
 ------------------------------------------------------ */
 
 html {
-  // Check out base/_mixin-gradual-media-queries.scss
-  // for an explaination of this mixin that gradually
-  // changes the base fontsize.
-  font-size: 80%;
-  @include gradual-queries(20em, 80%, 80em, 100%, 10em);
+  // changes the base fontsize to be able to properly use rem
+  // see _body.scss to see gradual font size change in media queries
+  font-size: u(rem(16));
 }
 
 * {

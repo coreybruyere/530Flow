@@ -46,13 +46,14 @@
 
 // Input elements
 input {
-  -webkit-appearance: none;
   border-radius: 0;
   @extend %serif--light;
   width: 100%;
   padding: 1em;
-  border: 1px solid $color__black;
+  border: u(rem(1)) solid $color__black;
   color: $color__black;
+  -webkit-appearance: none;
+  text-rendering: optimizeLegibility;
   &:focus {
     outline: none;
   }
@@ -73,12 +74,12 @@ $input-placeholder: $color__black;
 // Placeholders
 input {
   &::-webkit-input-placeholder {
-    color: $input-placeholder;
     @extend %serif--light;
+    color: $input-placeholder;
   }
   &:-moz-placeholder {
-    color: $input-placeholder;
     @extend %serif--light;
+    color: $input-placeholder;
   }
   &::-moz-placeholder {
     color: $input-placeholder;
@@ -142,6 +143,7 @@ input:focus {
 select {
   width: 100%;
   font-size: 1rem;
+  text-rendering: optimizeLegibility;
   &.select--sm {
     font-size: .5rem;
   }
@@ -174,11 +176,12 @@ select {
 ------------------------------------------------------ */
 
 textarea {
+  @extend %serif--light;
   width: 100%;
   min-height: 6em;
   padding: 1em;
-  border: solid 1px $color__black;
-  @extend %serif--light;
+  border: solid u(rem(1)) $color__black;
+  text-rendering: optimizeLegibility;
   &:focus {
     outline: none;
   }
@@ -209,31 +212,48 @@ textarea {
 
 ------------------------------------------------------ */
 
-input[type=radio] {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
+// extend to radio and checkbox
+%input-custom {
+  width: u(rem(14));
+  height: u(rem(14));
   padding: 0;
-  border-radius: 50%;
-  border: 1px solid #444;
+  border: u(rem(1)) solid $color__grey;
   background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
   &:checked {
-    background: #222;
+    background: $color__black;
+    border-color: $color__black;
   }
+}
+
+
+// extend to label--radio and label--checkbox
+%label-custom {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-left: u(rem(20));
+  input {
+    position: absolute;
+    top: u(rem(4));
+    left: 0;
+  }
+}
+
+
+
+input[type=radio] {
+  @extend %input-custom;
+  border-radius: 50%;
 }
 
 
 .label--radio {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  padding-left: 1em;
-  input {
-    position: absolute;
-    top: .7em;
-    left: 0;
-  }
+  @extend %label-custom;
 }
+
+
 
 
 
@@ -255,28 +275,26 @@ input[type=radio] {
 ------------------------------------------------------ */
 
 input[type=checkbox] {
-  -webkit-appearance:none;
-  width: 1em;
-  height: 1em;
-  padding: 0;
-  border: 1px solid #444;
-  background: transparent;
-  &:checked {
-    background: #222;
+  @extend %input-custom;
+  // Custom check mark icon
+  &:after {
+    position: absolute;
+    bottom: 0;
+    height: u(rem(11));
+    width: 100%;
+    text-align: center;
+    font-size: u(rem(8));
+    color: $color__white;
+    content: '✔';
   }
 }
 
 .label--checkbox {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  padding-left: 1em;
-  input {
-    position: absolute;
-    top: .7em;
-    left: 0;
-  }
+  @extend %label-custom;
 }
+
+
+
 
 
 
@@ -334,7 +352,7 @@ label {
 .form {
   display: block;
   padding: 2em;
-  border: 1px solid #888;
+  border: u(rem(1)) solid #888;
   background: #eee;
 }
 
@@ -359,7 +377,7 @@ label {
 .form__header {
   padding-bottom: 1em;
   margin-bottom: 2em;
-  border-bottom: 1px solid #888;
+  border-bottom: u(rem(1)) solid #888;
 }
 
 
@@ -516,7 +534,7 @@ fieldset {
     display: block;
   }
   input {
-    border: 1px solid rgba(218, 35, 0, 0.3);
+    border: u(rem(1)) solid rgba(218, 35, 0, 0.3);
   }
 
 }
@@ -619,5 +637,5 @@ fieldset {
 .form__actions {
   padding-top: 1em;
   margin-top: 2em;
-  border-top: 1px solid #888;
+  border-top: u(rem(1)) solid #888;
 }

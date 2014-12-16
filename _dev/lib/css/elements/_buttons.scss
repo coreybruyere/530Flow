@@ -32,19 +32,19 @@ button {
 }
 
 .btn {
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @extend %sans--regular;
   display: inline-block;
   background: $color__black;
   color: $color__white;
   border: none;
-  @extend %sans--regular;
   font-size: 1.25em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .225em;
   padding: 1em 1.25em;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   &:hover,
   &:focus,
   &:active {
@@ -69,7 +69,7 @@ button {
 
 .btn--secondary {
   background: none;
-  border: 1px solid $color__white;
+  border: u(rem(1)) solid $color__white;
   color: $color__white;
 }
 
@@ -113,7 +113,7 @@ button {
 ------------------------------------------------------ */
 
 .btn--inline {
-  font-size: 1em;
+  font-size: inherit;
 }
 
 
