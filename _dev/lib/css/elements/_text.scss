@@ -24,8 +24,9 @@
 --------------------------------------------------------  */
 
 p {
-  margin-bottom: 1em;
-  line-height: 1.25*$unit;
+  margin-bottom: u(rem($base-margin));
+  margin-top: u(rem($base-margin));
+  line-height: 1.25 * $unit;
 }
 
 

@@ -6,9 +6,54 @@
 --------------------------------------------------------
 
   Global variables are defined here.  Define your colors,
-  spacing and grid settings.
+  spacing, type, and grid settings.
 
 -----------------------------------------------------  */
+
+
+
+
+/* @type
+--------------------------------------------------------
+
+  All type variables are defined here.
+  Ems are used for font sizes and rem for layout
+
+------------------------------------------------------ */
+
+// Base body type
+$base-font-size: 16px;
+$base-line-height: u(rem(20));
+
+$h1-font-size: 2.25em;
+$h1-line: 20; // 20px
+$h1-lines: 2;
+$h1-line-height: u(rem($h1-line * $h1-lines));
+$h1-margin-top: u(rem(2 * $h1-line));
+$h1-margin-bottom: u(rem(1 * $h1-line));
+
+$h2-font-size: 1.75em;
+$h2-line: 20; // 20px
+$h2-lines: 2;
+$h2-line-height: u(rem($h2-line * $h2-lines));
+$h2-margin-top: u(rem(2 * $h2-line));
+$h2-margin-bottom: u(rem(1 * $h2-line));
+
+$h3-font-size: 1.3125em;
+$h3-line: 20; // 20px
+$h3-lines: 2;
+$h3-line-height: u(rem($h3-line * $h3-lines));
+$h3-margin-top: u(rem(1 * $h3-line));
+$h3-margin-bottom: u(rem(1 * $h3-line));
+
+$h4-font-size: 1em;
+$h4-line: 20; // 20px
+$h4-lines: 1;
+$h4-line-height: u(rem($h4-line * $h4-lines));
+$h4-margin-top: u(rem(1 * $h4-line));
+$h4-margin-bottom: u(rem(1 * $h4-line));
+
+
 
 
 
@@ -122,3 +167,5 @@ $portrait: "only screen and (orientation: portrait)" !default;
 --------------------------------------------------------- */
 
 $unit: 1.125em !global;
+$base-margin: 20 !global;
+

@@ -14,7 +14,7 @@
 
 body {
   @extend %sans--regular;
-  line-height: 1.5;
+  line-height: $base-line-height;
   color: $color__black;
   background: $color__white;
   // Check out base/_mixin-gradual-media-queries.scss

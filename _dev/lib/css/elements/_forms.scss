@@ -46,11 +46,11 @@
 
 // Input elements
 input {
-  border-radius: 0;
   @extend %serif--light;
+  border-radius: 0;
   width: 100%;
-  padding: 1em;
-  border: u(rem(1)) solid $color__black;
+  padding: u(rem(10));
+  border: em(1px) solid $color__black;
   color: $color__black;
   -webkit-appearance: none;
   text-rendering: optimizeLegibility;
@@ -59,11 +59,11 @@ input {
   }
   // Size modifiers
   &.input--s {
-    font-size: .5rem;
+    font-size: em(10px);
   }
 
   &.input--l {
-    font-size: 1.5rem;
+    font-size: em(18px);
   }
 }
 
@@ -142,13 +142,14 @@ input:focus {
 
 select {
   width: 100%;
-  font-size: 1rem;
+  font-size: em(16px);
   text-rendering: optimizeLegibility;
-  &.select--sm {
-    font-size: .5rem;
+  &.select--s {
+    font-size: em(10px);
   }
-  &.select--lg {
-    font-size: 1.5rem;
+
+  &.select--l {
+    font-size: em(18px);
   }
 }
 
@@ -178,18 +179,19 @@ select {
 textarea {
   @extend %serif--light;
   width: 100%;
-  min-height: 6em;
-  padding: 1em;
-  border: solid u(rem(1)) $color__black;
+  min-height: u(rem(96));
+  padding: u(rem(10));
+  border: solid em(1px) $color__black;
   text-rendering: optimizeLegibility;
   &:focus {
     outline: none;
   }
   &.textarea--s {
-    font-size: .5rem;
+    font-size: em(10px);
   }
+
   &.textarea--l {
-    font-size: 1.5rem;
+    font-size: em(18px);
   }
 }
 
@@ -217,7 +219,7 @@ textarea {
   width: u(rem(14));
   height: u(rem(14));
   padding: 0;
-  border: u(rem(1)) solid $color__grey;
+  border: em(1px) solid $color__grey;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -283,7 +285,7 @@ input[type=checkbox] {
     height: u(rem(11));
     width: 100%;
     text-align: center;
-    font-size: u(rem(8));
+    font-size: em(8px);
     color: $color__white;
     content: '✔';
   }
@@ -329,7 +331,7 @@ textarea {
 ------------------------------------------------------ */
 
 label {
-  font-size: 1em;
+  font-size: em(16px);
   font-weight: bold;
 }
 
@@ -351,8 +353,8 @@ label {
 
 .form {
   display: block;
-  padding: 2em;
-  border: u(rem(1)) solid #888;
+  padding: u(rem(10));
+  border: em(1px) solid #888;
   background: #eee;
 }
 
@@ -375,9 +377,9 @@ label {
 -------------------------------------------------------- */
 
 .form__header {
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-  border-bottom: u(rem(1)) solid #888;
+  padding-bottom: u(rem(10));
+  margin-bottom: u(rem(15));
+  border-bottom: em(1px) solid #888;
 }
 
 
@@ -502,7 +504,7 @@ fieldset {
 
 .field {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: u(rem(15));
 }
 
 // Field label
@@ -513,16 +515,16 @@ fieldset {
 // Field hint
 .field__hint {
   color: #888;
-  font-size: .75em;
-  padding: .25em 0;
+  font-size: em(10px);
+  padding: u(rem(4)) 0;
   font-style: italic;
 }
 
 // Field feedback
 .field__feedback {
   display: none; // hidden by default, shown if inside .is-error
-  font-size: .75em;
-  padding: .25em .75em;
+  font-size: em(10px);
+  padding: u(rem(4)) u(rem(6));
   background: rgba(218, 35, 0, 0.3);
   color: white;
 }
@@ -534,7 +536,7 @@ fieldset {
     display: block;
   }
   input {
-    border: u(rem(1)) solid rgba(218, 35, 0, 0.3);
+    border: em(1px) solid rgba(218, 35, 0, 0.3);
   }
 
 }
@@ -591,7 +593,7 @@ fieldset {
   display: block;
   > * {
     display: inline-block;
-    margin-right: .5em;
+    margin-right: u(rem(8));
     &:last-child {
       margin-right: 0;
     }
@@ -603,7 +605,7 @@ fieldset {
   display: block;
   > * {
     display: block;
-    margin: .5em 0;
+    margin: u(rem(8)) 0;
     &:last-child {
       margin-bottom: 0;
     }
@@ -635,7 +637,7 @@ fieldset {
 --------------------------------------------------------- */
 
 .form__actions {
-  padding-top: 1em;
-  margin-top: 2em;
+  padding-top: u(rem(10));
+  margin-top: u(rem(15));
   border-top: u(rem(1)) solid #888;
 }

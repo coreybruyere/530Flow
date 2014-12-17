@@ -27,7 +27,8 @@
   @config
 ---------------------------------------------------------
 
-  Config for main stylesheet. Sets var to compile non legacy browser stylesheet
+  Config for main stylesheet. Declares variable to compile
+  regular browser stylesheet
 
 -----------------------------------------------------  */
 /***
@@ -91,15 +92,43 @@
  */
 /**
 
+  @rem
+--------------------------------------------------------
+  base/_function-font-em.scss
+--------------------------------------------------------
+
+// Usage: font-size: em(10px);
+
+------------------------------------------------------ */
+/**
+ * Divides `$target` by declared `$font-size`.
+ *
+ * @param {Target}   $target  - desired px amount
+ * @param {Context}  $font-size (16) - root px amount
+ *
+ * @example scss
+ * // font-size: em(10px);
+ *
+ * @return {$value em}
+ */
+/**
+
   @variables
 ---------------------------------------------------------
   base/_vars.scss
 --------------------------------------------------------
 
   Global variables are defined here.  Define your colors,
-  spacing and grid settings.
+  spacing, type, and grid settings.
 
 -----------------------------------------------------  */
+/* @type
+--------------------------------------------------------
+
+  All type variables are defined here.
+  Ems are used for font sizes and rem for layout
+
+------------------------------------------------------ */
 /* @colors
 --------------------------------------------------------
 
@@ -177,34 +206,6 @@ video {
   display: block;
 }
 
-/**
-
-  @breakpoints mixin
------------------------------------------------------
-  base/_mixin-breakpoints.scss
------------------------------------------------------
-
-  This mixin makes using inline media queries easy.
-  Options include bp-at-least for min-width, bp-until
-  for max-width, and bp-between for min and max widths.
-
-  You can use your breakpoint vars, or any other value.
-
-  Usage: styles at medium breakpoint
-  .some-element {
-    @include bp-at-least($breakpoint__md){
-      your-styles: go-here;
-    }
-  }
-
-  Usage: styles at custom breakpoint
-  .another-element {
-    @include bp-until(83.45em){
-      your-styles: go-here;
-    }
-  }
-
------------------------------------------------------  */
 /**
 
   @fancy arrow
@@ -549,7 +550,7 @@ video {
 --------------------------------------------------------
 */
 .shim.top.none {
-  padding-top: 0em;
+  padding-top: 0;
 }
 .shim.top.xs {
   padding-top: 1.18421em;
@@ -566,11 +567,11 @@ video {
 .shim.top.xl {
   padding-top: 2.04545em;
 }
-.shim.top.jumbo {
+.shim.top.xxl {
   padding-top: 2.5em;
 }
 .shim.right.none {
-  padding-right: 0em;
+  padding-right: 0;
 }
 .shim.right.xs {
   padding-right: 1.18421em;
@@ -587,11 +588,11 @@ video {
 .shim.right.xl {
   padding-right: 2.04545em;
 }
-.shim.right.jumbo {
+.shim.right.xxl {
   padding-right: 2.5em;
 }
 .shim.bottom.none {
-  padding-bottom: 0em;
+  padding-bottom: 0;
 }
 .shim.bottom.xs {
   padding-bottom: 1.18421em;
@@ -608,11 +609,11 @@ video {
 .shim.bottom.xl {
   padding-bottom: 2.04545em;
 }
-.shim.bottom.jumbo {
+.shim.bottom.xxl {
   padding-bottom: 2.5em;
 }
 .shim.left.none {
-  padding-left: 0em;
+  padding-left: 0;
 }
 .shim.left.xs {
   padding-left: 1.18421em;
@@ -629,11 +630,11 @@ video {
 .shim.left.xl {
   padding-left: 2.04545em;
 }
-.shim.left.jumbo {
+.shim.left.xxl {
   padding-left: 2.5em;
 }
 .shim.all.none {
-  padding: 0em;
+  padding: 0;
 }
 .shim.all.xs {
   padding: 1.18421em;
@@ -650,7 +651,7 @@ video {
 .shim.all.xl {
   padding: 2.04545em;
 }
-.shim.all.jumbo {
+.shim.all.xxl {
   padding: 2.5em;
 }
 
@@ -658,7 +659,7 @@ video {
 --------------------------------------------------------
 */
 .margin.top.none {
-  margin-top: 0em;
+  margin-top: 0;
 }
 .margin.top.xs {
   margin-top: 1.18421em;
@@ -675,11 +676,11 @@ video {
 .margin.top.xl {
   margin-top: 2.04545em;
 }
-.margin.top.jumbo {
+.margin.top.xxl {
   margin-top: 2.5em;
 }
 .margin.right.none {
-  margin-right: 0em;
+  margin-right: 0;
 }
 .margin.right.xs {
   margin-right: 1.18421em;
@@ -696,11 +697,11 @@ video {
 .margin.right.xl {
   margin-right: 2.04545em;
 }
-.margin.right.jumbo {
+.margin.right.xxl {
   margin-right: 2.5em;
 }
 .margin.bottom.none {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 .margin.bottom.xs {
   margin-bottom: 1.18421em;
@@ -717,11 +718,11 @@ video {
 .margin.bottom.xl {
   margin-bottom: 2.04545em;
 }
-.margin.bottom.jumbo {
+.margin.bottom.xxl {
   margin-bottom: 2.5em;
 }
 .margin.left.none {
-  margin-left: 0em;
+  margin-left: 0;
 }
 .margin.left.xs {
   margin-left: 1.18421em;
@@ -738,7 +739,7 @@ video {
 .margin.left.xl {
   margin-left: 2.04545em;
 }
-.margin.left.jumbo {
+.margin.left.xxl {
   margin-left: 2.5em;
 }
 
@@ -954,7 +955,7 @@ input, input::-webkit-input-placeholder, input:-moz-placeholder, textarea {
 
 ------------------------------------------------------ */
 body {
-  line-height: 1.5;
+  line-height: 1.25rem;
   color: #515554;
   background: white;
 }
@@ -1028,11 +1029,11 @@ button:focus, button:active {
   background: #515554;
   color: white;
   border: none;
-  font-size: 1.25em;
+  font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .225em;
-  padding: 1em 1.25em;
+  padding: 1rem;
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1053,7 +1054,7 @@ button:focus, button:active {
 ------------------------------------------------------ */
 .btn--secondary {
   background: none;
-  border: 0.0625rem solid white;
+  border: 0.0625em solid white;
   color: white;
 }
 
@@ -1068,8 +1069,8 @@ button:focus, button:active {
 ------------------------------------------------------ */
 @media only screen and (min-width: 20rem) {
   .btn--large {
-    font-size: 1.25em;
-    padding: 1.25em 2.75em;
+    font-size: 1em;
+    padding: 1rem 1.25rem;
   }
 }
 
@@ -1129,7 +1130,7 @@ button:focus, button:active {
   background: transparent;
   border: none;
   padding: 0;
-  font-size: 1em;
+  font-size: 0.875em;
 }
 
 /**
@@ -1148,8 +1149,13 @@ button:focus, button:active {
 -----------------------------------------------------  */
 code {
   vertical-align: middle;
-  padding: .25em .5em;
+  padding: 0.25rem 0.5rem;
   background: rgba(193, 199, 208, 0.3);
+}
+
+pre {
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 /**
@@ -1195,8 +1201,8 @@ code {
 input {
   border-radius: 0;
   width: 100%;
-  padding: 1em;
-  border: 0.0625rem solid #515554;
+  padding: 0.625rem;
+  border: 0.0625em solid #515554;
   color: #515554;
   -webkit-appearance: none;
   text-rendering: optimizeLegibility;
@@ -1205,10 +1211,10 @@ input:focus {
   outline: none;
 }
 input.input--s {
-  font-size: .5rem;
+  font-size: 0.625em;
 }
 input.input--l {
-  font-size: 1.5rem;
+  font-size: 1.125em;
 }
 
 input::-webkit-input-placeholder {
@@ -1271,14 +1277,14 @@ input:focus:-ms-input-placeholder {
 ------------------------------------------------------ */
 select {
   width: 100%;
-  font-size: 1rem;
+  font-size: 1em;
   text-rendering: optimizeLegibility;
 }
-select.select--sm {
-  font-size: .5rem;
+select.select--s {
+  font-size: 0.625em;
 }
-select.select--lg {
-  font-size: 1.5rem;
+select.select--l {
+  font-size: 1.125em;
 }
 
 /* @textareas
@@ -1301,19 +1307,19 @@ select.select--lg {
 ------------------------------------------------------ */
 textarea {
   width: 100%;
-  min-height: 6em;
-  padding: 1em;
-  border: solid 0.0625rem #515554;
+  min-height: 6rem;
+  padding: 0.625rem;
+  border: solid 0.0625em #515554;
   text-rendering: optimizeLegibility;
 }
 textarea:focus {
   outline: none;
 }
 textarea.textarea--s {
-  font-size: .5rem;
+  font-size: 0.625em;
 }
 textarea.textarea--l {
-  font-size: 1.5rem;
+  font-size: 1.125em;
 }
 
 /* @radio inputs
@@ -1334,7 +1340,7 @@ input[type=radio], input[type=checkbox] {
   width: 0.875rem;
   height: 0.875rem;
   padding: 0;
-  border: 0.0625rem solid #b0b3b3;
+  border: 0.0625em solid #b0b3b3;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -1380,7 +1386,7 @@ input[type=checkbox]:after {
   height: 0.6875rem;
   width: 100%;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.5em;
   color: white;
   content: '✔';
 }
@@ -1425,8 +1431,8 @@ label {
 ------------------------------------------------------ */
 .form {
   display: block;
-  padding: 2em;
-  border: 0.0625rem solid #888888;
+  padding: 0.625rem;
+  border: 0.0625em solid #888888;
   background: #eee;
 }
 
@@ -1445,9 +1451,9 @@ label {
 
 -------------------------------------------------------- */
 .form__header {
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-  border-bottom: 0.0625rem solid #888888;
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.9375rem;
+  border-bottom: 0.0625em solid #888888;
 }
 
 /* @fieldsets
@@ -1564,7 +1570,7 @@ fieldset {
 -------------------------------------------------------- */
 .field {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 0.9375rem;
 }
 
 .field__label {
@@ -1573,15 +1579,15 @@ fieldset {
 
 .field__hint {
   color: #888;
-  font-size: .75em;
-  padding: .25em 0;
+  font-size: 0.625em;
+  padding: 0.25rem 0;
   font-style: italic;
 }
 
 .field__feedback {
   display: none;
-  font-size: .75em;
-  padding: .25em .75em;
+  font-size: 0.625em;
+  padding: 0.25rem 0.375rem;
   background: rgba(218, 35, 0, 0.3);
   color: white;
 }
@@ -1590,7 +1596,7 @@ fieldset {
   display: block;
 }
 .field.is-error input {
-  border: 0.0625rem solid rgba(218, 35, 0, 0.3);
+  border: 0.0625em solid rgba(218, 35, 0, 0.3);
 }
 
 /* @input group
@@ -1641,7 +1647,7 @@ fieldset {
 }
 .field__input-group > * {
   display: inline-block;
-  margin-right: .5em;
+  margin-right: 0.5rem;
 }
 .field__input-group > *:last-child {
   margin-right: 0;
@@ -1652,7 +1658,7 @@ fieldset {
 }
 .field__input-group--list > * {
   display: block;
-  margin: .5em 0;
+  margin: 0.5rem 0;
 }
 .field__input-group--list > *:last-child {
   margin-bottom: 0;
@@ -1676,8 +1682,8 @@ fieldset {
 
 --------------------------------------------------------- */
 .form__actions {
-  padding-top: 1em;
-  margin-top: 2em;
+  padding-top: 0.625rem;
+  margin-top: 0.9375rem;
   border-top: 0.0625rem solid #888888;
 }
 
@@ -1708,32 +1714,44 @@ fieldset {
 ------------------------------------------------------ */
 h1,
 .h1 {
-  margin-bottom: 1em;
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
+  font-size: 2.25em;
+  line-height: 2.5rem;
 }
 
 h2,
 .h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
+  font-size: 1.75em;
+  line-height: 2.5rem;
 }
 
 h3,
 .h3 {
-  margin-bottom: 1em;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 1.3125em;
+  line-height: 2.5rem;
 }
 
 h4,
 .h4 {
-  margin-bottom: 1em;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 1em;
+  line-height: 1.25rem;
 }
 
 h5,
 .h5 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 h6,
 .h6 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 /**
@@ -1753,10 +1771,10 @@ h6,
 -------------------------------------------------------- */
 hr {
   display: block;
-  height: 1px;
+  height: 0.0625rem;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+  border-top: 0.0625rem solid #cccccc;
+  margin: 1rem 0;
   padding: 0;
 }
 
@@ -1772,7 +1790,7 @@ hr {
 
 ------------------------------------------------------ */
 html {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 * {
@@ -1837,7 +1855,7 @@ img {
 
 ------------------------------------------------------ */
 .img--title {
-  height: 1em;
+  height: 1rem;
   width: auto;
   vertical-align: top;
 }
@@ -1861,22 +1879,22 @@ img {
 .img--right {
   width: auto;
   float: right;
-  margin-bottom: 1.125em;
-  margin-left: 1.125em;
+  margin-bottom: 1.25rem;
+  margin-left: 1.25rem;
 }
 
 .img--left {
   width: auto;
   float: left;
-  margin-right: 1.125em;
-  margin-bottom: 1.125em;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .img--center {
   width: auto;
   display: block;
   margin-right: auto;
-  margin-bottom: 1.125em;
+  margin-bottom: 1.25rem;
   margin-left: auto;
 }
 
@@ -1956,6 +1974,7 @@ img {
 ------------------------------------------------------ */
 a {
   color: inherit;
+  transition: color .25s ease-in-out;
 }
 a:hover, a:focus {
   opacity: .75;
@@ -2016,8 +2035,8 @@ body {
 ul,
 ol {
   padding-left: 0;
-  margin-left: 1.125em;
-  margin-bottom: 1.125em;
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 ul li,
 ol li {
@@ -2075,7 +2094,8 @@ ol li {
 
 --------------------------------------------------------  */
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
   line-height: 1.40625em;
 }
 
@@ -2151,7 +2171,7 @@ em {
   margin-left: auto;
   margin-right: auto;
   max-width: 64em;
-  padding: 0 1.125em;
+  padding: 0 1.125rem;
 }
 
 /**
@@ -4233,12 +4253,12 @@ em {
 
 ------------------------------------------------------ */
 .site-footer {
-  padding: 1.125em 0;
-  border-top: 1px solid #cfd2d2;
+  padding: 0.625rem 0;
+  border-top: 0.0625em solid #cfd2d2;
 }
 
 .site-credits {
-  display: block;
+  float: left;
   clear: both;
 }
 

@@ -10,10 +10,11 @@
 
 ------------------------------------------------------ */
 
+
 html {
   // changes the base fontsize to be able to properly use rem
   // see _body.scss to see gradual font size change in media queries
-  font-size: u(rem(16));
+  font-size: $base-font-size; // 16px defined in _vars.scss
 }
 
 * {

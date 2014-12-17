@@ -17,10 +17,10 @@
 
 hr {
   display: block;
-  height: 1px;
+  height: u(rem(1));
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+  border-top: u(rem(1)) solid #ccc;
+  margin: u(rem(16)) 0;
   padding: 0;
 }
 

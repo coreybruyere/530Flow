@@ -29,7 +29,8 @@
   @config
 ---------------------------------------------------------
 
-  Config for IE stylesheet. Sets var to compile legacy browser stylesheet
+  Config for IE stylesheet. Declares variable to compile legacy
+  browser stylesheet
 
 -----------------------------------------------------  */
 
@@ -55,6 +56,8 @@ $px-only: true;
 
   @import "base/function-u";
 
+  @import "base/function-font-em";
+
   // Vars
   //
   @import "base/vars";
@@ -65,8 +68,6 @@ $px-only: true;
 
   // Mixins
   //
-  @import "base/mixin-breakpoints";
-
   @import "base/mixin-arrows";
 
   @import "base/mixin-burger";

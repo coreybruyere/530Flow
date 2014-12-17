@@ -37,11 +37,11 @@ button {
   background: $color__black;
   color: $color__white;
   border: none;
-  font-size: 1.25em;
+  font-size: em(16px);
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .225em;
-  padding: 1em 1.25em;
+  padding: u(rem(16));
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +69,7 @@ button {
 
 .btn--secondary {
   background: none;
-  border: u(rem(1)) solid $color__white;
+  border: em(1px) solid $color__white;
   color: $color__white;
 }
 
@@ -90,8 +90,8 @@ button {
 .btn--large {
   // -- Min Width @ $small-mobile
   @media #{$small-mobile} {
-    font-size: 1.25em;
-    padding: 1.25em 2.75em;
+    font-size: em(16px);
+    padding: u(rem(16)) u(rem(20));
   }
 }
 
@@ -166,6 +166,6 @@ button {
   background: transparent;
   border: none;
   padding: 0;
-  font-size: 1em;
+  font-size: em(14px);
 }
 

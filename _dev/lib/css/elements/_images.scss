@@ -69,7 +69,7 @@ img {
 ------------------------------------------------------ */
 
 .img--title {
-  height: 1em;
+  height: u(rem(16));
   width: auto;
   vertical-align: top;
 }
@@ -98,22 +98,22 @@ img {
 .img--right {
     width: auto;
     float: right;
-    margin-bottom: 1*$unit;
-    margin-left: 1*$unit;
+    margin-bottom: u(rem($base-margin));
+    margin-left: u(rem($base-margin));
 }
 
 .img--left {
     width: auto;
     float:left;
-    margin-right: 1*$unit;
-    margin-bottom: 1*$unit;
+    margin-right: u(rem($base-margin));
+    margin-bottom: u(rem($base-margin));
 }
 
 .img--center {
     width: auto;
     display:block;
     margin-right:auto;
-    margin-bottom: 1*$unit;
+    margin-bottom: u(rem($base-margin));
     margin-left:auto;
 }
 

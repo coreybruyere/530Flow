@@ -29,7 +29,8 @@
   @config
 ---------------------------------------------------------
 
-  Config for main stylesheet. Sets var to compile non legacy browser stylesheet
+  Config for main stylesheet. Declares variable to compile
+  regular browser stylesheet
 
 -----------------------------------------------------  */
 
@@ -55,6 +56,9 @@ $dev-mode: false;
 
   @import "base/function-u";
 
+  @import "base/function-font-em";
+
+
   // Vars
   //
   @import "base/vars";
@@ -65,8 +69,6 @@ $dev-mode: false;
 
   // Mixins
   //
-  @import "base/mixin-breakpoints";
-
   @import "base/mixin-arrows";
 
   @import "base/mixin-burger";

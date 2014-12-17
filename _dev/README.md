@@ -32,6 +32,8 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * **DO NOT** using ID's.  Use classes instead
 * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
 * **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
+* Use provided `rem` function for margin, padding, width, height, etc.
+* Use provided `em` function for font sizes on elemnts
 * All CSS class names should use BEM syntax with double underscore and double dash
 * Use one discrete, comma separated selector per line in multi-selector rulesets
 * Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
@@ -44,7 +46,6 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * Modules are named _{module}.scss
 * Be generous with comments & use same comment block style `// -- Comment Text`
 * Variablize all colors, numbers, etc.
-* Use provided `rem` function
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
@@ -53,6 +54,7 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
     .module {
         @extend %clearfix;
         margin-top: u(rem(10));
+        font-size: em(10px);
         color: red;
         @include mixin;
 

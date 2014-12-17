@@ -32,6 +32,8 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * **DO NOT** using ID's.  Use classes instead
 * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
 * **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
+* Use provided `rem` function for layout: margin, padding, height, width
+* Use provided `em` function for type and border: font-size, border, etc.
 * All CSS class names should use BEM syntax with double underscore and double dash
 * Use one discrete, comma separated selector per line in multi-selector rulesets
 * Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
@@ -44,7 +46,6 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * Modules are named _{module}.scss
 * Be generous with comments & use same comment block style `// -- Comment Text`
 * Variablize all colors, numbers, etc.
-* Use provided `rem` function
 * Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
@@ -105,7 +106,10 @@ Throw this snippet in your Emmet Sublime User Settings to enable some quick keyb
       "snippets": {
         "mq-": "// -- Min Width @ ${1:width}\n@media #{${1:width}} {\n|\n}",
         "com": "// -------------------------------------\n//   ${1:Comment Name} \n// -------------------------------------",
-        "scom": "// -- ${1:Small Comment}"
+        "scom": "// -- ${1:Small Comment}",
+        "ie": "// -- Old ie \n@include old-ie {\n\t${1:property:value}\n}",
+        "rem": "u(rem(${1:value}))${2}",
+        "em": "em(${1:value}px)${2}",
       }
     }
   }

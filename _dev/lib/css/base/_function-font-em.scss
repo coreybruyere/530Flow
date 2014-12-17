@@ -1,0 +1,28 @@
+/**
+
+  @rem
+--------------------------------------------------------
+  base/_function-font-em.scss
+--------------------------------------------------------
+
+// Usage: font-size: em(10px);
+
+------------------------------------------------------ */
+
+/**
+ * Divides `$target` by declared `$font-size`.
+ *
+ * @param {Target}   $target  - desired px amount
+ * @param {Context}  $font-size (16) - root px amount
+ *
+ * @example scss
+ * // font-size: em(10px);
+ *
+ * @return {$value em}
+ */
+
+$font-size: 16px;
+
+@function em ($px, $font-size: $font-size) {
+    @return ($px / $font-size) * 1em;
+}
