@@ -9,9 +9,9 @@ module.exports = {
       style: 'expanded',
     },
     files: {
-      '_dev/lib/css/style.dev.css': '_dev/lib/css/screen.scss',
-      '_prod/_content/assets/css/screen.css': '_dev/lib/css/screen.scss',
-      '_prod/_content/assets/css/screen-ie.css': '_dev/lib/css/screen-ie.scss'
+      '_dev/lib/css/style.dev.css' : '_dev/lib/scss/screen.scss',
+      '_prod/_content/assets/css/screen.css' : '_dev/lib/scss/screen.scss',
+      '_prod/_content/assets/css/screen-ie.css' : '_dev/lib/scss/screen-ie.scss'
     }
   }
 }

@@ -13,7 +13,7 @@ Use the `index.html` file as a starting point for static development then prefix
 
 You can reference the example files or documentation to clarify proper BEM/SCSS, JS hooks, and Grid/Layout usage.
 
-An HTML file is also provided in `lib/css/sass-docs/` that documents all SCSS variable, function, and mixin usage. Please document any additional mixins added using the same format.
+An HTML file is also provided in `lib/scss/sass-docs/` that documents all SCSS variable, function, and mixin usage. Please document any additional mixins added using the same format.
 
 ## Guidelines
 
@@ -90,7 +90,7 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * An example would be a navigation drop down, or a message that displays a success or error state.
 * State class names should be written as a boolean.  For example, ```.is-collapsed``` or ```.is-error```.
 * When state rules are added to specific modules, the module name should be included in the classname and   prefixed with ```is-```.  For example, an active tab state could be written as ```.is-nav-active```.
-* States should be placed at the bottom of the partial thats being changed
+* States should be placed at the bottom of the module block thats being changed
 * Make sure to document each state
 * States can use `!importants` if absolutely necessary
 
@@ -101,18 +101,16 @@ Use ID's for JS on unique selectors and classes on repeated elements. Prefix all
 Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts that are used in this kit.
 ```json
 {
-  "snippets": {
     "css": {
       "snippets": {
-        "mq-": "// -- Min Width @ ${1:width}\n@media #{${1:width}} {\n|\n}",
-        "com": "// -------------------------------------\n//   ${1:Comment Name} \n// -------------------------------------",
-        "scom": "// -- ${1:Small Comment}",
-        "ie": "// -- Old ie \n@include old-ie {\n\t${1:property:value}\n}",
+        "mq-": "// -- Min Width @ ${1:width}\n@include bp-at-least(${1:width}) {\n|\n}",
+        "com": "/**\n\n\t@${1:Block Name}\n--------------------------------------------------------\n\tmodules/_${1:Block Name}.scss\n--------------------------------------------------------\n\n\t${2:Block Desc}\n\n-------------------------------------------------------- */",
+        "scom": "// ${1:Small Comment}",
+        "ie": "// Old ie \n@include old-ie {\n\t${1:property:value}\n}",
         "rem": "u(rem(${1:value}))${2}",
-        "em": "em(${1:value}px)${2}",
+        "em": "em(${1:value}px)${2};",
       }
     }
-  }
 }
 ```
 
@@ -122,22 +120,8 @@ The starter files contain as little code as possible.  The structure consists of
 ```
 ├── lib
 | 	├──css
-|  	  	├── base
-|	    	├── variables, resets, mixins, global assets like fonts
-|    	├── elements
-|	      	├── styles for base elements (p, ul, img, form, input, etc.)
-|    	├── layout
-|    	    ├── grids, widths, utilities, etc.
-|    	├── modules
-|    	    ├── styles for objects/modules you create (.site-header, .hero, .page, .bio, .site-footer, etc.)
-|    	├── README.md (credits and info about Skyline SCSS)
-|
-|    	├── screen.scss (the manifest file that pulls in all the partials and compiles into screen.css)
-|    	├── screen-ie.scss (same as screen.scss but returns pixel values for IE legacy)
 |    	├── style.dev.css (compiled css for static development files)
-|
-|    	├── sass-docs
-|	 		├── index file for SCSS mixin, function, & var documentation
+|       ├── style.dev.map (map file for browser development)
 |
 |	├── img
 |   	├── (placeholder images are here for example pages)
@@ -146,6 +130,21 @@ The starter files contain as little code as possible.  The structure consists of
 |   	├── production
 |			├── concatenated & minfied scripts, along with all other bower imported plugins
 |		├── scripts.js (global scripts - should be used on every page)
+|
+|   ├── scss
+|       ├── base
+|           ├── variables, resets, mixins, global assets like fonts
+|       ├── elements
+|           ├── styles for base elements (p, ul, img, form, input, etc.)
+|       ├── layout
+|           ├── grids, widths, utilities, etc.
+|       ├── modules
+|           ├── styles for objects/modules you create (.site-header, .hero, .page, .bio, .site-footer, etc.)
+|       ├── sass-docs
+|           ├── index file for SCSS mixin, function, & var documentation
+|
+|       ├── screen.scss (the manifest file that pulls in all the partials and compiles into screen.css)
+|       ├── screen-ie.scss (same as screen.scss but returns pixel values for IE legacy)
 |
 ├── example-forms.html
 |

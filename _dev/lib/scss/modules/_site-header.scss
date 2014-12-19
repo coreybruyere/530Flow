@@ -37,8 +37,8 @@
   text-decoration: none;
   display: block;
   text-align: center;
-  // -- Min Width @ $tablet
-  @media #{$tablet} {
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
     margin: 0;
     float: left;
     text-align: left;
@@ -48,8 +48,8 @@
 .branding__logo {
   height: 3*$unit;
   width: 3*$unit;
-  // -- Min Width @ $tablet
-  @media #{$tablet} {
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
     float: left;
     margin-right: 1*$unit;
   }
@@ -78,8 +78,8 @@
 // Site nav placeholders - extended to header and footer nav
 %site-nav {
   text-align: center;
-  // -- Min Width @ $tablet
-  @media #{$tablet} {
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
     float: right;
   }
 }

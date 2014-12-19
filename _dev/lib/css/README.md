@@ -1,4 +1,0 @@
-  - Base ............ foundations, mixins, functions, vars
-  - Elements ........ single elements
-  - Layout .......... layout objects like grids, containers
-  - Modules ......... objects created by combining elements

@@ -11,11 +11,16 @@
 'use strict';
 module.exports = function(grunt) {
 
+  // Show time for each executed task
+  require('time-grunt')(grunt);
+
   // Tasks are configured in partials located in grunt/
   require('load-grunt-config')(grunt);
 
   // Register default task
   grunt.registerTask('default', ['watch','concat']);
+
+  grunt.registerTask('lint', ['scsslint']);
 
   // Open new tab for static development
   grunt.registerTask('dev', ['connect:dev','watch','concat']);
@@ -26,7 +31,5 @@ module.exports = function(grunt) {
   // Turn those SVGs into a sprite
   grunt.registerTask('svg', ['svgstore']);
 
-  // Now, let's move things to the Production directory
-  // grunt.registerTask('move', ['copy']);
 
 };

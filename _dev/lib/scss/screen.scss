@@ -4,9 +4,7 @@
 
 ---------------------------------------------------------
 
-  BUILT WITH SKYLINE: EVOLVING CSS ARCHITECTURE
-
-  See README.md for info and credits
+  EVOLVING CSS ARCHITECTURE
 
 
 
@@ -58,7 +56,6 @@ $dev-mode: false;
 
   @import "base/function-font-em";
 
-
   // Vars
   //
   @import "base/vars";
@@ -69,6 +66,8 @@ $dev-mode: false;
 
   // Mixins
   //
+  @import "base/mixin-breakpoints";
+
   @import "base/mixin-arrows";
 
   @import "base/mixin-burger";
@@ -195,11 +194,9 @@ $dev-mode: false;
 
   @import "modules/site-footer";
 
-
   // Page Template Module
   //
   @import "modules/pages";
-
 
   // Component Modules
   //

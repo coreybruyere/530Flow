@@ -22,7 +22,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  margin-bottom: 2*$unit;
+  margin-bottom: u(rem(30));
 }
 
 .hero__media {
@@ -37,11 +37,6 @@
   top: 50%;
   text-align: center;
   color: $color__white;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: .75em;
-  // -- Min Width @ $mobile
-  @media #{$mobile} {
-    font-size: 1em;
-  }
+  font-size: em(14px);
 }

@@ -1,6 +1,6 @@
 /**
 
-  @heroes
+  @tooltips
 --------------------------------------------------------
   modules/_tooltips.scss
 --------------------------------------------------------
@@ -20,18 +20,18 @@
 
 ------------------------------------------------------ */
 
-// -- Variables
+// Variables
 $contentAttr:     data-tooltip;
 $trigger:         data-trigger;
 $placement:       data-placement;
 
 
-// -- The main tooltip class
+// The main tooltip class
 .tooltip, [role="tooltip"] {
   outline: none;
   position: relative;
 
-  // -- Hide the tooltip when not active
+  // Hide the tooltip when not active
   &:after,
   &:before {
     opacity: 0;
@@ -43,7 +43,7 @@ $placement:       data-placement;
     font-size: u(rem(12));
   }
 
-  // -- The actual tooltip styles
+  // The actual tooltip styles
   &:after {
     content: attr(#{$contentAttr});
     padding: u(rem(6));
@@ -52,7 +52,7 @@ $placement:       data-placement;
     white-space: nowrap;
   }
 
-  // -- Tooltip trigger
+  // Tooltip trigger
   &[#{$trigger}="hover"]:hover:before,
   &[#{$trigger}="hover"]:hover:after,
   &[#{$trigger}="focus"]:focus:before,
@@ -63,7 +63,7 @@ $placement:       data-placement;
     z-index: 2;
   }
 
-  // -- Tooltip placement top
+  // Tooltip placement top
   &[#{$placement}="top"]:after,
   &[#{$placement}="top"]:before {
     bottom: 100%;
@@ -86,7 +86,7 @@ $placement:       data-placement;
     transform: translate(50%);
   }
 
-  // -- Tooltip placement right
+  // Tooltip placement right
   &[#{$placement}="right"]:after,
   &[#{$placement}="right"]:before {
     left: 100%;
@@ -109,7 +109,7 @@ $placement:       data-placement;
     transform: translate(50%);
   }
 
-  // -- Tooltip placement bottom
+  // Tooltip placement bottom
   &[#{$placement}="bottom"]:after,
   &[#{$placement}="bottom"]:before {
     top:100%;
@@ -132,7 +132,7 @@ $placement:       data-placement;
     transform: translate(50%);
   }
 
-  // -- Tooltip placement left
+  // Tooltip placement left
   &[#{$placement}="left"]:after,
   &[#{$placement}="left"]:before {
     right: 100%;

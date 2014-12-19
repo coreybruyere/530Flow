@@ -4,9 +4,7 @@
 
 ---------------------------------------------------------
 
-  BUILT WITH SKYLINE: EVOLVING CSS ARCHITECTURE
-
-  See README.md for info and credits
+  EVOLVING CSS ARCHITECTURE
 
 
 
@@ -68,6 +66,8 @@ $px-only: true;
 
   // Mixins
   //
+  @import "base/mixin-breakpoints";
+
   @import "base/mixin-arrows";
 
   @import "base/mixin-burger";
@@ -194,11 +194,9 @@ $px-only: true;
 
   @import "modules/site-footer";
 
-
   // Page Template Module
   //
   @import "modules/pages";
-
 
   // Component Modules
   //

@@ -34,14 +34,14 @@
   }
 }
 
-// Breakpoint At Least
+// Breakpoint Until
 @mixin bp-until($device-width) {
-  @media screen and (max-width: $device-width - 1) {
+  @media screen and (max-width: $device-width - .01) {
     @content
   }
 }
 
-// Breakpoint At Least
+// Breakpoint Between
 @mixin bp-between($device-width, $device-width2) {
   @media screen and (min-width: $device-width) and (max-width: $device-width2) {
     @content

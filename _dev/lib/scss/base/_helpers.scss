@@ -55,36 +55,36 @@
 }
 
 // Responsive hiders
-// -- Min Width @ $small-mobile
-@media #{$small-mobile} {
+// Min Width @ $small-mobile
+@include bp-at-least($small-mobile) {
   .hide__xs {
     display: none;
   }
 }
 
-// -- Min Width @ $mobile
-@media #{$mobile} {
+// Min Width @ $mobile
+@include bp-at-least($mobile) {
   .hide__sm {
     display: none;
   }
 }
 
-// -- Min Width @ $tablet
-@media #{$tablet} {
+// Min Width @ $tablet
+@include bp-at-least($tablet) {
   .hide__md {
     display: none;
   }
 }
 
-// -- Min Width @ $small-desktop
-@media #{$small-desktop} {
+// Min Width @ $small-desktop
+@include bp-at-least($small-desktop) {
   .hide__lg {
     display: none;
   }
 }
 
-// -- Min Width @ $desktop
-@media #{$desktop} {
+// Min Width @ $desktop
+@include bp-at-least($desktop) {
   .hide__xl {
     display: none;
   }

@@ -119,36 +119,31 @@ $breakpoints: (
 // Define individual variables
 //
 // Extra Small: Small mobile
-$breakpoint__xs: map-get($breakpoints, xs);
+$small-mobile: map-get($breakpoints, xs);
 
 // Small: Larger mobile
-$breakpoint__sm: map-get($breakpoints, sm);
+$mobile: map-get($breakpoints, sm);
 
 // Medium: Tablet
-$breakpoint__md: map-get($breakpoints, md);
+$tablet: map-get($breakpoints, md);
 
 // Large: Landscape tablet, beginning desk size
-$breakpoint__lg: map-get($breakpoints, lg);
+$small-desktop: map-get($breakpoints, lg);
 
 // Extra Large: Large Desk size
-$breakpoint__xl: map-get($breakpoints, xl);
+$desktop: map-get($breakpoints, xl);
 
 // Double Extra Large: Huge Desk size
-$breakpoint__xxl: map-get($breakpoints, xxl);
+$large-desktop: map-get($breakpoints, xxl);
 
-
-// -- Media Queries
-$screen: "only screen" !default;
-$small-mobile: "only screen and (min-width:"#{$breakpoint__xs}")" !default;
-$mobile: "only screen and (min-width:"#{$breakpoint__sm}")" !default;
-$tablet: "only screen and (min-width:"#{$breakpoint__md}")" !default;
-$small-desktop: "only screen and (min-width:"#{$breakpoint__lg}")" !default;
-$desktop: "only screen and (min-width:"#{$breakpoint__xl}")" !default;
-$large-desktop: "only screen and (min-width:"#{$breakpoint__xxl}")" !default;
-
-// -- Orientation  Media Queries
+// Orientation Media Queries
+//
+// Landscape Orientation
 $landscape: "only screen and (orientation: landscape)" !default;
+
+// Portrait Orientation
 $portrait: "only screen and (orientation: portrait)" !default;
+
 
 
 
@@ -167,5 +162,5 @@ $portrait: "only screen and (orientation: portrait)" !default;
 --------------------------------------------------------- */
 
 $unit: 1.125em !global;
-$base-margin: 20 !global;
+$base-margin: 20 !global; // used in rem function
 

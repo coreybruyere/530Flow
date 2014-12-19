@@ -69,7 +69,7 @@ button {
 
 .btn--secondary {
   background: none;
-  border: em(1px) solid $color__white;
+  border: em(3px) solid $color__white;
   color: $color__white;
 }
 
@@ -88,8 +88,8 @@ button {
 ------------------------------------------------------ */
 
 .btn--large {
-  // -- Min Width @ $small-mobile
-  @media #{$small-mobile} {
+  // Min Width @ $small-mobile
+  @include bp-at-least($small-mobile) {
     font-size: em(16px);
     padding: u(rem(16)) u(rem(20));
   }
