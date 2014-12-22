@@ -123,8 +123,8 @@ Throw this snippet in your Emmet Sublime User Settings to enable some quick keyb
 }
 ```
 
-## Starter Files
-The starter files contain as little code as possible.  The structure consists of:
+## Starter Static Files
+These starter files (found within `_dev`) contain as little code as possible.  The structure consists of:
 
 ```
 ├── lib
