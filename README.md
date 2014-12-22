@@ -26,7 +26,7 @@ You can reference the example files or documentation to clarify proper BEM/SCSS,
 ## Guidelines
 
 #### CSS / SCSS
-This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, and maintainable codebase.
+This kit uses the [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, and maintainable codebase.
 
 The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory.
 
@@ -80,7 +80,7 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
         color: green;
     }
 ```
-**Class names are named using adjectives and nouns.**
+*Class names are named using adjectives and nouns.*
 
 ```css
     /* -- Block Noun */
@@ -103,7 +103,7 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
 * Make sure to document each state
 * States can use `!importants` if absolutely necessary
 
-#### JS
+#### Javascript
 Use ID's for JS on unique selectors and classes on repeated elements. Prefix all JS hooks with `js-`.
 
 #### Commenting/Snippets
