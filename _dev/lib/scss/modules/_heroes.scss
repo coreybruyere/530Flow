@@ -21,8 +21,8 @@
 
 .hero {
   position: relative;
-  overflow: hidden;
   margin-bottom: u(rem(30));
+  overflow: hidden;
 }
 
 .hero__media {
@@ -32,11 +32,11 @@
 
 .hero__main {
   position: absolute;
-  z-index: 210;
-  width: 100%;
   top: 50%;
-  text-align: center;
-  color: $color__white;
+  width: 100%;
   transform: translateY(-50%);
+  color: $color__white;
   font-size: em(14px);
+  text-align: center;
+  z-index: 210;
 }

@@ -7,22 +7,32 @@
 
 This starter kit includes the style files you will use on your site. Each SCSS partial is self-documented and includes markup examples in the comments. Whenever a new partial is added make sure to use the same documentation style to keep the project consistent. The kit also contains HTML files as examples to illustrate how you should write out your markup.
 
-530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development (CSS & JS) should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` when working in the `_dev` directory.
+530's Skyline is a minimal scaffolding starter kit that imposes little to no visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt tasks. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment, which means quicker development and/or prototyping. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development (CSS & JS) should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` while working in the `_dev` directory.
 
 Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'.  *example:* `page-about.html`
 
 You can reference the example files or documentation to clarify proper BEM/SCSS, JS hooks, and Grid/Layout usage.
 
-An HTML file is also provided in `lib/scss/sass-docs/` that documents all SCSS variable, function, and mixin usage. Please document any additional mixins added using the same format.
+#### Some buzz-wordy things included in this project
+
+* Static HTML5 files
+* [OOCSS SCSS files in BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* jQuery
+* Grunt.js
+* [Roots.io](http://roots.io/docs/) Wordpress Theme
+* [Schema.org markup in WP for better SEO](http://builtvisible.com/micro-data-schema-org-guide-generating-rich-snippets/)
+
 
 ## Guidelines
 
 #### CSS / SCSS
 This kit uses [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss.org/) patterns. Following these as closely as possible, along with good documentation, will lead to an organzied, and maintainable codebase.
 
-The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory
+The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory.
 
-**Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML
+This kit provides an `em` and `rem` function. The `em` function should be used for font-size while the `rem` function is used everywhere else a value and unit is needed.  Any unit passed through the `rem` function is relative to the default 16px value defined in the html block. This value shouldn't be tampered with.  Any font-size changes can be made within the `_body.scss` partial. Examples and documentation for these functions along with the rest of the projects mixins can be found in the HTML file located in `lib/scss/sass-docs/`
+
+**Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 
 **Class names impart little or no useful semantic information to machines** or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 
@@ -31,10 +41,10 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 
 * **DO NOT** using ID's.  Use classes instead
 * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
-* **DO NOT** (with the exception of pseudo/hover states and module modifier and child classes).
-* Use provided `rem` function for layout: margin, padding, height, width
-* Use provided `em` function for type and border: font-size, border, etc.
-* All CSS class names should use BEM syntax with double underscore and double dash
+* **DO NOT** (with the exception of pseudo/hover states, module modifiers, and child classes)
+* Use provided `rem` function for everything except font-size
+* Use provided `em` function for type font-size
+* All module class names should use the double underscore and double dash BEM syntax where appropriate
 * Use one discrete, comma separated selector per line in multi-selector rulesets
 * Order of CSS properties: Positioning, Display & Box Model, Color, Text, Other
 * List @extend(s) first
@@ -44,9 +54,8 @@ The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into 
 * Media queries belong right after pseudo-classes
 * List any class modifiers after all module children
 * Modules are named _{module}.scss
-* Be generous with comments & use same comment block style `// -- Comment Text`
-* Variablize all colors, numbers, etc.
-* Declare ```@extend``` followed by styles then ```@include``` statements at the end of the declaration block whenever possible.
+* Be generous with comments & use same comment style shown in the [Snippets Section](#commenting/snippets)
+* Variablize all colors, numbers, etc. in BEM syntax
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
 
 ###### SCSS Example
@@ -161,9 +170,10 @@ The starter files contain as little code as possible.  The structure consists of
 ```
 
 ## Usage
-run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`
+run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`.  See the projects [Gruntfile](https://github.com/coreybruyere/530Flow/blob/master/Gruntfile.js)
 
 
 ## Documentation
 Extensive docs are in the works, but not yet released. However, Skyline makes it easy by adding detailed documentation in the comments of the scss partials themselves. Descriptions are right next to the actual code, making it simple to learn how it works.
+
 

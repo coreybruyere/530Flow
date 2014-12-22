@@ -48,25 +48,25 @@
 .media {
   @extend %clearfix;
   display: block;
-  margin-bottom: 1em;  // you might end up changing this, either globally or per module
+  margin-bottom: em(16px);  // you might end up changing this, either globally or per module
 }
 
 
 
 // Child elements, to the left or right
 .media__left {
+  margin-right: em(16px);  // you might end up changing this, either globally or per module
   float: left;
-  margin-right: 1em;  // you might end up changing this, either globally or per module
 }
 .media__right {
+  margin-left: em(16px);
   float: right;
-  margin-left: 1em;
 }
 
 // The images inside those left/right elements should be block
 .media__left img,
 .media__right img {
-  display:block;
+  display: block;
 }
 
 

@@ -1,11 +1,14 @@
 module.exports = {
 	allFiles: [
-	    '_dev/lib/scss/**/*.scss',
+	    '_dev/lib/scss/elements/*.scss',
+	    '_dev/lib/scss/layout/*.scss',
+	    '_dev/lib/scss/modules/*.scss'
 	],
 	options: {
 	    bundleExec: false,
 	    colorizeOutput: true,
-	    config: '.scss-lint.yml',
-	    reporterOutput: null
+	    config: 'grunt/.scss-lint.yml',
+	    reporterOutput: null,
+	    force: true,
 	},
 }

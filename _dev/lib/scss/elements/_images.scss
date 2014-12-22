@@ -69,8 +69,8 @@ img {
 ------------------------------------------------------ */
 
 .img--title {
-  height: u(rem(16));
   width: auto;
+  height: u(rem(16));
   vertical-align: top;
 }
 
@@ -96,25 +96,25 @@ img {
 ------------------------------------------------------ */
 
 .img--right {
-    width: auto;
-    float: right;
-    margin-bottom: u(rem($base-margin));
-    margin-left: u(rem($base-margin));
+  width: auto;
+  margin-bottom: u(rem($base-margin));
+  margin-left: u(rem($base-margin));
+  float: right;
 }
 
 .img--left {
-    width: auto;
-    float:left;
-    margin-right: u(rem($base-margin));
-    margin-bottom: u(rem($base-margin));
+  width: auto;
+  margin-right: u(rem($base-margin));
+  margin-bottom: u(rem($base-margin));
+  float: left;
 }
 
 .img--center {
-    width: auto;
-    display:block;
-    margin-right:auto;
-    margin-bottom: u(rem($base-margin));
-    margin-left:auto;
+  display: block;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: u(rem($base-margin));
+  margin-left: auto;
 }
 
 // if these classes are used on an element that contains an image

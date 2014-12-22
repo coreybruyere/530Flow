@@ -22,21 +22,21 @@
 ------------------------------------------------------ */
 
 // Base body type
-$base-font-size: 16px;
+$base-font-size: 16px; // DO NOT change this value
 $base-line-height: u(rem(20));
 
 $h1-font-size: 2.25em;
 $h1-line: 20; // 20px
 $h1-lines: 2;
 $h1-line-height: u(rem($h1-line * $h1-lines));
-$h1-margin-top: u(rem(2 * $h1-line));
+$h1-margin-top: u(rem(1.5 * $h1-line));
 $h1-margin-bottom: u(rem(1 * $h1-line));
 
 $h2-font-size: 1.75em;
 $h2-line: 20; // 20px
 $h2-lines: 2;
 $h2-line-height: u(rem($h2-line * $h2-lines));
-$h2-margin-top: u(rem(2 * $h2-line));
+$h2-margin-top: u(rem(1.5 * $h2-line));
 $h2-margin-bottom: u(rem(1 * $h2-line));
 
 $h3-font-size: 1.3125em;
@@ -44,14 +44,14 @@ $h3-line: 20; // 20px
 $h3-lines: 2;
 $h3-line-height: u(rem($h3-line * $h3-lines));
 $h3-margin-top: u(rem(1 * $h3-line));
-$h3-margin-bottom: u(rem(1 * $h3-line));
+$h3-margin-bottom: u(rem(.75 * $h3-line));
 
 $h4-font-size: 1em;
 $h4-line: 20; // 20px
 $h4-lines: 1;
 $h4-line-height: u(rem($h4-line * $h4-lines));
 $h4-margin-top: u(rem(1 * $h4-line));
-$h4-margin-bottom: u(rem(1 * $h4-line));
+$h4-margin-bottom: u(rem(.75 * $h4-line));
 
 
 
@@ -149,18 +149,18 @@ $portrait: "only screen and (orientation: portrait)" !default;
 
 
 
-/* @global spacing unit
+/* @global spacing units
 ---------------------------------------------------------
 
-  Define an em value for $unit.  $unit is a helpful little
+  Define an em value for $base-unit.  $base-unit is a helpful little
   variable that serves to keep your spacing consistent.
 
-  Most often, 1 $unit is equal to your baseline height.  So
-  if your baseline height is 1.125ems (which is 18px), that's
-  the value of 1 $unit.
+  Most often, 1 $base-unit is equal to your baseline height.  So
+  if your baseline height is 16px, that's
+  the value of 1 $base-unit.
 
 --------------------------------------------------------- */
 
-$unit: 1.125em !global;
+$base-unit:   16 !global; // used in rem function
 $base-margin: 20 !global; // used in rem function
 

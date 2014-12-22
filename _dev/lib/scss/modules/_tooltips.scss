@@ -21,35 +21,36 @@
 ------------------------------------------------------ */
 
 // Variables
-$contentAttr:     data-tooltip;
-$trigger:         data-trigger;
-$placement:       data-placement;
+$content-attr:     data-tooltip;
+$trigger:          data-trigger;
+$placement:        data-placement;
 
 
 // The main tooltip class
-.tooltip, [role="tooltip"] {
-  outline: none;
+.tooltip,
+[role="tooltip"] {
   position: relative;
+  outline: none;
 
   // Hide the tooltip when not active
   &:after,
   &:before {
-    opacity: 0;
-    outline: none;
     position: absolute;
-    text-decoration: none;
     transition: opacity .3s linear 0s;
-    visibility: hidden;
+    outline: none;
     font-size: u(rem(12));
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   // The actual tooltip styles
   &:after {
-    content: attr(#{$contentAttr});
     padding: u(rem(6));
     background-color: $color__black;
     color: $color__white;
     white-space: nowrap;
+    content: attr(#{$content-attr});
   }
 
   // Tooltip trigger
@@ -57,8 +58,8 @@ $placement:       data-placement;
   &[#{$trigger}="hover"]:hover:after,
   &[#{$trigger}="focus"]:focus:before,
   &[#{$trigger}="focus"]:focus:after {
-    opacity: 1;
     transition: opacity .3s linear 0s;
+    opacity: 1;
     visibility: visible;
     z-index: 2;
   }
@@ -70,20 +71,20 @@ $placement:       data-placement;
   }
 
   &[#{$placement}="top"]:after {
-    border-radius: u(rem(4));
     left: 50%;
-    margin: 0 0 u(rem(14)) 0;
+    margin: 0 0 u(rem(14));
     transform: translate(50%);
+    border-radius: u(rem(4));
   }
 
   &[#{$placement}="top"]:before {
-    content: "";
+    left: 50%;
+    margin: 0 0 u(rem(7));
+    transform: translate(50%);
+    border-top: u(rem(8)) solid $color__black;
     border-right: u(rem(8)) solid transparent;
     border-left: u(rem(8)) solid transparent;
-    border-top: u(rem(8)) solid $color__black;
-    left: 50%;
-    margin: 0 0 u(rem(7)) 0;
-    transform: translate(50%);
+    content: '';
   }
 
   // Tooltip placement right
@@ -93,43 +94,43 @@ $placement:       data-placement;
   }
 
   &[#{$placement}="right"]:after {
-    border-radius: u(rem(4));
-    margin: 0 0 0 u(rem(14));
     top: 50%;
+    margin: 0 0 0 u(rem(14));
     transform: translate(50%);
+    border-radius: u(rem(4));
   }
 
   &[#{$placement}="right"]:before {
-    content: "";
-    border-bottom: u(rem(8)) solid transparent;
+    top: 50%;
+    margin: 0 0 0 u(rem(7));
+    transform: translate(50%);
     border-top: u(rem(8)) solid transparent;
     border-right: u(rem(8)) solid $color__black;
-    margin: 0 0 0 u(rem(7));
-    top: 50%;
-    transform: translate(50%);
+    border-bottom: u(rem(8)) solid transparent;
+    content: '';
   }
 
   // Tooltip placement bottom
   &[#{$placement}="bottom"]:after,
   &[#{$placement}="bottom"]:before {
-    top:100%;
+    top: 100%;
   }
 
   &[#{$placement}="bottom"]:after {
-    border-radius: u(rem(4));
     left: 50%;
-    margin: u(rem(15)) 0 0 0;
+    margin: u(rem(15)) 0 0;
     transform: translate(50%);
+    border-radius: u(rem(4));
   }
 
-    &[#{$placement}="bottom"]:before {
-    content: "";
-    border-right: u(rem(8)) solid transparent;
-    border-left: u(rem(8)) solid transparent;
-    border-bottom: u(rem(8)) solid $color__black;
+  &[#{$placement}="bottom"]:before {
     left: 50%;
-    margin: u(rem(8)) 0 0 0;
+    margin: u(rem(8)) 0 0;
     transform: translate(50%);
+    border-right: u(rem(8)) solid transparent;
+    border-bottom: u(rem(8)) solid $color__black;
+    border-left: u(rem(8)) solid transparent;
+    content: '';
   }
 
   // Tooltip placement left
@@ -139,20 +140,20 @@ $placement:       data-placement;
   }
 
   &[#{$placement}="left"]:after {
-    border-radius: u(rem(4));
-    margin: 0 u(rem(15)) 0 0;
     top: 50%;
+    margin: 0 u(rem(15)) 0 0;
     transform: translate(50%);
+    border-radius: u(rem(4));
   }
 
   &[#{$placement}="left"]:before {
-    content: "";
-    border-bottom: u(rem(8)) solid transparent;
-    border-top: u(rem(8)) solid transparent;
-    border-left: u(rem(8)) solid $color__black;
-    margin: 0 u(rem(7)) 0 0;
     top: 50%;
+    margin: 0 u(rem(7)) 0 0;
     transform: translate(50%);
+    border-top: u(rem(8)) solid transparent;
+    border-bottom: u(rem(8)) solid transparent;
+    border-left: u(rem(8)) solid $color__black;
+    content: '';
   }
 
 }

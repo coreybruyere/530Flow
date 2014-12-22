@@ -23,6 +23,6 @@
 
 $font-size: 16px;
 
-@function em ($px, $font-size: $font-size) {
+@function em ($px , $font-size: $font-size) {
     @return ($px / $font-size) * 1em;
 }

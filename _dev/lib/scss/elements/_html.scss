@@ -10,16 +10,23 @@
 
 ------------------------------------------------------ */
 
-
+// scss-lint:disable VendorPrefixes, Indentation
 html {
   // changes the base fontsize to be able to properly use rem
+  // DO NOT change this value
   // see _body.scss to see gradual font size change in media queries
   font-size: $base-font-size; // 16px defined in _vars.scss
 }
 
 * {
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
+
+
+
+
+
+// scss-lint:enable VendorPrefixes, Identation

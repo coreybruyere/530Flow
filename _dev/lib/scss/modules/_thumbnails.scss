@@ -24,19 +24,16 @@
 
 .thumbnail {
   display: block;
-  padding: .5*$unit;
+  padding: u(rem(3));
+  border: u(rem(1)) solid rgba(0, 0, 0, .15);
   background: rgba(0, 0, 0, .1);
-  border: 1px solid rgba(0, 0, 0, .15);
   text-decoration: none;
 }
 
 .thumbnail__media {
-  margin-bottom: .5*$unit;
+  margin-bottom: u(rem(5));
 }
 
 .thumbnail__caption {
   font-size: 85%;
-  h1, h2, h3, h4, h5, h5 {
-   margin-bottom: .25*$unit;
-  }
 }

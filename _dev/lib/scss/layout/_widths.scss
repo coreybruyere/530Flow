@@ -88,36 +88,36 @@ $widths__generate-common-denominator-widths: true; // true or false
 // Define english for each integer
 //
 $english-by-number: (
-  1:  "one",
-  2:  "two",
-  3:  "three",
-  4:  "four",
-  5:  "five",
-  6:  "six",
-  7:  "seven",
-  8:  "eight",
-  9:  "nine",
-  10: "ten",
-  11: "eleven",
-  12: "twelve"
+  1:  'one',
+  2:  'two',
+  3:  'three',
+  4:  'four',
+  5:  'five',
+  6:  'six',
+  7:  'seven',
+  8:  'eight',
+  9:  'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve'
 );
 
 // Define english 'nth' for the denominators of
 // our fractions
 //
 $english-nth-by-number: (
-  1:  "whole",
-  2:  "half",
-  3:  "third",
-  4:  "fourth",
-  5:  "fifth",
-  6:  "sixth",
-  7:  "seventh",
-  8:  "eighth",
-  9:  "ninth",
-  10: "tenth",
-  11: "eleventh",
-  12: "twelfth"
+  1:  'whole',
+  2:  'half',
+  3:  'third',
+  4:  'fourth',
+  5:  'fifth',
+  6:  'sixth',
+  7:  'seventh',
+  8:  'eighth',
+  9:  'ninth',
+  10: 'tenth',
+  11: 'eleventh',
+  12: 'twelfth'
 );
 
 // Euclid's Algorithm to find GCD of Fraction
@@ -127,6 +127,7 @@ $english-nth-by-number: (
 // It will always be so in our
 // case - so we're not going to add conditionals to check for this
 
+// scss-lint:disable ElsePlacement
 @function gcd($a, $b) {
   @if ($b == 0) { @return $a; }
   @else {
@@ -139,28 +140,28 @@ $english-nth-by-number: (
 // Mixin to return easy-to-read width class from 2 numbers
 // Accepts a $numerator, $denominator, and optional breakpoint
 //
-@mixin easy-to-read-width($numerator, $denominator, $breakpoint:"") {
+@mixin easy-to-read-width($numerator, $denominator, $breakpoint:'') {
   // Define optional prefix
   //
-  $breakpoint-prefix: ".";
-  @if ($breakpoint != "n") {
+  $breakpoint-prefix: '.';
+  @if ($breakpoint != 'n') {
     @if map-has-key($widths__number-of-divisions-at-breakpoint, $breakpoint) {
-      $breakpoint-prefix: ".#{unquote($breakpoint)}-";
+      $breakpoint-prefix: '.#{unquote($breakpoint)}-';
     }
   }
 
   // Define english and delimiter '-' for first part of class
   //
-  $width-first-part: "#{map-get($english-by-number, $numerator)}-";
+  $width-first-part: '#{map-get($english-by-number, $numerator)}-';
 
   // Define english nth for second part
   //
-  $width-second-part: "#{map-get($english-nth-by-number, $denominator)}";
+  $width-second-part: '#{map-get($english-nth-by-number, $denominator)}';
   @if ($numerator > 1) {
-    $width-second-part: "#{$width-second-part}s";
+    $width-second-part: '#{$width-second-part}s';
   }
-  @if ($width-second-part == "halfs") {
-    $width-second-part: "halves";
+  @if ($width-second-part == 'halfs') {
+    $width-second-part: 'halves';
   }
 
   // Here's the class
@@ -181,11 +182,12 @@ $english-nth-by-number: (
     #{$breakpoint-prefix}#{$width-first-part}#{$width-second-part} { width: ($numerator/$denominator)*100%; }
   }
 }
+// scss-lint:enable ElsePlacement
 
 // Loop through all breakpoints in $widths__number-of-divisions-at-breakpoint
 @each $breakpoint, $num-divisions in $widths__number-of-divisions-at-breakpoint {
   @if ($num-divisions > 0) {
-    @if ($breakpoint != "n") {
+    @if ($breakpoint != 'n') {
       /*
 
         Responsive widths at $breakpoint__#{$breakpoint}

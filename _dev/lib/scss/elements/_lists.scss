@@ -43,9 +43,9 @@
 
 ul,
 ol {
-  padding-left: 0;
-  margin-left: u(rem($base-margin));
   margin-bottom: u(rem($base-margin));
+  margin-left: u(rem($base-margin));
+  padding-left: 0;
   li {
     line-height: 2;
   }

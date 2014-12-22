@@ -70,14 +70,14 @@
 $grid__float-at: $mobile;
 //
 // Define the width of the gutters between grid units
-// You might use $unit from _vars.scss, or a relative value
-// of $unit, like .5$unit for instance for small gutters.
-$grid__gutter-width: $unit;
+// You might use $base-unit from _vars.scss, or a relative value
+// of $base-unit, like .5 * $base-unit for instance for small gutters.
+$grid__gutter-width: $base-unit;
 //
 // Define the amount of space at the bottom of a grid unit
 // when they are stacking (before they start to float)
-// You might choose $unit again.
-$grid__bottom-spacing-when-stacking: $unit;
+// You might choose $base-unit again.
+$grid__bottom-spacing-when-stacking: $base-unit;
 //
 // Define the amount of space at the bottom of a grid unit
 // when they are floating. It's often a good idea to make
@@ -89,13 +89,13 @@ $grid__bottom-spacing-when-floating: $grid__gutter-width;
 // Grid Wrap
 .grid-wrap,
 .gw {
-  @include clearfix();
   display: block;
+  margin-bottom: u(rem(-1*$grid__bottom-spacing-when-stacking));
   // Sometimes, ul are used for grid wraps
   list-style-type: none;
-  margin-bottom: -1*$grid__bottom-spacing-when-stacking;
+  @include clearfix();
   @include bp-at-least($grid__float-at) {
-    margin: 0 0 -1*$grid__bottom-spacing-when-floating -1*$grid__gutter-width;
+    margin: 0 0 u(rem(-1*$grid__bottom-spacing-when-floating)) u(rem(-1*$grid__gutter-width));
   }
 }
 
@@ -103,14 +103,14 @@ $grid__bottom-spacing-when-floating: $grid__gutter-width;
 // Grid
 .grid,
 .g {
-  @include clearfix();
-  min-height: u(rem(1));
-  position: relative;
-  padding-bottom: $grid__bottom-spacing-when-stacking;
   display: block;
+  position: relative;
   width: 100%;
+  min-height: u(rem(1));
+  padding-bottom: u(rem($grid__bottom-spacing-when-stacking));
+  @include clearfix();
   @include bp-at-least($grid__float-at) {
-    padding: 0 0 $grid__bottom-spacing-when-floating $grid__gutter-width;
+    padding: 0 0 u(rem($grid__bottom-spacing-when-floating)) u(rem($grid__gutter-width));
     float: left;
   }
 }

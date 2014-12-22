@@ -4,32 +4,28 @@ module.exports = {
   },
   scripts: {
     files: ['_dev/lib/js/*.js'],
-    tasks: ['jshint', 'concat', 'newer:uglify'],
+    tasks: ['jshint', 'concat', 'uglify'],
     options: {
       spawn: false,
     },
   },
-  // scsslint: {
-  //   files: '_dev/lib/scss/elements/_buttons.scss',
-  //   tasks: ['scsslint'],
-  // },
   css: {
     files: ['_dev/lib/scss/**/*.scss'],
-    tasks: ['newer:sass', 'autoprefixer', 'cssmin'],
+    tasks: ['sass', 'autoprefixer', 'cssmin', 'scsslint'],
     options: {
       spawn: false,
     },
   },
   images: {
     files: ['_dev/lib/img/*.{png,jpg,gif}'],
-    tasks: ['newer:imagemin'],
+    tasks: ['imagemin'],
     options: {
       spawn: false,
     },
   },
   svg: {
     files: ['_dev/lib/img/svg/source/*.{svg}'],
-    tasks: ['newer:svgstore'],
+    tasks: ['svgstore'],
     options: {
       spawn: false,
     },

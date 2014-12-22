@@ -14,10 +14,9 @@
 
 body {
   @extend %sans--regular;
-  line-height: $base-line-height;
-  color: $color__black;
   background: $color__white;
-  color: black;
+  color: $color__black;
+  line-height: $base-line-height;
   // Check out base/_mixin-gradual-media-queries.scss
   // for an explaination of this mixin that gradually
   @include gradual-queries(20em, 80%, 80em, 100%, 10em);

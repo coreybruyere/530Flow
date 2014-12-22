@@ -93,37 +93,37 @@ $ups__number-of-ups-at-breakpoint: (
 // in something like base/_definitions.scss.
 //
 $english-by-number: (
-  1:  "one",
-  2:  "two",
-  3:  "three",
-  4:  "four",
-  5:  "five",
-  6:  "six",
-  7:  "seven",
-  8:  "eight",
-  9:  "nine",
-  10: "ten",
-  11: "eleven",
-  12: "twelve"
+  1:  'one',
+  2:  'two',
+  3:  'three',
+  4:  'four',
+  5:  'five',
+  6:  'six',
+  7:  'seven',
+  8:  'eight',
+  9:  'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve'
 );
 
 
 // Mixin to return easy-to-read up class from 2 numbers
 // Accepts a $numerator, $denominator, and optional breakpoint
 //
-@mixin easy-to-read-up($n, $breakpoint:"") {
+@mixin easy-to-read-up($n, $breakpoint:'') {
   // Define optional prefix
   //
-  $breakpoint-prefix: ".";
-  @if ($breakpoint != "n") {
+  $breakpoint-prefix: '.';
+  @if ($breakpoint != 'n') {
     @if map-has-key($ups__number-of-ups-at-breakpoint, $breakpoint) {
-      $breakpoint-prefix: ".#{unquote($breakpoint)}-";
+      $breakpoint-prefix: '.#{unquote($breakpoint)}-';
     }
   }
 
   // Define english and delimiter '-' for first part of class
   //
-  $up-first-part: "#{map-get($english-by-number, $n)}-";
+  $up-first-part: '#{map-get($english-by-number, $n)}-';
 
   // Here's the class
   #{$breakpoint-prefix}#{$up-first-part}up > * { width: (100 / $n)*1%; }
@@ -132,7 +132,7 @@ $english-by-number: (
 // Loop through all breakpoints in $ups__number-of-ups-at-breakpoint
 @each $breakpoint, $num-ups in $ups__number-of-ups-at-breakpoint {
   @if ($num-ups > 0) {
-    @if ($breakpoint != "n") {
+    @if ($breakpoint != 'n') {
       /*
 
         Responsive ups at $breakpoint__#{$breakpoint}

@@ -23,8 +23,8 @@
 ------------------------------------------------------ */
 
 a {
-  color: inherit;
   transition: color .25s ease-in-out;
+  color: inherit;
   &:hover,
   &:focus {
     opacity: .75;

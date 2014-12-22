@@ -5,8 +5,8 @@
   modules/_callouts.scss
 --------------------------------------------------------
 
-  Callouts, are sections of featured content that usually 
-  contain an icon, a title, and some text. These are 
+  Callouts, are sections of featured content that usually
+  contain an icon, a title, and some text. These are
   usually in a row, and call attention to highlighted features.
 
   Example: Callout
@@ -24,11 +24,11 @@
 
 .callout__media {
   display: block;
-  margin: 0 auto 1*$unit;
-  max-height: 3em;
   width: auto;
+  max-height: u(rem(32));
+  margin: 0 auto u(rem(10));
 }
 
 .callout__title {
-  font-size: 1.5em;
+  font-size: em(20px);
 }

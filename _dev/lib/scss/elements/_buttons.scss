@@ -25,26 +25,26 @@
 button {
   &:focus,
   &:active {
+    border: 0;
     outline: none;
     box-shadow: none;
-    border: none;
   }
 }
 
 .btn {
   @extend %sans--regular;
   display: inline-block;
+  padding: u(rem(16));
+  border: 0;
   background: $color__black;
   color: $color__white;
-  border: none;
   font-size: em(16px);
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: .225em;
-  padding: u(rem(16));
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .225em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
   &:hover,
   &:focus,
   &:active {
@@ -68,8 +68,8 @@ button {
 ------------------------------------------------------ */
 
 .btn--secondary {
-  background: none;
   border: em(3px) solid $color__white;
+  background: none;
   color: $color__white;
 }
 
@@ -90,8 +90,8 @@ button {
 .btn--large {
   // Min Width @ $small-mobile
   @include bp-at-least($small-mobile) {
-    font-size: em(16px);
     padding: u(rem(16)) u(rem(20));
+    font-size: em(16px);
   }
 }
 
@@ -138,9 +138,9 @@ button {
 .btn--block {
   display: block;
   width: 100%;
-  text-align: center;
   padding-right: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 
@@ -163,9 +163,9 @@ button {
 ------------------------------------------------------ */
 
 .btn--icon {
-  background: transparent;
-  border: none;
   padding: 0;
+  border: 0;
+  background: transparent;
   font-size: em(14px);
 }
 

@@ -5,6 +5,8 @@
 2. grunt dev : Open a new browser tab pointing to dev file and run watch task
 3. grunt process : Minify all images, css, and js for production
 4. grunt svg : Build svg file - see folder structure in svg.js
+5. grunt lint : Lint SCSS files
+
 
 */
 
@@ -20,8 +22,6 @@ module.exports = function(grunt) {
   // Register default task
   grunt.registerTask('default', ['watch','concat']);
 
-  grunt.registerTask('lint', ['scsslint']);
-
   // Open new tab for static development
   grunt.registerTask('dev', ['connect:dev','watch','concat']);
 
@@ -30,6 +30,9 @@ module.exports = function(grunt) {
 
   // Turn those SVGs into a sprite
   grunt.registerTask('svg', ['svgstore']);
+
+  // Lint SCSS alone
+  grunt.registerTask('lint', ['scsslint']);
 
 
 };

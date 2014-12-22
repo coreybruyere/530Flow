@@ -16,13 +16,13 @@
 // Code
 //
 code {
-  vertical-align: middle;
   padding: u(rem(4)) u(rem(8));
   background: rgba(193, 199, 208, .3);
+  vertical-align: middle;
 }
 
 // Pre
 pre {
-	margin-bottom: u(rem($base-margin));
-	margin-top: u(rem($base-margin));
+  margin-top: u(rem($base-margin));
+  margin-bottom: u(rem($base-margin));
 }

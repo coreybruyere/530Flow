@@ -1,0 +1,46 @@
+/* @branding
+--------------------------------------------------------
+
+  The logo & (optional) wordmark
+
+  Example: Branding logo
+  <a class="branding" href="/">
+    <img class="branding__logo img--title" src="images/logo.svg" alt="My Company">
+    <h1 class="branding__wordmark">My Company</h1>
+  </a>
+
+------------------------------------------------------ */
+
+.branding {
+  display: block;
+  margin: 0 auto u(rem(10));
+  text-align: center;
+  text-decoration: none;
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    margin: 0;
+    float: left;
+    text-align: left;
+  }
+}
+
+.branding__logo {
+  width: u(rem(60));
+  height: u(rem(60));
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    margin-right: u(rem(10));
+    float: left;
+  }
+}
+
+.branding__wordmark {
+  margin: 0;
+  padding-top: u(rem(10));
+  font-size: em(17px);
+  white-space: nowrap;
+}
+
+.branding--footer {
+
+}

@@ -20,10 +20,10 @@
 // The header
 //
 .page__header {
-  padding: 1*$unit 0;
-  margin-bottom: 1*$unit;
-  background: rgba(0,0,0,.025);
-  border-bottom: 1px solid $color__grey--light;
+  margin-bottom: u(rem(10));
+  padding: u(rem(10)) 0;
+  border-bottom: u(rem(1)) solid $color__grey--light;
+  background: rgba(0, 0 , 0, .025);
 }
 
 

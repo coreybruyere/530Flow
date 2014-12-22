@@ -47,13 +47,13 @@
 // Input elements
 input {
   @extend %serif--light;
-  border-radius: 0;
   width: 100%;
   padding: u(rem(10));
   border: em(1px) solid $color__black;
+  border-radius: 0;
   color: $color__black;
-  -webkit-appearance: none;
   text-rendering: optimizeLegibility;
+  -webkit-appearance: none;
   &:focus {
     outline: none;
   }
@@ -72,6 +72,7 @@ input {
 $input-placeholder: $color__black;
 
 // Placeholders
+// scss-lint:disable MergeableSelector, VendorPrefixes
 input {
   &::-webkit-input-placeholder {
     @extend %serif--light;
@@ -103,6 +104,7 @@ input:focus {
     opacity: .3;
   }
 }
+// scss-lint:enable MergeableSelector, VendorPrefixes
 
 
 
@@ -224,8 +226,8 @@ textarea {
   cursor: pointer;
   -webkit-appearance: none;
   &:checked {
-    background: $color__black;
     border-color: $color__black;
+    background: $color__black;
   }
 }
 
@@ -234,8 +236,8 @@ textarea {
 %label-custom {
   display: inline-block;
   position: relative;
-  cursor: pointer;
   padding-left: u(rem(20));
+  cursor: pointer;
   input {
     position: absolute;
     top: u(rem(4));
@@ -244,7 +246,7 @@ textarea {
 }
 
 
-
+// scss-lint:disable QualifyingElement
 input[type=radio] {
   @extend %input-custom;
   border-radius: 50%;
@@ -282,39 +284,22 @@ input[type=checkbox] {
   &:after {
     position: absolute;
     bottom: 0;
-    height: u(rem(11));
     width: 100%;
-    text-align: center;
-    font-size: em(8px);
+    height: u(rem(11));
     color: $color__white;
+    font-size: em(8px);
+    text-align: center;
     content: '✔';
   }
 }
+// scss-lint:enable QualifyingElement
+
 
 .label--checkbox {
   @extend %label-custom;
 }
 
 
-
-
-
-
-
-
-/* @textareas
---------------------------------------------------------
-
-  Base styling for textareas
-
-  Example: Textarea
-  <textarea name="schramburger">Hello, there.</textarea>
-
------------------------------------------------------- */
-
-textarea {
-  width: 100%;
-}
 
 
 
@@ -377,8 +362,8 @@ label {
 -------------------------------------------------------- */
 
 .form__header {
-  padding-bottom: u(rem(10));
   margin-bottom: u(rem(15));
+  padding-bottom: u(rem(10));
   border-bottom: em(1px) solid #888;
 }
 
@@ -445,7 +430,7 @@ label {
 -------------------------------------------------------- */
 
 fieldset {
-  border: none;
+  border: 0;
 }
 
 
@@ -505,6 +490,19 @@ fieldset {
 .field {
   position: relative;
   margin-bottom: u(rem(15));
+
+  // field error states
+  &.is-error {
+
+    .field__feedback {
+      display: block;
+    }
+    input {
+      border: em(1px) solid rgba(218, 35, 0, .3);
+    }
+
+  }
+
 }
 
 // Field label
@@ -514,32 +512,21 @@ fieldset {
 
 // Field hint
 .field__hint {
+  padding: u(rem(4)) 0;
   color: #888;
   font-size: em(10px);
-  padding: u(rem(4)) 0;
   font-style: italic;
 }
 
 // Field feedback
 .field__feedback {
   display: none; // hidden by default, shown if inside .is-error
-  font-size: em(10px);
   padding: u(rem(4)) u(rem(6));
-  background: rgba(218, 35, 0, 0.3);
-  color: white;
+  background: rgba(218, 35, 0, .3);
+  color: $color__white;
+  font-size: em(10px);
 }
 
-// Field error states
-.field.is-error {
-
-  .field__feedback {
-    display: block;
-  }
-  input {
-    border: em(1px) solid rgba(218, 35, 0, 0.3);
-  }
-
-}
 
 
 
@@ -637,7 +624,7 @@ fieldset {
 --------------------------------------------------------- */
 
 .form__actions {
-  padding-top: u(rem(10));
   margin-top: u(rem(15));
+  padding-top: u(rem(10));
   border-top: em(1px) solid #888;
 }

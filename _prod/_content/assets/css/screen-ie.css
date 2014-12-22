@@ -149,15 +149,15 @@
   Define global breakpoints as xs, sm, md, lg, xl
 
 --------------------------------------------------------- */
-/* @global spacing unit
+/* @global spacing units
 ---------------------------------------------------------
 
-  Define an em value for $unit.  $unit is a helpful little
+  Define an em value for $base-unit.  $base-unit is a helpful little
   variable that serves to keep your spacing consistent.
 
-  Most often, 1 $unit is equal to your baseline height.  So
-  if your baseline height is 1.125ems (which is 18px), that's
-  the value of 1 $unit.
+  Most often, 1 $base-unit is equal to your baseline height.  So
+  if your baseline height is 16px, that's
+  the value of 1 $base-unit.
 
 --------------------------------------------------------- */
 /**
@@ -579,106 +579,106 @@ video {
   padding-top: 0;
 }
 .shim.top.xs {
-  padding-top: 1.18421em;
+  padding-top: 16.84211px;
 }
 .shim.top.sm {
-  padding-top: 1.32353em;
+  padding-top: 18.82353px;
 }
 .shim.top.md {
-  padding-top: 1.5em;
+  padding-top: 21.33333px;
 }
 .shim.top.lg {
-  padding-top: 1.73077em;
+  padding-top: 24.61538px;
 }
 .shim.top.xl {
-  padding-top: 2.04545em;
+  padding-top: 29.09091px;
 }
 .shim.top.xxl {
-  padding-top: 2.5em;
+  padding-top: 35.55556px;
 }
 .shim.right.none {
   padding-right: 0;
 }
 .shim.right.xs {
-  padding-right: 1.18421em;
+  padding-right: 16.84211px;
 }
 .shim.right.sm {
-  padding-right: 1.32353em;
+  padding-right: 18.82353px;
 }
 .shim.right.md {
-  padding-right: 1.5em;
+  padding-right: 21.33333px;
 }
 .shim.right.lg {
-  padding-right: 1.73077em;
+  padding-right: 24.61538px;
 }
 .shim.right.xl {
-  padding-right: 2.04545em;
+  padding-right: 29.09091px;
 }
 .shim.right.xxl {
-  padding-right: 2.5em;
+  padding-right: 35.55556px;
 }
 .shim.bottom.none {
   padding-bottom: 0;
 }
 .shim.bottom.xs {
-  padding-bottom: 1.18421em;
+  padding-bottom: 16.84211px;
 }
 .shim.bottom.sm {
-  padding-bottom: 1.32353em;
+  padding-bottom: 18.82353px;
 }
 .shim.bottom.md {
-  padding-bottom: 1.5em;
+  padding-bottom: 21.33333px;
 }
 .shim.bottom.lg {
-  padding-bottom: 1.73077em;
+  padding-bottom: 24.61538px;
 }
 .shim.bottom.xl {
-  padding-bottom: 2.04545em;
+  padding-bottom: 29.09091px;
 }
 .shim.bottom.xxl {
-  padding-bottom: 2.5em;
+  padding-bottom: 35.55556px;
 }
 .shim.left.none {
   padding-left: 0;
 }
 .shim.left.xs {
-  padding-left: 1.18421em;
+  padding-left: 16.84211px;
 }
 .shim.left.sm {
-  padding-left: 1.32353em;
+  padding-left: 18.82353px;
 }
 .shim.left.md {
-  padding-left: 1.5em;
+  padding-left: 21.33333px;
 }
 .shim.left.lg {
-  padding-left: 1.73077em;
+  padding-left: 24.61538px;
 }
 .shim.left.xl {
-  padding-left: 2.04545em;
+  padding-left: 29.09091px;
 }
 .shim.left.xxl {
-  padding-left: 2.5em;
+  padding-left: 35.55556px;
 }
 .shim.all.none {
   padding: 0;
 }
 .shim.all.xs {
-  padding: 1.18421em;
+  padding: 16.84211px;
 }
 .shim.all.sm {
-  padding: 1.32353em;
+  padding: 18.82353px;
 }
 .shim.all.md {
-  padding: 1.5em;
+  padding: 21.33333px;
 }
 .shim.all.lg {
-  padding: 1.73077em;
+  padding: 24.61538px;
 }
 .shim.all.xl {
-  padding: 2.04545em;
+  padding: 29.09091px;
 }
 .shim.all.xxl {
-  padding: 2.5em;
+  padding: 35.55556px;
 }
 
 /* @margin-helpers
@@ -688,97 +688,97 @@ video {
   margin-top: 0;
 }
 .margin.top.xs {
-  margin-top: 1.18421em;
+  margin-top: 16.84211px;
 }
 .margin.top.sm {
-  margin-top: 1.32353em;
+  margin-top: 18.82353px;
 }
 .margin.top.md {
-  margin-top: 1.5em;
+  margin-top: 21.33333px;
 }
 .margin.top.lg {
-  margin-top: 1.73077em;
+  margin-top: 24.61538px;
 }
 .margin.top.xl {
-  margin-top: 2.04545em;
+  margin-top: 29.09091px;
 }
 .margin.top.xxl {
-  margin-top: 2.5em;
+  margin-top: 35.55556px;
 }
 .margin.right.none {
   margin-right: 0;
 }
 .margin.right.xs {
-  margin-right: 1.18421em;
+  margin-right: 16.84211px;
 }
 .margin.right.sm {
-  margin-right: 1.32353em;
+  margin-right: 18.82353px;
 }
 .margin.right.md {
-  margin-right: 1.5em;
+  margin-right: 21.33333px;
 }
 .margin.right.lg {
-  margin-right: 1.73077em;
+  margin-right: 24.61538px;
 }
 .margin.right.xl {
-  margin-right: 2.04545em;
+  margin-right: 29.09091px;
 }
 .margin.right.xxl {
-  margin-right: 2.5em;
+  margin-right: 35.55556px;
 }
 .margin.bottom.none {
   margin-bottom: 0;
 }
 .margin.bottom.xs {
-  margin-bottom: 1.18421em;
+  margin-bottom: 16.84211px;
 }
 .margin.bottom.sm {
-  margin-bottom: 1.32353em;
+  margin-bottom: 18.82353px;
 }
 .margin.bottom.md {
-  margin-bottom: 1.5em;
+  margin-bottom: 21.33333px;
 }
 .margin.bottom.lg {
-  margin-bottom: 1.73077em;
+  margin-bottom: 24.61538px;
 }
 .margin.bottom.xl {
-  margin-bottom: 2.04545em;
+  margin-bottom: 29.09091px;
 }
 .margin.bottom.xxl {
-  margin-bottom: 2.5em;
+  margin-bottom: 35.55556px;
 }
 .margin.left.none {
   margin-left: 0;
 }
 .margin.left.xs {
-  margin-left: 1.18421em;
+  margin-left: 16.84211px;
 }
 .margin.left.sm {
-  margin-left: 1.32353em;
+  margin-left: 18.82353px;
 }
 .margin.left.md {
-  margin-left: 1.5em;
+  margin-left: 21.33333px;
 }
 .margin.left.lg {
-  margin-left: 1.73077em;
+  margin-left: 24.61538px;
 }
 .margin.left.xl {
-  margin-left: 2.04545em;
+  margin-left: 29.09091px;
 }
 .margin.left.xxl {
-  margin-left: 2.5em;
+  margin-left: 35.55556px;
 }
 
 /* @push-pull-helpers
 --------------------------------------------------------
 */
 .full-bleed {
-  margin-right: -1.125em !important;
-  margin-left: -1.125em !important;
+  margin-right: -16 !important;
+  margin-left: -16 !important;
 }
 .islet .full-bleed {
-  margin-right: -0.5625em !important;
-  margin-left: -0.5625em !important;
+  margin-right: -8 !important;
+  margin-left: -8 !important;
 }
 
 /* @bg-color-helpers
@@ -965,9 +965,9 @@ input, input::-webkit-input-placeholder, input:-moz-placeholder, textarea {
 
 ------------------------------------------------------ */
 body {
-  line-height: 20px;
-  color: #515554;
   background: #fff;
+  color: #515554;
+  line-height: 20px;
 }
 @media (min-width: 20em) {
   body {
@@ -1029,24 +1029,24 @@ body {
 
 ------------------------------------------------------ */
 button:focus, button:active {
+  border: 0;
   outline: none;
   box-shadow: none;
-  border: none;
 }
 
 .btn {
   display: inline-block;
+  padding: 16px;
+  border: 0;
   background: #515554;
   color: #fff;
-  border: none;
   font-size: 1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: .225em;
-  padding: 16px;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .225em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
 }
 .btn:hover, .btn:focus, .btn:active {
   outline: none;
@@ -1063,8 +1063,8 @@ button:focus, button:active {
 
 ------------------------------------------------------ */
 .btn--secondary {
-  background: none;
   border: 0.1875em solid #fff;
+  background: none;
   color: #fff;
 }
 
@@ -1079,8 +1079,8 @@ button:focus, button:active {
 ------------------------------------------------------ */
 @media screen and (min-width: 320px) {
   .btn--large {
-    font-size: 1em;
     padding: 16px 20px;
+    font-size: 1em;
   }
 }
 
@@ -1117,9 +1117,9 @@ button:focus, button:active {
 .btn--block {
   display: block;
   width: 100%;
-  text-align: center;
   padding-right: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 /* @btn--icon
@@ -1137,9 +1137,9 @@ button:focus, button:active {
 
 ------------------------------------------------------ */
 .btn--icon {
-  background: transparent;
-  border: none;
   padding: 0;
+  border: 0;
+  background: transparent;
   font-size: 0.875em;
 }
 
@@ -1158,14 +1158,14 @@ button:focus, button:active {
 
 -----------------------------------------------------  */
 code {
-  vertical-align: middle;
   padding: 4px 8px;
   background: rgba(193, 199, 208, 0.3);
+  vertical-align: middle;
 }
 
 pre {
-  margin-bottom: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /**
@@ -1209,13 +1209,13 @@ pre {
 
 ------------------------------------------------------ */
 input {
-  border-radius: 0;
   width: 100%;
   padding: 10px;
   border: 0.0625em solid #515554;
+  border-radius: 0;
   color: #515554;
-  -webkit-appearance: none;
   text-rendering: optimizeLegibility;
+  -webkit-appearance: none;
 }
 input:focus {
   outline: none;
@@ -1356,15 +1356,15 @@ input[type=radio], input[type=checkbox] {
   -webkit-appearance: none;
 }
 input[type=radio]:checked, input[type=checkbox]:checked {
-  background: #515554;
   border-color: #515554;
+  background: #515554;
 }
 
 .label--radio, .label--checkbox {
   display: inline-block;
   position: relative;
-  cursor: pointer;
   padding-left: 20px;
+  cursor: pointer;
 }
 .label--radio input, .label--checkbox input {
   position: absolute;
@@ -1393,25 +1393,12 @@ input[type=radio] {
 input[type=checkbox]:after {
   position: absolute;
   bottom: 0;
+  width: 100%;
   height: 11px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.5em;
   color: #fff;
+  font-size: 0.5em;
+  text-align: center;
   content: '✔';
-}
-
-/* @textareas
---------------------------------------------------------
-
-  Base styling for textareas
-
-  Example: Textarea
-  <textarea name="schramburger">Hello, there.</textarea>
-
------------------------------------------------------- */
-textarea {
-  width: 100%;
 }
 
 /* @labels
@@ -1461,8 +1448,8 @@ label {
 
 -------------------------------------------------------- */
 .form__header {
-  padding-bottom: 10px;
   margin-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 0.0625em solid #888;
 }
 
@@ -1524,7 +1511,7 @@ label {
 
 -------------------------------------------------------- */
 fieldset {
-  border: none;
+  border: 0;
 }
 
 /* @fields
@@ -1582,31 +1569,30 @@ fieldset {
   position: relative;
   margin-bottom: 15px;
 }
+.field.is-error .field__feedback {
+  display: block;
+}
+.field.is-error input {
+  border: 0.0625em solid rgba(218, 35, 0, 0.3);
+}
 
 .field__label {
   display: block;
 }
 
 .field__hint {
+  padding: 4px 0;
   color: #888;
   font-size: 0.625em;
-  padding: 4px 0;
   font-style: italic;
 }
 
 .field__feedback {
   display: none;
-  font-size: 0.625em;
   padding: 4px 6px;
   background: rgba(218, 35, 0, 0.3);
-  color: white;
-}
-
-.field.is-error .field__feedback {
-  display: block;
-}
-.field.is-error input {
-  border: 0.0625em solid rgba(218, 35, 0, 0.3);
+  color: #fff;
+  font-size: 0.625em;
 }
 
 /* @input group
@@ -1692,8 +1678,8 @@ fieldset {
 
 --------------------------------------------------------- */
 .form__actions {
-  padding-top: 10px;
   margin-top: 15px;
+  padding-top: 10px;
   border-top: 0.0625em solid #888;
 }
 
@@ -1724,32 +1710,32 @@ fieldset {
 ------------------------------------------------------ */
 h1,
 .h1 {
+  margin-top: 30px;
   margin-bottom: 20px;
-  margin-top: 40px;
   font-size: 2.25em;
   line-height: 40px;
 }
 
 h2,
 .h2 {
+  margin-top: 30px;
   margin-bottom: 20px;
-  margin-top: 40px;
   font-size: 1.75em;
   line-height: 40px;
 }
 
 h3,
 .h3 {
-  margin-bottom: 20px;
   margin-top: 20px;
+  margin-bottom: 15px;
   font-size: 1.3125em;
   line-height: 40px;
 }
 
 h4,
 .h4 {
-  margin-bottom: 20px;
   margin-top: 20px;
+  margin-bottom: 15px;
   font-size: 1em;
   line-height: 20px;
 }
@@ -1782,10 +1768,10 @@ h6,
 hr {
   display: block;
   height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
   margin: 16px 0;
   padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
 
 /**
@@ -1804,10 +1790,10 @@ html {
 }
 
 * {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /**
@@ -1865,8 +1851,8 @@ img {
 
 ------------------------------------------------------ */
 .img--title {
-  height: 16px;
   width: auto;
+  height: 16px;
   vertical-align: top;
 }
 
@@ -1888,21 +1874,21 @@ img {
 ------------------------------------------------------ */
 .img--right {
   width: auto;
-  float: right;
   margin-bottom: 20px;
   margin-left: 20px;
+  float: right;
 }
 
 .img--left {
   width: auto;
-  float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+  float: left;
 }
 
 .img--center {
-  width: auto;
   display: block;
+  width: auto;
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
@@ -1956,11 +1942,11 @@ img {
 
 ------------------------------------------------------ */
 .icon {
-  color: inherit;
   display: inline-block;
+  color: inherit;
+  font-size: 1em;
   font-style: normal;
   vertical-align: middle;
-  font-size: 1em;
 }
 
 /**
@@ -1983,8 +1969,8 @@ img {
 
 ------------------------------------------------------ */
 a {
-  color: inherit;
   transition: color .25s ease-in-out;
+  color: inherit;
 }
 a:hover, a:focus {
   opacity: .75;
@@ -2044,9 +2030,9 @@ body {
 -------------------------------------------------------- */
 ul,
 ol {
-  padding-left: 0;
-  margin-left: 20px;
   margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 0;
 }
 ul li,
 ol li {
@@ -2104,9 +2090,8 @@ ol li {
 
 --------------------------------------------------------  */
 p {
-  margin-bottom: 20px;
   margin-top: 20px;
-  line-height: 1.40625em;
+  margin-bottom: 20px;
 }
 
 /* @inline
@@ -2178,9 +2163,9 @@ em {
  *
  */
 .container {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 64em;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0 18px;
 }
 
@@ -2244,10 +2229,10 @@ em {
 ------------------------------------------------------ */
 .grid-wrap,
 .gw {
-  zoom: 1;
   display: block;
+  margin-bottom: -16px;
   list-style-type: none;
-  margin-bottom: -1.125em;
+  zoom: 1;
 }
 .grid-wrap:before, .grid-wrap:after,
 .gw:before,
@@ -2262,18 +2247,18 @@ em {
 @media screen and (min-width: 550px) {
   .grid-wrap,
   .gw {
-    margin: 0 0 -1.125em -1.125em;
+    margin: 0 0 -16px -16px;
   }
 }
 
 .grid,
 .g {
-  zoom: 1;
-  min-height: 1px;
-  position: relative;
-  padding-bottom: 1.125em;
   display: block;
+  position: relative;
   width: 100%;
+  min-height: 1px;
+  padding-bottom: 16px;
+  zoom: 1;
 }
 .grid:before, .grid:after,
 .g:before,
@@ -2288,7 +2273,7 @@ em {
 @media screen and (min-width: 550px) {
   .grid,
   .g {
-    padding: 0 0 1.125em 1.125em;
+    padding: 0 0 16px 16px;
     float: left;
   }
 }
@@ -2342,13 +2327,13 @@ em {
 }
 
 .media__left {
-  float: left;
   margin-right: 1em;
+  float: left;
 }
 
 .media__right {
-  float: right;
   margin-left: 1em;
+  float: right;
 }
 
 .media__left img,
@@ -4775,52 +4760,8 @@ em {
 
 ------------------------------------------------------ */
 .site-header {
-  padding: 1.125em 0;
+  padding: 10px 0;
   border-bottom: 1px solid #cfd2d2;
-}
-
-/* @branding
---------------------------------------------------------
-
-  The logo & (optional) wordmark
-
-  Example: Branding logo
-  <a class="branding" href="/">
-    <img class="branding__logo img--title" src="images/logo.svg" alt="My Company">
-    <h1 class="branding__wordmark">My Company</h1>
-  </a>
-
------------------------------------------------------- */
-.branding {
-  margin: 0 auto 1.125em;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .branding {
-    margin: 0;
-    float: left;
-    text-align: left;
-  }
-}
-
-.branding__logo {
-  height: 3.375em;
-  width: 3.375em;
-}
-@media screen and (min-width: 768px) {
-  .branding__logo {
-    float: left;
-    margin-right: 1.125em;
-  }
-}
-
-.branding__wordmark {
-  font-size: 1.6875em;
-  white-space: nowrap;
-  line-height: 2.25em;
-  margin: 0;
 }
 
 /*
@@ -4836,16 +4777,16 @@ em {
 }
 @media screen and (min-width: 768px) {
   .site-nav, .site-nav--footer {
+    padding-top: 20px;
     float: right;
   }
 }
 
 .site-nav__link, .site-nav--footer__link {
   display: inline-block;
-  height: 3.375em;
-  line-height: 3.375em;
-  padding: 0 .5em;
-  margin-left: 0.5625em;
+  height: 30px;
+  margin-left: 5px;
+  padding: 0 1px;
 }
 .site-nav__link:first-child, .site-nav--footer__link:first-child {
   margin-left: 0;
@@ -4905,10 +4846,10 @@ em {
 
 -----------------------------------------------------  */
 .page__header {
-  padding: 1.125em 0;
-  margin-bottom: 1.125em;
-  background: rgba(0, 0, 0, 0.025);
+  margin-bottom: 10px;
+  padding: 10px 0;
   border-bottom: 1px solid #cfd2d2;
+  background: rgba(0, 0, 0, 0.025);
 }
 
 /**
@@ -4950,10 +4891,10 @@ em {
 ------------------------------------------------------ */
 .alert {
   position: relative;
+  margin-bottom: 20px;
+  padding: 5px;
   border-width: 1px;
   border-style: solid;
-  margin-bottom: 2.25em;
-  padding: .5rem 4rem .5rem .5rem;
   line-height: 1.25;
 }
 
@@ -4964,11 +4905,11 @@ em {
 .alert__close {
   position: absolute;
   top: 50%;
-  margin-top: -.75em;
   right: 1em;
-  opacity: .5;
+  margin-top: -0.0625em;
   transition: all .3s;
   text-decoration: none;
+  opacity: .5;
 }
 .alert__close:hover {
   opacity: 1;
@@ -4987,36 +4928,36 @@ em {
 }
 
 .alert--error {
-  color: red;
   border-color: red;
   background: #f4f4f4;
+  color: red;
 }
 .alert--error:after {
   border-color: red;
 }
 
 .alert--warning {
-  color: yellow;
   border-color: yellow;
   background: #f4f4f4;
+  color: yellow;
 }
 .alert--warning:after {
   border-color: yellow;
 }
 
 .alert--info {
-  color: blue;
   border-color: blue;
   background: #f4f4f4;
+  color: blue;
 }
 .alert--info:after {
   border-color: blue;
 }
 
 .alert--success {
-  color: green;
   border-color: green;
   background: #f4f4f4;
+  color: green;
 }
 .alert--success:after {
   border-color: green;
@@ -5036,12 +4977,56 @@ em {
 
 -----------------------------------------------------  */
 .block {
-  margin-bottom: 1.125em;
+  margin-bottom: 20px;
 }
 
 .block--ends {
-  margin-top: 1.125em;
-  margin-bottom: 1.125em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* @branding
+--------------------------------------------------------
+
+  The logo & (optional) wordmark
+
+  Example: Branding logo
+  <a class="branding" href="/">
+    <img class="branding__logo img--title" src="images/logo.svg" alt="My Company">
+    <h1 class="branding__wordmark">My Company</h1>
+  </a>
+
+------------------------------------------------------ */
+.branding {
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .branding {
+    margin: 0;
+    float: left;
+    text-align: left;
+  }
+}
+
+.branding__logo {
+  width: 60px;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .branding__logo {
+    margin-right: 10px;
+    float: left;
+  }
+}
+
+.branding__wordmark {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 1.0625em;
+  white-space: nowrap;
 }
 
 /**
@@ -5051,8 +5036,8 @@ em {
   modules/_callouts.scss
 --------------------------------------------------------
 
-  Callouts, are sections of featured content that usually 
-  contain an icon, a title, and some text. These are 
+  Callouts, are sections of featured content that usually
+  contain an icon, a title, and some text. These are
   usually in a row, and call attention to highlighted features.
 
   Example: Callout
@@ -5069,13 +5054,13 @@ em {
 
 .callout__media {
   display: block;
-  margin: 0 auto 1.125em;
-  max-height: 3em;
   width: auto;
+  max-height: 32px;
+  margin: 0 auto 10px;
 }
 
 .callout__title {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 /**
@@ -5099,8 +5084,8 @@ em {
 ------------------------------------------------------ */
 .hero {
   position: relative;
-  overflow: hidden;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .hero__media {
@@ -5110,13 +5095,13 @@ em {
 
 .hero__main {
   position: absolute;
-  z-index: 210;
-  width: 100%;
   top: 50%;
-  text-align: center;
-  color: #fff;
+  width: 100%;
   transform: translateY(-50%);
+  color: #fff;
   font-size: 0.875em;
+  text-align: center;
+  z-index: 210;
 }
 
 /**
@@ -5155,103 +5140,127 @@ em {
 
 
 ------------------------------------------------------ */
-.tooltip, [role="tooltip"] {
-  outline: none;
+.tooltip,
+[role="tooltip"] {
   position: relative;
-}
-.tooltip:after, .tooltip:before, [role="tooltip"]:after, [role="tooltip"]:before {
-  opacity: 0;
   outline: none;
-  position: absolute;
-  text-decoration: none;
-  transition: opacity .3s linear 0s;
-  visibility: hidden;
-  font-size: 12px;
 }
-.tooltip:after, [role="tooltip"]:after {
-  content: attr(data-tooltip);
+.tooltip:after, .tooltip:before,
+[role="tooltip"]:after,
+[role="tooltip"]:before {
+  position: absolute;
+  transition: opacity .3s linear 0s;
+  outline: none;
+  font-size: 12px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.tooltip:after,
+[role="tooltip"]:after {
   padding: 6px;
   background-color: #515554;
   color: #fff;
   white-space: nowrap;
+  content: attr(data-tooltip);
 }
-.tooltip[data-trigger="hover"]:hover:before, .tooltip[data-trigger="hover"]:hover:after, .tooltip[data-trigger="focus"]:focus:before, .tooltip[data-trigger="focus"]:focus:after, [role="tooltip"][data-trigger="hover"]:hover:before, [role="tooltip"][data-trigger="hover"]:hover:after, [role="tooltip"][data-trigger="focus"]:focus:before, [role="tooltip"][data-trigger="focus"]:focus:after {
-  opacity: 1;
+.tooltip[data-trigger="hover"]:hover:before, .tooltip[data-trigger="hover"]:hover:after, .tooltip[data-trigger="focus"]:focus:before, .tooltip[data-trigger="focus"]:focus:after,
+[role="tooltip"][data-trigger="hover"]:hover:before,
+[role="tooltip"][data-trigger="hover"]:hover:after,
+[role="tooltip"][data-trigger="focus"]:focus:before,
+[role="tooltip"][data-trigger="focus"]:focus:after {
   transition: opacity .3s linear 0s;
+  opacity: 1;
   visibility: visible;
   z-index: 2;
 }
-.tooltip[data-placement="top"]:after, .tooltip[data-placement="top"]:before, [role="tooltip"][data-placement="top"]:after, [role="tooltip"][data-placement="top"]:before {
+.tooltip[data-placement="top"]:after, .tooltip[data-placement="top"]:before,
+[role="tooltip"][data-placement="top"]:after,
+[role="tooltip"][data-placement="top"]:before {
   bottom: 100%;
 }
-.tooltip[data-placement="top"]:after, [role="tooltip"][data-placement="top"]:after {
-  border-radius: 4px;
+.tooltip[data-placement="top"]:after,
+[role="tooltip"][data-placement="top"]:after {
   left: 50%;
-  margin: 0 0 14px 0;
+  margin: 0 0 14px;
   transform: translate(50%);
+  border-radius: 4px;
 }
-.tooltip[data-placement="top"]:before, [role="tooltip"][data-placement="top"]:before {
-  content: "";
+.tooltip[data-placement="top"]:before,
+[role="tooltip"][data-placement="top"]:before {
+  left: 50%;
+  margin: 0 0 7px;
+  transform: translate(50%);
+  border-top: 8px solid #515554;
   border-right: 8px solid transparent;
   border-left: 8px solid transparent;
-  border-top: 8px solid #515554;
-  left: 50%;
-  margin: 0 0 7px 0;
-  transform: translate(50%);
+  content: '';
 }
-.tooltip[data-placement="right"]:after, .tooltip[data-placement="right"]:before, [role="tooltip"][data-placement="right"]:after, [role="tooltip"][data-placement="right"]:before {
+.tooltip[data-placement="right"]:after, .tooltip[data-placement="right"]:before,
+[role="tooltip"][data-placement="right"]:after,
+[role="tooltip"][data-placement="right"]:before {
   left: 100%;
 }
-.tooltip[data-placement="right"]:after, [role="tooltip"][data-placement="right"]:after {
-  border-radius: 4px;
-  margin: 0 0 0 14px;
+.tooltip[data-placement="right"]:after,
+[role="tooltip"][data-placement="right"]:after {
   top: 50%;
+  margin: 0 0 0 14px;
   transform: translate(50%);
+  border-radius: 4px;
 }
-.tooltip[data-placement="right"]:before, [role="tooltip"][data-placement="right"]:before {
-  content: "";
-  border-bottom: 8px solid transparent;
+.tooltip[data-placement="right"]:before,
+[role="tooltip"][data-placement="right"]:before {
+  top: 50%;
+  margin: 0 0 0 7px;
+  transform: translate(50%);
   border-top: 8px solid transparent;
   border-right: 8px solid #515554;
-  margin: 0 0 0 7px;
-  top: 50%;
-  transform: translate(50%);
+  border-bottom: 8px solid transparent;
+  content: '';
 }
-.tooltip[data-placement="bottom"]:after, .tooltip[data-placement="bottom"]:before, [role="tooltip"][data-placement="bottom"]:after, [role="tooltip"][data-placement="bottom"]:before {
+.tooltip[data-placement="bottom"]:after, .tooltip[data-placement="bottom"]:before,
+[role="tooltip"][data-placement="bottom"]:after,
+[role="tooltip"][data-placement="bottom"]:before {
   top: 100%;
 }
-.tooltip[data-placement="bottom"]:after, [role="tooltip"][data-placement="bottom"]:after {
+.tooltip[data-placement="bottom"]:after,
+[role="tooltip"][data-placement="bottom"]:after {
+  left: 50%;
+  margin: 15px 0 0;
+  transform: translate(50%);
   border-radius: 4px;
-  left: 50%;
-  margin: 15px 0 0 0;
-  transform: translate(50%);
 }
-.tooltip[data-placement="bottom"]:before, [role="tooltip"][data-placement="bottom"]:before {
-  content: "";
+.tooltip[data-placement="bottom"]:before,
+[role="tooltip"][data-placement="bottom"]:before {
+  left: 50%;
+  margin: 8px 0 0;
+  transform: translate(50%);
   border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
   border-bottom: 8px solid #515554;
-  left: 50%;
-  margin: 8px 0 0 0;
-  transform: translate(50%);
+  border-left: 8px solid transparent;
+  content: '';
 }
-.tooltip[data-placement="left"]:after, .tooltip[data-placement="left"]:before, [role="tooltip"][data-placement="left"]:after, [role="tooltip"][data-placement="left"]:before {
+.tooltip[data-placement="left"]:after, .tooltip[data-placement="left"]:before,
+[role="tooltip"][data-placement="left"]:after,
+[role="tooltip"][data-placement="left"]:before {
   right: 100%;
 }
-.tooltip[data-placement="left"]:after, [role="tooltip"][data-placement="left"]:after {
-  border-radius: 4px;
+.tooltip[data-placement="left"]:after,
+[role="tooltip"][data-placement="left"]:after {
+  top: 50%;
   margin: 0 15px 0 0;
-  top: 50%;
   transform: translate(50%);
+  border-radius: 4px;
 }
-.tooltip[data-placement="left"]:before, [role="tooltip"][data-placement="left"]:before {
-  content: "";
-  border-bottom: 8px solid transparent;
-  border-top: 8px solid transparent;
-  border-left: 8px solid #515554;
-  margin: 0 7px 0 0;
+.tooltip[data-placement="left"]:before,
+[role="tooltip"][data-placement="left"]:before {
   top: 50%;
+  margin: 0 7px 0 0;
   transform: translate(50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #515554;
+  content: '';
 }
 
 /**
@@ -5277,41 +5286,41 @@ em {
 
 --------------------------------------------------------- */
 .modal {
+  display: none;
   position: fixed;
-  z-index: 200;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   height: 100%;
   background: rgba(255, 255, 255, 0.96);
-  display: none;
+  z-index: 200;
 }
 
 .modal__container {
+  display: table;
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  display: table;
   height: 100%;
-  padding: 1.125em;
+  padding: 10px;
 }
 
 .modal__close {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 0.37125em 0.37125em 0 0;
-  font-size: 3em;
-  border: none;
+  margin: 2px 2px 0 0;
+  border: 0;
   background: none;
-  display: block;
+  font-size: 1em;
 }
 .modal__close:hover, .modal__close:focus {
+  border: 0;
   outline: none;
-  border: none;
   opacity: .85;
 }
 .modal__close:active {
@@ -5320,13 +5329,9 @@ em {
 
 .modal__body {
   display: table-cell;
-  height: 100%;
   width: 100%;
+  height: 100%;
   vertical-align: middle;
-}
-.modal__body p {
-  margin-bottom: 1em;
-  font-size: 1.5em;
 }
 
 /**
@@ -5354,21 +5359,18 @@ em {
 -----------------------------------------------------  */
 .thumbnail {
   display: block;
-  padding: 0.5625em;
-  background: rgba(0, 0, 0, 0.1);
+  padding: 3px;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.1);
   text-decoration: none;
 }
 
 .thumbnail__media {
-  margin-bottom: 0.5625em;
+  margin-bottom: 5px;
 }
 
 .thumbnail__caption {
   font-size: 85%;
-}
-.thumbnail__caption h1, .thumbnail__caption h2, .thumbnail__caption h3, .thumbnail__caption h4, .thumbnail__caption h5, .thumbnail__caption h5 {
-  margin-bottom: 0.28125em;
 }
 
 /**
@@ -5383,19 +5385,19 @@ em {
 -----------------------------------------------------  */
 .video-embed {
   display: block;
+  position: relative;
   width: 100%;
   height: 0;
-  position: relative;
   padding-top: 66.666%;
 }
 .video-embed iframe {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 100% !important;
   width: 100% !important;
+  height: 100% !important;
 }
 
 /*# sourceMappingURL=screen-ie.css.map */

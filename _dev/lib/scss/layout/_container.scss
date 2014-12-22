@@ -43,9 +43,9 @@ $container__max-width: 64em; // restricts width
 
 .container {
   @extend %clearfix;
-  margin-left: auto;
-  margin-right: auto;
   max-width: $container__max-width;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0 u(rem(18));
 }
 
