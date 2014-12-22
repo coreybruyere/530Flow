@@ -30,7 +30,7 @@ This kit uses the [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss
 
 The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory.
 
-This kit provides an `em` and `rem` function. The `em` function should be used for font-size while the `rem` function is used everywhere else a value and unit is needed.  Any unit passed through the `rem` function is relative to the default 16px value defined in the html block. This value shouldn't be tampered with.  Any font-size changes can be made within the `_body.scss` partial. Examples and documentation for these functions along with the rest of the projects mixins can be found in the HTML file located in `lib/scss/sass-docs/`
+This kit provides an `em` and `rem` function. The `em` function should be used for font-size while the `rem` function is used everywhere else a value and unit is needed.  Any unit passed through the `rem` function is relative to the default 16px value defined in the html block. This value shouldn't be tampered with.  Any global font-size changes can be made within the `_body.scss` partial. Examples and documentation for these functions along with the rest of the projects mixins can be found in the HTML file located in `lib/scss/sass-docs/`
 
 **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 
