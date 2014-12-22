@@ -104,7 +104,7 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
 * States can use `!importants` if absolutely necessary
 
 #### Javascript
-Use ID's for JS on unique selectors and classes on repeated elements. Prefix all JS hooks with `js-`.
+Use ID's on DOM elements and classes on repeated elements when adding javascript hooks. Prefix all JS hooks with `js-`.
 
 #### Commenting/Snippets
 Throw this snippet in your Emmet Sublime User Settings to enable some quick keyboard shortcuts that are used in this kit.
