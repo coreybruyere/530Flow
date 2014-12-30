@@ -20,10 +20,10 @@ module.exports = function(grunt) {
   require('load-grunt-config')(grunt);
 
   // Register default task
-  grunt.registerTask('default', ['watch','concat']);
+  grunt.registerTask('default', ['watch', 'concat']);
 
   // Open new tab for static development
-  grunt.registerTask('dev', ['connect:dev','watch','concat']);
+  grunt.registerTask('dev', ['connect:dev', 'watch', 'concat']);
 
   // Let's process things for production
   grunt.registerTask('process', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'modernizr', 'imagemin']);
@@ -33,6 +33,10 @@ module.exports = function(grunt) {
 
   // Lint SCSS alone
   grunt.registerTask('lint', ['scsslint']);
+
+  grunt.registerTask('ver', ['version']);
+
+
 
 
 };

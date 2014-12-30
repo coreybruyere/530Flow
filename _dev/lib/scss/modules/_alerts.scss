@@ -40,7 +40,7 @@
 .alert {
   position: relative;
   margin-bottom: u(rem($base-margin));
-  padding: u(rem(5));
+  padding: u(rem(5)) u(rem(15));
   border-width: u(rem(1));
   border-style: solid;
   line-height: 1.25;
@@ -56,10 +56,13 @@
 // Close buttons in alert
 .alert__close {
   position: absolute;
-  top: 50%;
-  right: em(16px);
-  margin-top: em(-1px);
+  top: u(rem(15));
+  right: u(rem(15));
+  width: u(rem(20));
+  height: u(rem(20));
   transition: all .3s;
+  background-color: $color__white;
+  text-align: center;
   text-decoration: none;
   opacity: .5;
   &:hover {

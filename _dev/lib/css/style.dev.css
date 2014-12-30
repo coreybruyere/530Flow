@@ -146,7 +146,7 @@
 /* @breakpoints
 ---------------------------------------------------------
 
-  Define global breakpoints as xs, sm, md, lg, xl
+  Define global breakpoints as xs, sm, md, lg, xl, xxl
 
 --------------------------------------------------------- */
 /* @global spacing units
@@ -1158,7 +1158,7 @@ button:focus, button:active {
 
 -----------------------------------------------------  */
 code {
-  padding: 0.25rem 0.5rem;
+  padding: 0.0625rem 0.3125rem;
   background: rgba(193, 199, 208, 0.3);
   vertical-align: middle;
 }
@@ -2252,7 +2252,9 @@ em {
 }
 
 .grid,
-.g {
+.g,
+.site-main,
+.sidebar {
   display: block;
   position: relative;
   width: 100%;
@@ -2262,17 +2264,25 @@ em {
 }
 .grid:before, .grid:after,
 .g:before,
-.g:after {
+.g:after,
+.site-main:before,
+.sidebar:before,
+.site-main:after,
+.sidebar:after {
   content: " ";
   display: table;
 }
 .grid:after,
-.g:after {
+.g:after,
+.site-main:after,
+.sidebar:after {
   clear: both;
 }
 @media screen and (min-width: 34.375rem) {
   .grid,
-  .g {
+  .g,
+  .site-main,
+  .sidebar {
     padding: 0 0 1rem 1rem;
     float: left;
   }
@@ -2415,7 +2425,7 @@ em {
 -----------------------------------------------------  */
       /*
 
-        Widths at default Viewport
+        UP Widths at default Viewport
 
       ---------------------------------------------------- */
 .one-up > * {
@@ -2468,7 +2478,7 @@ em {
 
       /*
 
-        Responsive ups at $breakpoint__xs
+        Responsive UP widths at $small-mobile
 
       ---------------------------------------------------- */
 @media screen and (min-width: 20rem) {
@@ -2522,7 +2532,7 @@ em {
 }
       /*
 
-        Responsive ups at $breakpoint__sm
+        Responsive UP widths at $mobile
 
       ---------------------------------------------------- */
 @media screen and (min-width: 34.375rem) {
@@ -2576,7 +2586,7 @@ em {
 }
       /*
 
-        Responsive ups at $breakpoint__md
+        Responsive UP widths at $tablet
 
       ---------------------------------------------------- */
 @media screen and (min-width: 48rem) {
@@ -2630,7 +2640,7 @@ em {
 }
       /*
 
-        Responsive ups at $breakpoint__lg
+        Responsive UP widths at $small-desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 64rem) {
@@ -2684,7 +2694,7 @@ em {
 }
       /*
 
-        Responsive ups at $breakpoint__xl
+        Responsive UP widths at $desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 78.5rem) {
@@ -2738,7 +2748,7 @@ em {
 }
       /*
 
-        Responsive ups at $breakpoint__xxl
+        Responsive UP widths at $large-desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 100rem) {
@@ -2819,6 +2829,10 @@ em {
 
       ---------------------------------------------------- */
 .one-whole {
+  width: 100%;
+}
+
+.site-main, .sidebar {
   width: 100%;
 }
 
@@ -3132,7 +3146,7 @@ em {
 
       /*
 
-        Responsive widths at $breakpoint__sm
+        Responsive widths at $mobile
 
       ---------------------------------------------------- */
 @media screen and (min-width: 34.375rem) {
@@ -3450,7 +3464,7 @@ em {
 }
       /*
 
-        Responsive widths at $breakpoint__md
+        Responsive widths at $tablet
 
       ---------------------------------------------------- */
 @media screen and (min-width: 48rem) {
@@ -3470,7 +3484,15 @@ em {
     width: 33.33333%;
   }
 
+  .sidebar {
+    width: 33.33333%;
+  }
+
   .md-two-thirds {
+    width: 66.66667%;
+  }
+
+  .site-main {
     width: 66.66667%;
   }
 
@@ -3768,7 +3790,7 @@ em {
 }
       /*
 
-        Responsive widths at $breakpoint__lg
+        Responsive widths at $small-desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 64rem) {
@@ -4086,7 +4108,7 @@ em {
 }
       /*
 
-        Responsive widths at $breakpoint__xl
+        Responsive widths at $desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 78.5rem) {
@@ -4404,7 +4426,7 @@ em {
 }
       /*
 
-        Responsive widths at $breakpoint__xxl
+        Responsive widths at $large-desktop
 
       ---------------------------------------------------- */
 @media screen and (min-width: 100rem) {
@@ -4749,6 +4771,10 @@ em {
   this case, we call that .site.
 
 ------------------------------------------------------ */
+.site {
+  padding-top: 1.25rem;
+}
+
 /**
 
   @site-header
@@ -4818,7 +4844,7 @@ em {
 ------------------------------------------------------ */
 .site-footer {
   padding: 0.625rem 0;
-  border-top: 0.0625em solid #cfd2d2;
+  border-top: 0.0625rem solid #cfd2d2;
 }
 
 .site-credits {
@@ -4892,7 +4918,7 @@ em {
 .alert {
   position: relative;
   margin-bottom: 1.25rem;
-  padding: 0.3125rem;
+  padding: 0.3125rem 0.9375rem;
   border-width: 0.0625rem;
   border-style: solid;
   line-height: 1.25;
@@ -4904,10 +4930,13 @@ em {
 
 .alert__close {
   position: absolute;
-  top: 50%;
-  right: 1em;
-  margin-top: -0.0625em;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  width: 1.25rem;
+  height: 1.25rem;
   transition: all .3s;
+  background-color: #fff;
+  text-align: center;
   text-decoration: none;
   opacity: .5;
 }
@@ -4915,52 +4944,52 @@ em {
   opacity: 1;
 }
 .alert--error .alert__close {
-  color: red;
+  color: #e74c3c;
 }
 .alert__close .alert--warning {
-  color: yellow;
+  color: #f1c40f;
 }
 .alert__close .alert--info {
-  color: blue;
+  color: #2980b9;
 }
 .alert__close .alert--success {
-  color: green;
+  color: #27ae60;
 }
 
 .alert--error {
-  border-color: red;
+  border-color: #e74c3c;
   background: #f4f4f4;
-  color: red;
+  color: #e74c3c;
 }
 .alert--error:after {
-  border-color: red;
+  border-color: #e74c3c;
 }
 
 .alert--warning {
-  border-color: yellow;
+  border-color: #f1c40f;
   background: #f4f4f4;
-  color: yellow;
+  color: #f1c40f;
 }
 .alert--warning:after {
-  border-color: yellow;
+  border-color: #f1c40f;
 }
 
 .alert--info {
-  border-color: blue;
+  border-color: #2980b9;
   background: #f4f4f4;
-  color: blue;
+  color: #2980b9;
 }
 .alert--info:after {
-  border-color: blue;
+  border-color: #2980b9;
 }
 
 .alert--success {
-  border-color: green;
+  border-color: #27ae60;
   background: #f4f4f4;
-  color: green;
+  color: #27ae60;
 }
 .alert--success:after {
-  border-color: green;
+  border-color: #27ae60;
 }
 
 /**
@@ -5102,6 +5131,67 @@ em {
   font-size: 0.875em;
   text-align: center;
   z-index: 210;
+}
+
+/**
+
+  @modals
+---------------------------------------------------------
+  modules/_modals.scss
+--------------------------------------------------------
+
+  These are very basic modals, which simply cover the entire
+  viewport from top to bottom, left to right.  Feel free
+  to edit the styles of modals to suit your needs.
+
+--------------------------------------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  z-index: 200;
+}
+
+.modal__container {
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  padding: 0.625rem;
+}
+
+.modal__close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.125rem 0.125rem 0 0;
+  border: 0;
+  background: none;
+  font-size: 1em;
+}
+.modal__close:hover, .modal__close:focus {
+  border: 0;
+  outline: none;
+  opacity: .85;
+}
+.modal__close:active {
+  opacity: .6;
+}
+
+.modal__body {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
 }
 
 /**
@@ -5275,65 +5365,14 @@ em {
 -----------------------------------------------------  */
 /**
 
-  @modals
----------------------------------------------------------
-  modules/_modals.scss
+  @sidebar
+--------------------------------------------------------
+  modules/_sidebar.scss
 --------------------------------------------------------
 
-  These are very basic modals, which simply cover the entire
-  viewport from top to bottom, left to right.  Feel free
-  to edit the styles of modals to suit your needs.
+  Sidebars
 
---------------------------------------------------------- */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.96);
-  z-index: 200;
-}
-
-.modal__container {
-  display: table;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  padding: 0.625rem;
-}
-
-.modal__close {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0.125rem 0.125rem 0 0;
-  border: 0;
-  background: none;
-  font-size: 1em;
-}
-.modal__close:hover, .modal__close:focus {
-  border: 0;
-  outline: none;
-  opacity: .85;
-}
-.modal__close:active {
-  opacity: .6;
-}
-
-.modal__body {
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-}
-
+------------------------------------------------------ */
 /**
 
   @thumbnails

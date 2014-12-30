@@ -10,7 +10,7 @@ module.exports = {
                 '_dev/lib/css/*.css',
                 '_dev/lib/css/*.map'
               ],
-        dest: '_prod/_content/assets/css/',
+        dest: '_prod/_content/themes/530Press/assets/css/',
         filter: 'isFile'
       },
       {
@@ -18,7 +18,7 @@ module.exports = {
         expand: true,
         flatten: true,
         src: ['_dev/lib/js/production/*-min.js'],
-        dest: '_prod/_content/assets/js/',
+        dest: '_prod/_content/themes/530Press/assets/js/',
         filter: 'isFile'
       },
       {
@@ -26,7 +26,7 @@ module.exports = {
         expand: true,
         flatten: true,
         src: ['_dev/lib/img/*'],
-        dest: '_prod/_content/assets/img/',
+        dest: '_prod/_content/themes/530Press/assets/img/',
         filter: 'isFile'
       },
       {
@@ -34,7 +34,7 @@ module.exports = {
         expand: true,
         flatten: true,
         src: ['_dev/lib/img/svg/processed/*'],
-        dest: '_prod/_content/assets/img/svg/',
+        dest: '_prod/_content/themes/530Press/assets/img/svg/',
         filter: 'isFile'
       },
       {
@@ -42,7 +42,7 @@ module.exports = {
         expand: true,
         flatten: true,
         src: ['_dev/lib/fonts/*'],
-        dest: '_prod/_content/assets/fonts/',
+        dest: '_prod/_content/themes/530Press/assets/fonts/',
         filter: 'isFile'
       },
     ]

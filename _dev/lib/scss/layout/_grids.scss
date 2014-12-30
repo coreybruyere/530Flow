@@ -88,7 +88,8 @@ $grid__bottom-spacing-when-floating: $grid__gutter-width;
 
 // Grid Wrap
 .grid-wrap,
-.gw {
+.gw,
+%gw {
   display: block;
   margin-bottom: u(rem(-1*$grid__bottom-spacing-when-stacking));
   // Sometimes, ul are used for grid wraps
@@ -102,7 +103,8 @@ $grid__bottom-spacing-when-floating: $grid__gutter-width;
 
 // Grid
 .grid,
-.g {
+.g,
+%g {
   display: block;
   position: relative;
   width: 100%;

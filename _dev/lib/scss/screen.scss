@@ -210,13 +210,15 @@ $dev-mode: false;
 
   @import "modules/heroes";
 
+  @import "modules/modals";
+
   @import "modules/tabs";
 
   @import "modules/tooltips";
 
   @import "modules/post";
 
-  @import "modules/modals";
+  @import "modules/sidebar";
 
   @import "modules/thumbnails";
 

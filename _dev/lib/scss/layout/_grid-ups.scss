@@ -80,6 +80,17 @@ $ups__number-of-ups-at-breakpoint: (
   xxl: 12
 );
 
+// Variable widths for comments
+$widths__device-type: (
+  n:  'screen',
+  xs: '$small-mobile',
+  sm: '$mobile',
+  md: '$tablet',
+  lg: '$small-desktop',
+  xl: '$desktop',
+  xxl:'$large-desktop'
+);
+
 
 
 // ----------------------------------------------------
@@ -115,9 +126,11 @@ $english-by-number: (
   // Define optional prefix
   //
   $breakpoint-prefix: '.';
+  $breakpoint-silent-prefix: '%';
   @if ($breakpoint != 'n') {
     @if map-has-key($ups__number-of-ups-at-breakpoint, $breakpoint) {
       $breakpoint-prefix: '.#{unquote($breakpoint)}-';
+      $breakpoint-silent-prefix: '%#{unquote($breakpoint)}-';
     }
   }
 
@@ -127,6 +140,10 @@ $english-by-number: (
 
   // Here's the class
   #{$breakpoint-prefix}#{$up-first-part}up > * { width: (100 / $n)*1%; }
+
+  // Here's the silent class to extend
+  #{$breakpoint-silent-prefix}#{$up-first-part}up > * { width: (100 / $n)*1%; }
+
 }
 
 // Loop through all breakpoints in $ups__number-of-ups-at-breakpoint
@@ -135,7 +152,7 @@ $english-by-number: (
     @if ($breakpoint != 'n') {
       /*
 
-        Responsive ups at $breakpoint__#{$breakpoint}
+        Responsive UP widths at #{map-get($widths__device-type, $breakpoint)}
 
       ---------------------------------------------------- */
       @include bp-at-least ( map-get($breakpoints, $breakpoint) ) {
@@ -147,7 +164,7 @@ $english-by-number: (
     @else {
       /*
 
-        Widths at default Viewport
+        UP Widths at default Viewport
 
       ---------------------------------------------------- */
       @for $i from 1 through $num-ups {

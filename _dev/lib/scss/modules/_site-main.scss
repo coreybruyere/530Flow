@@ -10,5 +10,8 @@
 ------------------------------------------------------ */
 
 .site-main {
+  @extend %g;
+  @extend %one-whole;
+  @extend %md-two-thirds;
   display: block; // <main> element still needs block declaration
 }

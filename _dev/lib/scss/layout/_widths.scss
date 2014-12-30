@@ -52,6 +52,17 @@ $widths__number-of-divisions-at-breakpoint: (
   xxl: 12
 );
 
+// Variable widths for comments
+$widths__device-type: (
+  n:  'screen',
+  xs: '$small-mobile',
+  sm: '$mobile',
+  md: '$tablet',
+  lg: '$small-desktop',
+  xl: '$desktop',
+  xxl:'$large-desktop'
+);
+
 
 // 100% width classes:
 // ------------------------------------------------------
@@ -144,15 +155,18 @@ $english-nth-by-number: (
   // Define optional prefix
   //
   $breakpoint-prefix: '.';
+  $breakpoint-silent-prefix: '%';
   @if ($breakpoint != 'n') {
     @if map-has-key($widths__number-of-divisions-at-breakpoint, $breakpoint) {
       $breakpoint-prefix: '.#{unquote($breakpoint)}-';
+      $breakpoint-silent-prefix: '%#{unquote($breakpoint)}-';
     }
   }
 
   // Define english and delimiter '-' for first part of class
   //
   $width-first-part: '#{map-get($english-by-number, $numerator)}-';
+  $width-first-silent-part: '#{map-get($english-by-number, $numerator)}-';
 
   // Define english nth for second part
   //
@@ -180,6 +194,9 @@ $english-nth-by-number: (
   }
   @else {
     #{$breakpoint-prefix}#{$width-first-part}#{$width-second-part} { width: ($numerator/$denominator)*100%; }
+    // Silent Class to etend
+    #{$breakpoint-silent-prefix}#{$width-first-part}#{$width-second-part} { width: ($numerator/$denominator)*100%; }
+
   }
 }
 // scss-lint:enable ElsePlacement
@@ -190,7 +207,7 @@ $english-nth-by-number: (
     @if ($breakpoint != 'n') {
       /*
 
-        Responsive widths at $breakpoint__#{$breakpoint}
+        Responsive widths at #{map-get($widths__device-type, $breakpoint)}
 
       ---------------------------------------------------- */
       @include bp-at-least ( map-get($breakpoints, $breakpoint) ) {

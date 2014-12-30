@@ -84,10 +84,10 @@ $color__grey: #b0b3b3;
 $color__grey--light: #cfd2d2;
 $color__offwhite: #f4f4f4;
 $color__white: #fff;
-$color__error: red;
-$color__warning: yellow;
-$color__info: blue;
-$color__success: green;
+$color__error: #e74c3c;
+$color__warning: #f1c40f;
+$color__info: #2980b9;
+$color__success: #27ae60;
 
 
 
@@ -98,7 +98,7 @@ $color__success: green;
 /* @breakpoints
 ---------------------------------------------------------
 
-  Define global breakpoints as xs, sm, md, lg, xl
+  Define global breakpoints as xs, sm, md, lg, xl, xxl
 
 --------------------------------------------------------- */
 
