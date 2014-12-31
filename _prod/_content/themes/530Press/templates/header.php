@@ -9,12 +9,14 @@
         <h1 class="branding__wordmark">Site Name</h1>
       </a>
     </div>
-    <nav class="site-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <nav class="nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
       <?php
         if (has_nav_menu('primary_navigation')) :
           wp_nav_menu(array(
-            'theme_location' => 'primary_navigation',
-            'menu_class'     => 'nav navbar-nav'
+            'theme_location'  => 'primary_navigation',
+            'walker'          => new Roots_Nav_Walker(),
+            'menu_class'      => 'list-ui',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s" role="menubar">%3$s</ul>'
           ));
         endif;
       ?>

@@ -1,0 +1,54 @@
+/**
+
+  @nav
+--------------------------------------------------------
+  modules/_nav.scss
+--------------------------------------------------------
+
+  Navigations used throughout site
+  Includes site header & footer navigations
+
+------------------------------------------------------ */
+
+// Site nav placeholders - extended to header and footer nav
+%nav {
+  text-align: left;
+  // Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    padding-top: u(rem(20));
+    float: right;
+  }
+}
+
+%nav-item {
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    display: inline-block;
+    height: u(rem(30));
+    margin-left: u(rem(10));
+    padding: 0 u(rem(1));
+    float: left;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.nav {
+  @extend %nav;
+}
+
+.nav__item {
+  @extend %nav-item;
+  > a {
+
+  }
+}
+
+.nav__sub-item {
+}
+
+
+
+
+

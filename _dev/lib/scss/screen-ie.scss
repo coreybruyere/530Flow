@@ -198,7 +198,7 @@ $px-only: true;
   //
   @import "modules/pages";
 
-  // Component Modules
+    // Component Modules
   //
   @import "modules/alerts";
 
@@ -208,9 +208,13 @@ $px-only: true;
 
   @import "modules/callouts";
 
+  @import "modules/dropdown";
+
   @import "modules/heroes";
 
   @import "modules/modals";
+
+  @import "modules/nav";
 
   @import "modules/tabs";
 

@@ -50,3 +50,27 @@ ol {
     line-height: 2;
   }
 }
+
+
+
+
+
+/**
+
+  @list-ui
+--------------------------------------------------------
+
+  Remove default list styles
+
+------------------------------------------------------ */
+
+.list-ui,
+%list-ui {
+  @extend %clearfix;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+

@@ -1,5 +1,6 @@
 module.exports = {
   dist: {
+    // Concat all files in js src folder
     src: [
       '_dev/lib/js/*.js',
     ],

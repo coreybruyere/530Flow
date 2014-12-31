@@ -1,0 +1,41 @@
+/**
+
+  @dropdown
+--------------------------------------------------------
+  modules/_dropdown.scss
+--------------------------------------------------------
+
+  Dropdown that can be used in conjunction with site-footer
+  and site-header or as a stand alone module
+
+------------------------------------------------------ */
+
+.dropdown {
+  &:hover {
+    // immediate child dropdown
+    > .dropdown__menu {
+      display: list-item;
+    }
+  }
+}
+
+.dropdown__toggle {
+  &:after {
+    display: inline-block;
+    padding: 0 5px;
+    content: '\25BE';
+  }
+}
+
+.dropdown__menu {
+  @extend %list-ui;
+  margin-left: u(rem(10));
+  text-align: left;
+  z-index: 1;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    display: none;
+    position: absolute;
+  }
+}
+

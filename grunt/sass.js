@@ -1,9 +1,8 @@
 module.exports = {
   dist: {
     options: {
-      // add load paths
       loadPath: [
-        // '_dev/lib//bower_components/neat/app/assets/stylesheets/'
+        // 'add optional load paths'
       ],
       // cssmin will minify later
       style: 'expanded',

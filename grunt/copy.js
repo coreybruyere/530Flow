@@ -3,6 +3,7 @@ module.exports = {
     files: [
       {
         // Move CSS files from development to production
+        // Use sass.js to import/concat Bower css files
         expand: true,
         flatten: true,
         src:  [
@@ -14,10 +15,20 @@ module.exports = {
         filter: 'isFile'
       },
       {
-        // Move JS files from development to production
+        // Move specific JS plugins from Bower to production
         expand: true,
         flatten: true,
-        src: ['_dev/lib/js/production/*-min.js'],
+        src:  [
+                '_dev/lib/bower_components/slick-carousel/slick/slick.min.js'
+              ],
+        dest: '_prod/_content/themes/530Press/assets/js/vendor/',
+        filter: 'isFile'
+      },
+      {
+        // Move scripts and all global files from development to production
+        expand: true,
+        flatten: true,
+        src: ['_dev/lib/js/production/*.js'],
         dest: '_prod/_content/themes/530Press/assets/js/',
         filter: 'isFile'
       },

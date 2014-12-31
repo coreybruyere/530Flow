@@ -23,7 +23,8 @@ function roots_scripts() {
     $assets = array(
       'css'       => '/assets/css/screen.css',
       'js'        => '/assets/js/global.js',
-      'modernizr' => '/assets/vendor/modernizr/modernizr-min.js',
+      'modernizr' => '/assets/js/vendor/modernizr/modernizr-min.js',
+      'slick'     => '/assets/js/vendor/slick.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
   } else {
@@ -32,7 +33,8 @@ function roots_scripts() {
     $assets     = array(
       'css'       => '/assets/css/screen-min.css?' . $assets['assets/css/screen-min.css']['hash'],
       'js'        => '/assets/js/global-min.js?' . $assets['assets/js/global-min.js']['hash'],
-      'modernizr' => '/assets/vendor/modernizr/modernizr-min.js',
+      'modernizr' => '/assets/js/vendor/modernizr/modernizr-min.js',
+      'slick'     => '/assets/js/vendor/slick.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
     );
   }

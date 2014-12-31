@@ -26,7 +26,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['connect:dev', 'watch', 'concat']);
 
   // Let's process things for production
-  grunt.registerTask('process', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'modernizr', 'imagemin']);
+  grunt.registerTask('process', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'modernizr', 'imagemin', 'copy']);
 
   // Turn those SVGs into a sprite
   grunt.registerTask('svg', ['svgstore']);

@@ -35,6 +35,26 @@ a {
 
 
 
+/* @link
+--------------------------------------------------------
+
+  Alternative link class for a tags
+
+------------------------------------------------------ */
+
+.link {
+  display: inline-block;
+  transition: color .25s ease-in-out;
+  color: inherit;
+  &:hover,
+  &:focus {
+    opacity: .75;
+  }
+}
+
+
+
+
 
 /* @webkit-tap-highlight
 --------------------------------------------------------

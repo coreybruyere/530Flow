@@ -19,19 +19,3 @@
   clear: both;
 }
 
-/*
-
-  @site-nav-footer
---------------------------------------------------------
-
-  The main footer navigation
-
------------------------------------------------------  */
-
-.site-nav--footer {
-  @extend %site-nav;
-}
-
-.site-nav--footer__link {
-  @extend %site-nav-link;
-}
