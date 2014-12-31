@@ -5240,25 +5240,25 @@ em {
   Includes site header & footer navigations
 
 ------------------------------------------------------ */
-.nav {
+.nav, .nav--footer {
   text-align: left;
 }
 @media screen and (min-width: 48rem) {
-  .nav {
+  .nav, .nav--footer {
     padding-top: 1.25rem;
     float: right;
   }
 }
 
 @media screen and (min-width: 48rem) {
-  .nav__item {
+  .nav__item, .nav--footer__item {
     display: inline-block;
     height: 1.875rem;
     margin-left: 0.625rem;
     padding: 0 0.0625rem;
     float: left;
   }
-  .nav__item:first-child {
+  .nav__item:first-child, .nav--footer__item:first-child {
     margin-left: 0;
   }
 }

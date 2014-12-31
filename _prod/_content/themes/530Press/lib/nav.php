@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author Spencer Baynton
+ * @author Spencer Baynton and Corey Bruyere
  * @uses Walker_Nav_Menu
  * @version 1.0.0
  */
@@ -59,7 +59,6 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
         $item_output .= '>';
         $item_output .= $args->link_before;
 
-
       }
 
       $item_output .= apply_filters( 'the_title', $item->title, $item->ID );
@@ -71,7 +70,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
 
       if ( ! in_array( 'dropdown-header', $item->classes ) ) {
 
-        // Caret for dropdown or just use after pseudo
+        // Caret for dropdown or just use pseudo css class
         // if ( in_array( 'dropdown', $item->classes ) ) {
         //   $item_output .= ' <span class="dropdown__caret"></span>';
         // }
@@ -100,9 +99,9 @@ function roots_nav_menu_css_class($classes, $item) {
   $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'is-active', $classes);
   $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
   if ($item->menu_item_parent != 0 ) {
-    $classes[] = 'nav__sub-item--' . $slug;;
+    $classes[] = 'nav-sub-item--' . $slug;;
   } else {
-    $classes[] = 'nav__item--' . $slug;;
+    $classes[] = 'nav-item--' . $slug;;
   }
   $classes = array_unique($classes);
   return array_filter($classes, 'is_element_empty');
@@ -130,22 +129,16 @@ function roots_nav_menu_args($args = '') {
 add_filter('wp_nav_menu_args', 'roots_nav_menu_args');
 
 /**
- * Custom class name for <a> tag
- *
- */
-// function add_menuclass($output) {
-//    $output= preg_replace('/<a/', '<a class="nav__link"', $output, -1);
-//    return $output;
-// }
-// add_filter('wp_nav_menu','add_menuclass');
-
-/**
  * Custom class name for <li> tags
  *
  */
 function add_listclass($classes, $item, $args) {
+  // Append sub class if children are present
   if ($item->menu_item_parent != 0 ) {
     $classes[] = 'nav__sub-item';
+  // Append class to secondary nav
+  } elseif ($args->theme_location == 'secondary_navigation' ) {
+    $classes[] = 'nav--footer__item';
   } else {
     $classes[] = 'nav__item';
   }

@@ -23,7 +23,6 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
-      console.log('hi');
     }
   },
   // Home page
@@ -36,7 +35,6 @@ var Roots = {
   admin_bar: {
     init: function() {
       // JavaScript to be fired on the about us page
-      console.log('wtf');
     }
   }
 };

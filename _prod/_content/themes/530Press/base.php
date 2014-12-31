@@ -1,5 +1,6 @@
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
+  <?php include_once("assets/img/svg/svg-defs.svg"); ?>
 
   <!--[if lt IE 8]>
     <div class="alert alert--warning">

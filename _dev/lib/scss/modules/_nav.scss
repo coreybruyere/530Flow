@@ -34,6 +34,7 @@
   }
 }
 
+// Primary Navigation
 .nav {
   @extend %nav;
 }
@@ -46,7 +47,22 @@
 }
 
 .nav__sub-item {
+
 }
+
+// Secondary Navigation
+.nav--footer {
+  @extend %nav;
+}
+
+.nav--footer__item {
+  @extend %nav-item;
+  > a {
+
+  }
+}
+
+
 
 
 
