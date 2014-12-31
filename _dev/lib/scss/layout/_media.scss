@@ -48,18 +48,18 @@
 .media {
   @extend %clearfix;
   display: block;
-  margin-bottom: em(16px);  // you might end up changing this, either globally or per module
+  margin-bottom: u(rem(16));
 }
 
 
 
 // Child elements, to the left or right
 .media__left {
-  margin-right: em(16px);  // you might end up changing this, either globally or per module
+  margin-right: u(rem(16));
   float: left;
 }
 .media__right {
-  margin-left: em(16px);
+  margin-left: u(rem(16));
   float: right;
 }
 
@@ -78,6 +78,13 @@
 .media__body,
 .media__body > :last-child {
   margin-bottom: 0;
+}
+
+
+
+// Media Heading
+.media__heading {
+  margin-top: 0;
 }
 
 

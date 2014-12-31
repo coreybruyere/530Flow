@@ -26,17 +26,12 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['connect:dev', 'watch', 'concat']);
 
   // Let's process things for production
-  grunt.registerTask('process', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'modernizr', 'imagemin', 'copy']);
+  grunt.registerTask('process', ['concat', 'uglify', 'sass', 'cssmin', 'modernizr', 'imagemin', 'copy']);
 
   // Turn those SVGs into a sprite
   grunt.registerTask('svg', ['svgstore']);
 
   // Lint SCSS alone
   grunt.registerTask('lint', ['scsslint']);
-
-  grunt.registerTask('ver', ['version']);
-
-
-
 
 };

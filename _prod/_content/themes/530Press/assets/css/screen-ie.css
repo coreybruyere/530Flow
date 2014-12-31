@@ -793,6 +793,7 @@ video {
 --------------------------------------------------------
 */
 .clearfix,
+.field__input-group,
 .list-ui,
 .dropdown__menu,
 .container,
@@ -801,11 +802,13 @@ video {
   zoom: 1;
 }
 .clearfix:before, .clearfix:after,
+.field__input-group:before,
 .list-ui:before,
 .dropdown__menu:before,
 .container:before,
 .media:before,
 .site-header:before,
+.field__input-group:after,
 .list-ui:after,
 .dropdown__menu:after,
 .container:after,
@@ -815,6 +818,7 @@ video {
   display: table;
 }
 .clearfix:after,
+.field__input-group:after,
 .list-ui:after,
 .dropdown__menu:after,
 .container:after,
@@ -1044,9 +1048,11 @@ button:focus, button:active {
 
 .btn {
   display: inline-block;
-  padding: 16px;
+  height: 35px;
+  padding: 8px;
   border: 0;
   background: #515554;
+  cursor: pointer;
   color: #fff;
   font-size: 1em;
   -moz-osx-font-smoothing: grayscale;
@@ -1071,7 +1077,7 @@ button:focus, button:active {
 
 ------------------------------------------------------ */
 .btn--secondary {
-  border: 0.1875em solid #fff;
+  border: 3px solid #fff;
   background: none;
   color: #fff;
 }
@@ -1219,7 +1225,7 @@ pre {
 input {
   width: 100%;
   padding: 10px;
-  border: 0.0625em solid #515554;
+  border: 1px solid #515554;
   border-radius: 0;
   color: #515554;
   text-rendering: optimizeLegibility;
@@ -1327,7 +1333,7 @@ textarea {
   width: 100%;
   min-height: 96px;
   padding: 10px;
-  border: solid 0.0625em #515554;
+  border: solid 1px #515554;
   text-rendering: optimizeLegibility;
 }
 textarea:focus {
@@ -1358,7 +1364,7 @@ input[type=radio], input[type=checkbox] {
   width: 14px;
   height: 14px;
   padding: 0;
-  border: 0.0625em solid #b0b3b3;
+  border: 1px solid #b0b3b3;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -1437,7 +1443,7 @@ label {
 .form {
   display: block;
   padding: 10px;
-  border: 0.0625em solid #888;
+  border: 1px solid #888;
   background: #eee;
 }
 
@@ -1458,7 +1464,7 @@ label {
 .form__header {
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 0.0625em solid #888;
+  border-bottom: 1px solid #888;
 }
 
 /* @fieldsets
@@ -1581,7 +1587,7 @@ fieldset {
   display: block;
 }
 .field.is-error input {
-  border: 0.0625em solid rgba(218, 35, 0, 0.3);
+  border: 1px solid rgba(218, 35, 0, 0.3);
 }
 
 .field__label {
@@ -1651,7 +1657,9 @@ fieldset {
 }
 .field__input-group > * {
   display: inline-block;
+  width: auto;
   margin-right: 8px;
+  float: left;
 }
 .field__input-group > *:last-child {
   margin-right: 0;
@@ -1688,7 +1696,7 @@ fieldset {
 .form__actions {
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 0.0625em solid #888;
+  border-top: 1px solid #888;
 }
 
 /**
@@ -2371,16 +2379,16 @@ em {
 ---------------------------------------------------------  */
 .media {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 .media__left {
-  margin-right: 1em;
+  margin-right: 16px;
   float: left;
 }
 
 .media__right {
-  margin-left: 1em;
+  margin-left: 16px;
   float: right;
 }
 
@@ -2396,6 +2404,10 @@ em {
 .media__body,
 .media__body > :last-child {
   margin-bottom: 0;
+}
+
+.media__heading {
+  margin-top: 0;
 }
 
 /**

@@ -49,7 +49,7 @@ input {
   @extend %serif--light;
   width: 100%;
   padding: u(rem(10));
-  border: em(1px) solid $color__black;
+  border: u(rem(1)) solid $color__black;
   border-radius: 0;
   color: $color__black;
   text-rendering: optimizeLegibility;
@@ -183,7 +183,7 @@ textarea {
   width: 100%;
   min-height: u(rem(96));
   padding: u(rem(10));
-  border: solid em(1px) $color__black;
+  border: solid u(rem(1)) $color__black;
   text-rendering: optimizeLegibility;
   &:focus {
     outline: none;
@@ -221,7 +221,7 @@ textarea {
   width: u(rem(14));
   height: u(rem(14));
   padding: 0;
-  border: em(1px) solid $color__grey;
+  border: u(rem(1)) solid $color__grey;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -339,7 +339,7 @@ label {
 .form {
   display: block;
   padding: u(rem(10));
-  border: em(1px) solid #888;
+  border: u(rem(1)) solid #888;
   background: #eee;
 }
 
@@ -364,7 +364,7 @@ label {
 .form__header {
   margin-bottom: u(rem(15));
   padding-bottom: u(rem(10));
-  border-bottom: em(1px) solid #888;
+  border-bottom: u(rem(1)) solid #888;
 }
 
 
@@ -498,7 +498,7 @@ fieldset {
       display: block;
     }
     input {
-      border: em(1px) solid rgba(218, 35, 0, .3);
+      border: u(rem(1)) solid rgba(218, 35, 0, .3);
     }
 
   }
@@ -577,17 +577,19 @@ fieldset {
 ------------------------------------------------------ */
 
 .field__input-group {
+  @extend %clearfix;
   display: block;
   > * {
     display: inline-block;
+    width: auto;
     margin-right: u(rem(8));
+    float: left;
     &:last-child {
       margin-right: 0;
     }
   }
 }
 
-// List mod
 .field__input-group--list {
   display: block;
   > * {
@@ -626,5 +628,5 @@ fieldset {
 .form__actions {
   margin-top: u(rem(15));
   padding-top: u(rem(10));
-  border-top: em(1px) solid #888;
+  border-top: u(rem(1)) solid #888;
 }

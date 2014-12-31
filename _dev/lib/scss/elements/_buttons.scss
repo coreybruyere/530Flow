@@ -34,9 +34,11 @@ button {
 .btn {
   @extend %sans--regular;
   display: inline-block;
-  padding: u(rem(16));
+  height: u(rem(35));
+  padding: u(rem(8));
   border: 0;
   background: $color__black;
+  cursor: pointer;
   color: $color__white;
   font-size: em(16px);
   -moz-osx-font-smoothing: grayscale;
@@ -68,7 +70,7 @@ button {
 ------------------------------------------------------ */
 
 .btn--secondary {
-  border: em(3px) solid $color__white;
+  border: u(rem(3)) solid $color__white;
   background: none;
   color: $color__white;
 }
