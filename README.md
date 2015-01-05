@@ -34,7 +34,7 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
 
 **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 
-**Class names impart little or no useful semantic information to machines** or human visitors unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
+**Class names impart little or no useful semantic information to machines or human visitors** unless it is part of a small set of agreed upon (and machine readable) names – Microformats.
 
 
 ###### General Styling
