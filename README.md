@@ -15,12 +15,12 @@ You can reference the example files or documentation to clarify proper BEM/SCSS,
 
 #### Some buzz-wordy things included in this project
 
-* Static HTML5 files
-* [OOCSS SCSS files in BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* jQuery
+* HTML5 markup & attr's
+* OOCSS SCSS files
 * Grunt.js
+* [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax
 * [Roots.io](http://roots.io/docs/) Wordpress Theme
-* [Schema.org markup in WP for better SEO](http://builtvisible.com/micro-data-schema-org-guide-generating-rich-snippets/)
+* [Micro Data](http://builtvisible.com/micro-data-schema-org-guide-generating-rich-snippets/) markup
 
 
 ## Guidelines
