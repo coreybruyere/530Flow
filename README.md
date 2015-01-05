@@ -3,11 +3,11 @@
 
 ## Introduction
 
-530's modified version of Skyline helps you create a design system for your website.  It encourages a well thought-out CSS architecture, and enables you to develop a reusable and maintainable codebase.
+530's modified version of Skyline (530Flow) helps you create a design system for your website.  Its main focus is its well thought-out CSS architecture, which enables you to develop a reusable and maintainable codebase.
 
 This starter kit includes the style files you will use on your site. Each SCSS partial is self-documented and includes markup examples in the comments. Whenever a new partial is added make sure to use the same documentation style to keep the project consistent. The kit also contains HTML files as examples to illustrate how you should write out your markup.
 
-530's Skyline is a minimal scaffolding starter kit that imposes little to no visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt tasks. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment, which means quicker development and/or prototyping. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development (CSS & JS) should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` while working in the `_dev` directory.
+530Flow is a minimal scaffolding starter kit that imposes little to no visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt tasks. 530Flow is a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment, which means quicker development and/or prototyping.  After completing development in static files, the markup can be copied over to the correct templates held in '_prod/_content/themes/530Press' directory or you can simply develop in your template files and use the 'grunt' task to watch and copy all of your assets into your theme directory.  CSS and Javascript development should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` while working in the `_dev` directory.
 
 Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'.  *example:* `page-about.html`
 
@@ -30,7 +30,7 @@ This kit uses the [BEM](http://bem.info/method/) syntax and [OOCSS](http://oocss
 
 The `grunt` and `grunt dev` commands compile, prefix, minify, and copy css into both the static development directory and the cms directory.
 
-This kit provides an `em` and `rem` function. The `em` function should be used for font-size while the `rem` function is used everywhere else a value and unit is needed.  Any unit passed through the `rem` function is relative to the default 16px value defined in the html block. This value shouldn't be tampered with.  Any global font-size changes can be made within the `_body.scss` partial. Examples and documentation for these functions along with the rest of the projects mixins can be found in the HTML file located in `lib/scss/sass-docs/`
+This kit provides an `em` and `rem` function. The `em` function should be used for font-size while the `rem` function is used everywhere else a value and unit is needed.  Any unit passed through the `rem` function is relative to the default 16px value defined in the html block. This value shouldn't be changed.  Any global font-size changes can be made within the `_body.scss` partial. Examples and documentation for these functions along with the rest of the projects mixins can be found in the HTML file located in `lib/scss/sass-docs/`
 
 **Class names should communicate _useful_ information to _developers_.** It’s helpful to understand what a specific class name is going to do when you read a DOM snippet, especially in multi-developer teams where front-enders won’t be the only people working with HTML components. If you don’t need to add presentation and behaviour to your web documents, then you probably don’t need classes in your HTML.
 
