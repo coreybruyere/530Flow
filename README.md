@@ -1,4 +1,4 @@
-# 530's Starter Workflow : HTML, SCSS, WP
+# Static to Dynamic Wordpress Workflow
 
 
 ## Introduction
