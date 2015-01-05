@@ -173,7 +173,5 @@ These starter files (found within `_dev`) contain as little code as possible.  T
 run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`.  See the projects [Gruntfile](https://github.com/coreybruyere/530Flow/blob/master/Gruntfile.js)
 
 
-## Documentation
-Extensive docs are in the works, but not yet released. However, Skyline makes it easy by adding detailed documentation in the comments of the scss partials themselves. Descriptions are right next to the actual code, making it simple to learn how it works.
 
 
