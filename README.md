@@ -53,7 +53,7 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
 * Nest all pseduo-classes directly beneath base properties and values
 * Media queries belong right after pseudo-classes
 * List any class modifiers after all module children
-* Modules are named _{module}.scss
+* Modules are named _*{$module}*.scss
 * Be generous with comments & use same comment style shown in the [Snippets Section](#user-content-commentingsnippets)
 * Variablize all colors, numbers, etc. in BEM syntax
 * If a ```:hover``` pseudo class is styled, ```:focus``` should also be styled for accessibility. Focus styles should never be removed
