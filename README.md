@@ -39,9 +39,9 @@ This kit provides an `em` and `rem` function. The `em` function should be used f
 
 ###### General Styling
 
-* **DO NOT** using ID's.  Use classes instead
+* **DO NOT** use ID's.  Use classes instead
 * **DO NOT** over-qualify selectors.  Keep specificity number as low as possible
-* **DO NOT** (with the exception of pseudo/hover states, module modifiers, and child classes)
+* **DO NOT** nest (with the exception of pseudo/hover states, module modifiers, and child classes)
 * Use provided `rem` function for everything except font-size
 * Use provided `em` function for type font-size
 * All module class names should use the double underscore and double dash BEM syntax where appropriate
