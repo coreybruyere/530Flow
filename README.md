@@ -9,8 +9,8 @@ This starter kit includes the style files you will use on your site. Each SCSS p
 
 530Flow is a minimal scaffolding starter kit that imposes little to no visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt tasks. 530Flow is a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment, which means quicker development and/or prototyping.  After completing development in static files, the markup can be copied over to the correct templates held in `_prod/_content/themes/530Press` directory or you can simply develop in your template files and use the 'grunt' task to watch and copy all of your assets into your theme directory.  CSS and Javascript development should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` while working in the `_dev` directory.
 
-Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'.
-  *example:* `page-about.html`
+Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'
+  **example:** `page-about.html`
 
 You can reference the example files or documentation to clarify proper BEM/SCSS, JS hooks, and Grid/Layout usage.
 
