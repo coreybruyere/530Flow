@@ -12,7 +12,7 @@
 
 // Site nav placeholders - extended to header and footer nav
 %nav {
-  text-align: left;
+  text-align: right;
   // Min Width @ $tablet
   @include bp-at-least($tablet) {
     padding-top: u(rem(20));

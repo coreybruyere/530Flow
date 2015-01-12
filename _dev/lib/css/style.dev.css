@@ -263,20 +263,21 @@ video {
 --------------------------------------------------------
 
 // Usage: @include burger();
+// Use Pixel Values
 
 ------------------------------------------------------ */
 /**
  * CSS Menu Burger
  *
- * @param {Width}         $width (1.875em)  -  desired width
- * @param {Height}        $height (.250em)  -  desired height
- * @param {Gutter}        $hover (.250em)  -  desired gutter space
+ * @param {Width}         $width (30px)  -  desired width
+ * @param {Height}        $height (5px)  -  desired height
+ * @param {Gutter}        $gutter (3px)  -  desired gutter space
  * @param {Color}         $color (#000)  -  desired color
- * @param {Border Radius} $border-radius (.188em)  -  desired border radius
+ * @param {Border Radius} $border-radius (0)  -  desired border radius
  * @param {Transition}    $transiition-duration (.3s)  -  desired transition time
  * @example scss
  * // @include burger();
- * // @include burger('3em', 1em, 1em, red, .2em, .1s);
+ * // @include burger('20px', 5px, 5px, $color, 2px, .1s);
  *
  */
 /**
@@ -1048,7 +1049,6 @@ button:focus, button:active {
 
 .btn {
   display: inline-block;
-  height: 2.1875rem;
   padding: 0.5rem;
   border: 0;
   background: #515554;
@@ -5253,7 +5253,7 @@ em {
 
 ------------------------------------------------------ */
 .nav, .nav--footer {
-  text-align: left;
+  text-align: right;
 }
 @media screen and (min-width: 48rem) {
   .nav, .nav--footer {

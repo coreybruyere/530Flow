@@ -16,6 +16,13 @@ module.exports = {
       spawn: false,
     },
   },
+  lint: {
+    files: ['_dev/lib/scss/**/*.scss'],
+    tasks: ['scsslint'],
+    options: {
+      spawn: false,
+    },
+  },
   images: {
     files: ['_dev/lib/img/*.{png,jpg,gif}'],
     tasks: ['imagemin'],

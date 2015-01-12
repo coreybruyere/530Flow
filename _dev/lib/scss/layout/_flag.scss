@@ -1,0 +1,78 @@
+/**
+
+  @flag
+--------------------------------------------------------
+  layout/_flag.scss
+--------------------------------------------------------
+
+  The flag object shares a lot of common traits with the media object; its sole purpose is displaying image- and text-like content side-by-side. Where the flag object differs, however, is its ability to vertically align the image and text to the tops, middles or bottoms of each other. Aside from the visual difference of vertical alignment, there isn’t too much difference between the two objects’ code. One thing to note is that the flag object is slightly more verbose in its implementation; the media object can have its classes applied directly to its content whereas the flag object needs its classes applied to wrappers around its content. For example, compare the following snippets for the media and flag objects respectively:
+
+
+  Source: http://csswizardry.com/2013/05/the-flag-object/
+
+-----------------------------------------------------  */
+
+
+/* @flag objects
+---------------------------------------------------------
+
+  Example: Flag Object
+  <div class="flag">
+      <div class="flag__image">
+          <img src="" alt="">
+      </div>
+      <div class="flag__body">
+          <p></p>
+      </div>
+  </div>
+
+  Example: Flag Object, top
+  <div class="flag--top">
+      <div class="flag__image">
+          <img src="" alt="">
+      </div>
+      <div class="flag__body">
+          <p></p>
+      </div>
+  </div>
+
+---------------------------------------------------------  */
+
+.flag {
+    display: table;
+    width: 100%;
+}
+
+.flag__image,
+.flag__body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .flag--top & {
+        vertical-align: top;
+    }
+
+    .flag--bottom & {
+        vertical-align: bottom;
+    }
+}
+
+.flag__image {
+    padding-right: u(rem(10));
+
+    > img {
+        display: block;
+        max-width: none;
+    }
+
+    .flag--rev & {
+        padding-right: 0;
+        padding-left: u(rem(10));
+    }
+}
+
+.flag__body {
+    width: 100%;
+}
+
+

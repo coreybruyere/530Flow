@@ -7,38 +7,38 @@
 --------------------------------------------------------
 
 // Usage: @include burger();
+// Use Pixel Values
 
 ------------------------------------------------------ */
 
 /**
  * CSS Menu Burger
  *
- * @param {Width}         $width (1.875em)  -  desired width
- * @param {Height}        $height (.250em)  -  desired height
- * @param {Gutter}        $hover (.250em)  -  desired gutter space
+ * @param {Width}         $width (30px)  -  desired width
+ * @param {Height}        $height (5px)  -  desired height
+ * @param {Gutter}        $gutter (3px)  -  desired gutter space
  * @param {Color}         $color (#000)  -  desired color
- * @param {Border Radius} $border-radius (.188em)  -  desired border radius
+ * @param {Border Radius} $border-radius (0)  -  desired border radius
  * @param {Transition}    $transiition-duration (.3s)  -  desired transition time
  * @example scss
  * // @include burger();
- * // @include burger('3em', 1em, 1em, red, .2em, .1s);
+ * // @include burger('20px', 5px, 5px, $color, 2px, .1s);
  *
  */
-@mixin burger($width: 1.875em, $height: .250em, $gutter: .250em, $color: #000, $border-radius: .188em, $transition-duration: .3s) {
+
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
-    $burger-color: $color !global;
 
     position: relative;
     margin-top: $height + $gutter;
     margin-bottom: $height + $gutter;
 
     &, &:before, &:after {
-        display: inline-block;
+        display: block;
         width: $width;
         height: $height;
-        background-color: $burger-color;
-        transition: all .5s ease-in-out;
+        background-color: $color;
         @if $border-radius != 0 {
             border-radius: $border-radius;
         }
@@ -67,6 +67,8 @@
         top: $height + $gutter;
     }
 }
+
+
 
 
 /**
@@ -139,7 +141,7 @@
  * // @include burger-to-cross();
  * // @include burger-to-cross(green);
  */
-@mixin burger-to-cross($active-color: $burger-color) {
+@mixin burger-to-cross($active-color: $color) {
     & {
         background-color: transparent;
     }

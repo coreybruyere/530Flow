@@ -34,7 +34,6 @@ button {
 .btn {
   @extend %sans--regular;
   display: inline-block;
-  height: u(rem(35));
   padding: u(rem(8));
   border: 0;
   background: $color__black;
