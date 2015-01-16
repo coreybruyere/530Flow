@@ -5,7 +5,7 @@ module.exports = {
   multiple_files: {
     expand: true,
     flatten: true,
-    src: '_prod/_content/themes/530Press/assets/css/*-min.css',
-    dest: '_prod/_content/themes/530Press/assets/css/',
+    src: 'dist/site/themes/530Press/assets/css/*-min.css',
+    dest: 'dist/site/themes/530Press/assets/css/',
   },
 }

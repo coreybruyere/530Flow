@@ -8,9 +8,9 @@ module.exports = {
       style: 'expanded',
     },
     files: {
-      '_dev/lib/css/style.dev.css' : '_dev/lib/scss/screen.scss',
-      '_prod/_content/themes/530Press/assets/css/screen.css' : '_dev/lib/scss/screen.scss',
-      '_prod/_content/themes/530Press/assets/css/screen-ie.css' : '_dev/lib/scss/screen-ie.scss'
+      'src/lib/css/style.dev.css' : 'src/lib/scss/screen.scss',
+      'dist/site/themes/530Press/assets/css/screen.css' : 'src/lib/scss/screen.scss',
+      'dist/site/themes/530Press/assets/css/screen-ie.css' : 'src/lib/scss/screen-ie.scss'
     }
   }
 }

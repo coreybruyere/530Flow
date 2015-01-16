@@ -52,8 +52,8 @@ if ( empty( $_SERVER['HTTP_HOST'] ) ) {
 // ========================
 // Custom Content Directory
 // ========================
-defined('WP_CONTENT_DIR') or define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/_content' );
-defined('WP_CONTENT_URL') or define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/_content' );
+defined('WP_CONTENT_DIR') or define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/site' );
+defined('WP_CONTENT_URL') or define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/site' );
 
 // =======================
 // Use built-in themes too
@@ -70,8 +70,8 @@ $GLOBALS['wp_theme_directories'][] = dirname( __FILE__ ) . '/wp/wp-content/theme
 // =============================
 // Configuration for the Content
 // =============================
-if ( file_exists( dirname( __FILE__ ) . '/_content/config.php' ) ) {
-	include( dirname( __FILE__ ) . '/_content/config.php' );
+if ( file_exists( dirname( __FILE__ ) . '/site/config.php' ) ) {
+	include( dirname( __FILE__ ) . '/site/config.php' );
 }
 
 // =====================

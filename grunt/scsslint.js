@@ -1,10 +1,10 @@
 module.exports = {
 	dist: {
 	  src: [
-	  	'_dev/lib/scss/modules/*.scss',
+	  	'src/lib/scss/modules/*.scss',
 	  	// GLOBBING NOT WORKING : UPDATE?
-	  	// '_dev/lib/scss/elements/*.scss',
-	  	// '_dev/lib/scss/layout/*.scss',
+	  	// 'src/lib/scss/elements/*.scss',
+	  	// 'src/lib/scss/layout/*.scss',
 	  ],
 	},
 	options: {

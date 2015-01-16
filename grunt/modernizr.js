@@ -1,11 +1,11 @@
 module.exports = {
   dist: {
-    devFile: '_dev/lib/bower_components/modernizr/modernizr.js',
-    outputFile: '_prod/_content/themes/530Press/assets/js/vendor/modernizr/modernizr-min.js',
+    devFile: 'src/lib/bower_components/modernizr/modernizr.js',
+    outputFile: 'dist/site/themes/530Press/assets/js/vendor/modernizr/modernizr-min.js',
     files: {
       src: [
-        '_dev/lib/js/*.js',
-        '_dev/lib/css/*.css',
+        'src/lib/js/*.js',
+        'src/lib/css/*.css',
       ]
     }
   }

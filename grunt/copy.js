@@ -7,11 +7,11 @@ module.exports = {
         expand: true,
         flatten: true,
         src:  [
-                '_dev/lib/css/*-min.css',
-                '_dev/lib/css/*.css',
-                '_dev/lib/css/*.map'
+                'src/lib/css/*-min.css',
+                'src/lib/css/*.css',
+                'src/lib/css/*.map'
               ],
-        dest: '_prod/_content/themes/530Press/assets/css/',
+        dest: 'dist/site/themes/530Press/assets/css/',
         filter: 'isFile'
       },
       {
@@ -19,41 +19,41 @@ module.exports = {
         expand: true,
         flatten: true,
         src:  [
-                '_dev/lib/bower_components/slick-carousel/slick/slick.min.js'
+                'src/lib/bower_components/slick-carousel/slick/slick.min.js'
               ],
-        dest: '_prod/_content/themes/530Press/assets/js/vendor/',
+        dest: 'dist/site/themes/530Press/assets/js/vendor/',
         filter: 'isFile'
       },
       {
         // Move scripts and all global files from development to production
         expand: true,
         flatten: true,
-        src: ['_dev/lib/js/production/*.js'],
-        dest: '_prod/_content/themes/530Press/assets/js/',
+        src: ['src/lib/js/production/*.js'],
+        dest: 'dist/site/themes/530Press/assets/js/',
         filter: 'isFile'
       },
       {
         // Move images from development to production
         expand: true,
         flatten: true,
-        src: ['_dev/lib/img/*'],
-        dest: '_prod/_content/themes/530Press/assets/img/',
+        src: ['src/lib/img/*'],
+        dest: 'dist/site/themes/530Press/assets/img/',
         filter: 'isFile'
       },
       {
         // Move SVG icons from development to production
         expand: true,
         flatten: true,
-        src: ['_dev/lib/img/svg/processed/*'],
-        dest: '_prod/_content/themes/530Press/assets/img/svg/',
+        src: ['src/lib/img/svg/processed/*'],
+        dest: 'dist/site/themes/530Press/assets/img/svg/',
         filter: 'isFile'
       },
       {
         // Move font files from development to production
         expand: true,
         flatten: true,
-        src: ['_dev/lib/fonts/*'],
-        dest: '_prod/_content/themes/530Press/assets/fonts/',
+        src: ['src/lib/fonts/*'],
+        dest: 'dist/site/themes/530Press/assets/fonts/',
         filter: 'isFile'
       },
     ]

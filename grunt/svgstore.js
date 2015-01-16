@@ -1,7 +1,7 @@
 module.exports = {
   defaults: {
     options: {
-      prefix : 'shape-',
+      prefix : 'icon-',
       cleanup: true,
       includedemo : true,
       svg: {
@@ -17,7 +17,7 @@ module.exports = {
       }
     },
     files: {
-      '_dev/lib/img/svg/processed/svg-defs.svg': ['_dev/lib/img/svg/source/*.svg']
+      'src/lib/img/svg/processed/svg-defs.svg': ['src/lib/img/svg/source/*.svg']
     },
   },
 }

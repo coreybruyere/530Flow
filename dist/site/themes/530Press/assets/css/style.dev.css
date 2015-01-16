@@ -263,20 +263,21 @@ video {
 --------------------------------------------------------
 
 // Usage: @include burger();
+// Use Pixel Values
 
 ------------------------------------------------------ */
 /**
  * CSS Menu Burger
  *
- * @param {Width}         $width (1.875em)  -  desired width
- * @param {Height}        $height (.250em)  -  desired height
- * @param {Gutter}        $hover (.250em)  -  desired gutter space
+ * @param {Width}         $width (30px)  -  desired width
+ * @param {Height}        $height (5px)  -  desired height
+ * @param {Gutter}        $gutter (3px)  -  desired gutter space
  * @param {Color}         $color (#000)  -  desired color
- * @param {Border Radius} $border-radius (.188em)  -  desired border radius
+ * @param {Border Radius} $border-radius (0)  -  desired border radius
  * @param {Transition}    $transiition-duration (.3s)  -  desired transition time
  * @example scss
  * // @include burger();
- * // @include burger('3em', 1em, 1em, red, .2em, .1s);
+ * // @include burger('20px', 5px, 5px, $color, 2px, .1s);
  *
  */
 /**
@@ -793,15 +794,24 @@ video {
 --------------------------------------------------------
 */
 .clearfix,
+.field__input-group,
+.list-ui,
+.dropdown__menu,
 .container,
 .media,
 .site-header {
   zoom: 1;
 }
 .clearfix:before, .clearfix:after,
+.field__input-group:before,
+.list-ui:before,
+.dropdown__menu:before,
 .container:before,
 .media:before,
 .site-header:before,
+.field__input-group:after,
+.list-ui:after,
+.dropdown__menu:after,
 .container:after,
 .media:after,
 .site-header:after {
@@ -809,6 +819,9 @@ video {
   display: table;
 }
 .clearfix:after,
+.field__input-group:after,
+.list-ui:after,
+.dropdown__menu:after,
 .container:after,
 .media:after,
 .site-header:after {
@@ -1036,9 +1049,10 @@ button:focus, button:active {
 
 .btn {
   display: inline-block;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 0;
   background: #515554;
+  cursor: pointer;
   color: #fff;
   font-size: 1em;
   -moz-osx-font-smoothing: grayscale;
@@ -1063,7 +1077,7 @@ button:focus, button:active {
 
 ------------------------------------------------------ */
 .btn--secondary {
-  border: 0.1875em solid #fff;
+  border: 0.1875rem solid #fff;
   background: none;
   color: #fff;
 }
@@ -1211,7 +1225,7 @@ pre {
 input {
   width: 100%;
   padding: 0.625rem;
-  border: 0.0625em solid #515554;
+  border: 0.0625rem solid #515554;
   border-radius: 0;
   color: #515554;
   text-rendering: optimizeLegibility;
@@ -1319,7 +1333,7 @@ textarea {
   width: 100%;
   min-height: 6rem;
   padding: 0.625rem;
-  border: solid 0.0625em #515554;
+  border: solid 0.0625rem #515554;
   text-rendering: optimizeLegibility;
 }
 textarea:focus {
@@ -1350,7 +1364,7 @@ input[type=radio], input[type=checkbox] {
   width: 0.875rem;
   height: 0.875rem;
   padding: 0;
-  border: 0.0625em solid #b0b3b3;
+  border: 0.0625rem solid #b0b3b3;
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
@@ -1429,7 +1443,7 @@ label {
 .form {
   display: block;
   padding: 0.625rem;
-  border: 0.0625em solid #888;
+  border: 0.0625rem solid #888;
   background: #eee;
 }
 
@@ -1450,7 +1464,7 @@ label {
 .form__header {
   margin-bottom: 0.9375rem;
   padding-bottom: 0.625rem;
-  border-bottom: 0.0625em solid #888;
+  border-bottom: 0.0625rem solid #888;
 }
 
 /* @fieldsets
@@ -1573,7 +1587,7 @@ fieldset {
   display: block;
 }
 .field.is-error input {
-  border: 0.0625em solid rgba(218, 35, 0, 0.3);
+  border: 0.0625rem solid rgba(218, 35, 0, 0.3);
 }
 
 .field__label {
@@ -1643,7 +1657,9 @@ fieldset {
 }
 .field__input-group > * {
   display: inline-block;
+  width: auto;
   margin-right: 0.5rem;
+  float: left;
 }
 .field__input-group > *:last-child {
   margin-right: 0;
@@ -1680,7 +1696,7 @@ fieldset {
 .form__actions {
   margin-top: 0.9375rem;
   padding-top: 0.625rem;
-  border-top: 0.0625em solid #888;
+  border-top: 0.0625rem solid #888;
 }
 
 /**
@@ -1976,6 +1992,21 @@ a:hover, a:focus {
   opacity: .75;
 }
 
+/* @link
+--------------------------------------------------------
+
+  Alternative link class for a tags
+
+------------------------------------------------------ */
+.link {
+  display: inline-block;
+  transition: color .25s ease-in-out;
+  color: inherit;
+}
+.link:hover, .link:focus {
+  opacity: .75;
+}
+
 /* @webkit-tap-highlight
 --------------------------------------------------------
 
@@ -2037,6 +2068,21 @@ ol {
 ul li,
 ol li {
   line-height: 2;
+}
+
+/**
+
+  @list-ui
+--------------------------------------------------------
+
+  Remove default list styles
+
+------------------------------------------------------ */
+.list-ui,
+.dropdown__menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /**
@@ -2333,16 +2379,16 @@ em {
 ---------------------------------------------------------  */
 .media {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .media__left {
-  margin-right: 1em;
+  margin-right: 1rem;
   float: left;
 }
 
 .media__right {
-  margin-left: 1em;
+  margin-left: 1rem;
   float: right;
 }
 
@@ -2358,6 +2404,10 @@ em {
 .media__body,
 .media__body > :last-child {
   margin-bottom: 0;
+}
+
+.media__heading {
+  margin-top: 0;
 }
 
 /**
@@ -4790,34 +4840,6 @@ em {
   border-bottom: 0.0625rem solid #cfd2d2;
 }
 
-/*
-
-  @site-nav
---------------------------------------------------------
-
-  The main site navigation.
-
------------------------------------------------------  */
-.site-nav, .site-nav--footer {
-  text-align: center;
-}
-@media screen and (min-width: 48rem) {
-  .site-nav, .site-nav--footer {
-    padding-top: 1.25rem;
-    float: right;
-  }
-}
-
-.site-nav__link, .site-nav--footer__link {
-  display: inline-block;
-  height: 1.875rem;
-  margin-left: 0.3125rem;
-  padding: 0 0.0625rem;
-}
-.site-nav__link:first-child, .site-nav--footer__link:first-child {
-  margin-left: 0;
-}
-
 /**
 
   @site-main
@@ -4852,14 +4874,6 @@ em {
   clear: both;
 }
 
-/*
-
-  @site-nav-footer
---------------------------------------------------------
-
-  The main footer navigation
-
------------------------------------------------------  */
 /**
 
   @pages
@@ -5094,6 +5108,39 @@ em {
 
 /**
 
+  @dropdown
+--------------------------------------------------------
+  modules/_dropdown.scss
+--------------------------------------------------------
+
+  Dropdown that can be used in conjunction with site-footer
+  and site-header or as a stand alone module
+
+------------------------------------------------------ */
+.dropdown:hover > .dropdown__menu {
+  display: list-item;
+}
+
+.dropdown__toggle:after {
+  display: inline-block;
+  padding: 0 0.3125rem;
+  content: '\25BE';
+}
+
+.dropdown__menu {
+  margin-left: 0.625rem;
+  text-align: left;
+  z-index: 1;
+}
+@media screen and (min-width: 48rem) {
+  .dropdown__menu {
+    display: none;
+    position: absolute;
+  }
+}
+
+/**
+
   @heroes
 --------------------------------------------------------
   modules/_heroes.scss
@@ -5192,6 +5239,40 @@ em {
   width: 100%;
   height: 100%;
   vertical-align: middle;
+}
+
+/**
+
+  @nav
+--------------------------------------------------------
+  modules/_nav.scss
+--------------------------------------------------------
+
+  Navigations used throughout site
+  Includes site header & footer navigations
+
+------------------------------------------------------ */
+.nav, .nav--footer {
+  text-align: right;
+}
+@media screen and (min-width: 48rem) {
+  .nav, .nav--footer {
+    padding-top: 1.25rem;
+    float: right;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav__item, .nav--footer__item {
+    display: inline-block;
+    height: 1.875rem;
+    margin-left: 0.625rem;
+    padding: 0 0.0625rem;
+    float: left;
+  }
+  .nav__item:first-child, .nav--footer__item:first-child {
+    margin-left: 0;
+  }
 }
 
 /**

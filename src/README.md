@@ -7,7 +7,7 @@
 
 This starter kit includes the style files you will use on your site. In most cases, you will copy the contents of the `css` folder into your own project. Each SCSS partial is self-documented and includes markup examples in the comments. Whenever a new partial is added make sure to use the same documentation style to keep the project consistent. The kit also contains HTML files as examples to illustrate how you will write out your markup.
 
-530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `_dev` directory. All assets are compiled and concatenated into `_prod` when working in the `_dev` directory.
+530's Skyline is a minimal scaffolding, it does not impose a visual style.  It contains many layout and structural helpers, utilities, and basic element and module styles that you will build upon. This kit helps to streamline frontend processes with various grunt task. It's a static frontend-first workflow that allows for developers to easily piece together 'pieces' or 'modules' in a static development environment. It also allows for on the fly frontend changes or development in a non-static environment - in our case Wordpress. Frontend development should only take place within the `src` directory. All assets are compiled and concatenated into `dist` when working in the `src` directory.
 
 Use the `index.html` file as a starting point for static development then prefix the rest of your pages with 'page-'. `**example:** page-about.html`
 
@@ -160,7 +160,7 @@ The starter files contain as little code as possible.  The structure consists of
 ```
 
 ## Usage
-run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `_dev`
+run `grunt` to watch files or `grunt dev` to open static index file and watch development files found in `src`
 
 
 ## Documentation
