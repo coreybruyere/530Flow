@@ -14,7 +14,7 @@
 module.exports = function(grunt) {
 
   // Show time for each executed task
-  require('time-grunt')(grunt);
+  // require('time-grunt')(grunt);
 
   // Tasks are configured in partials located in grunt/
   require('load-grunt-config')(grunt);

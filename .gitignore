@@ -1,26 +1,31 @@
 # Ignore system and config files
-*.DS_Store
+.DS_Store
 .sass-cache/
+.log
 local-config.php
-
-# Things to ignore in the development directory
 node_modules/
-# development/lib/bower_components/FitText.js
-# development/lib/bower_components/Lettering.js
-# development/lib/fonts/*
-# development/lib/images/*
-# development/lib/images/svg/*
-# development/lib/javascripts/*
-# development/lib/styles/css/*
-# development/lib/styles/scss/**/*
+license.txt
 
-# Ignore everything in the "wp-content" directory, except "plugins" and "themes"
+
+
+# Things to ignore in the src directory
+src/lib/bower_components/
+
+
+
+# No need to add the upgrade folder to the repo #
+wp-content/upgrade/*
+
+# No need to add the uploads folder to the repo #
+wp-content/uploads/*
+
+# No need to add the plugins folder to the repo #
+wp-content/plugins/*
+
+# sitemaps not needed locally #
+sitemap.xml
+sitemap.xml.gz
+
 wp-content/*
-!app/plugins/
-!app/themes/
-production/app/themes/530press/.sass-cache/*
-# production/app/themes/530press/lib/fonts/*
-# production/app/themes/530press/lib/images/*
-# production/app/themes/530press/lib/images/svg/*
-# production/app/themes/530press/lib/javascripts/*
-# production/app/themes/530press/lib/styles/css/*
+!site/plugins/
+!site/themes/
